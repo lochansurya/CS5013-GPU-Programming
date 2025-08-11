@@ -70,7 +70,7 @@ int main(int argc, char *argv[]) {
     // Copy result back to host
     cudaMemcpy(h_arr, d_arr, arr_size, cudaMemcpyDeviceToHost);
 
-    // Print squared array
+    // Print squared array; This runs on the Host(CPU)
     printf("Squared array:\n");
     for (int i = 0; i < N; i++) {
         printf("%d ", h_arr[i]);
