@@ -20,7 +20,7 @@ __global__ void matmatmul_tiled_kernel(Matrix A, Matrix B, Matrix C){
     unsigned int bid_x = blockIdx.x * blockDim.x;
     unsigned int bid_y = blockIdx.y * blockDim.y;
 
-    //Compute the Thread coordinates in the Grid
+    //Compute the Thread Coordinates in the Grid
     unsigned int tid_x = bid_x + threadIdx.x;
     unsigned int tid_y = bid_y + threadIdx.y;
 
