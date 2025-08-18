@@ -1,5 +1,14 @@
+#include "../../matrix_csv.hpp"
 #include <cuda_runtime.h>
 #include <stdio.h>
+#include <fstream>
+#include <cstdint>
+#include <iostream>
+#include <sstream>
+#include <vector>
+#include <string>
+
+
 
 // CUDA kernel for matrix multiplication: C = A * B
 __global__ void matrix_multiplication_kernel(
@@ -39,8 +48,31 @@ extern "C" void solve(const float* A, const float* B, float* C, int M, int N, in
 // ----------------------
 // Optional: Test in host code
 // ----------------------
-int main() {
-    int M = 4, N = 4, K = 4;
+int main(int argc, char* argv[]) {
+    int M = stoi(argv[1]);
+    int N = stoi(argv[2]);
+
+    std::string matrix_A_file_path(argv[3]);
+    std::string matrix_B_file_path(argv[4]);
+
+    // Read matrix A
+    std::ifstream fileA(matrix_A_file_path);
+    std::vector<std::vector<int32_t>> matA_int32;
+    std::pair<size_t, size_t> dimensions_A = matrix_read(fileA, matA_int32);
+    fileA.close();
+
+    // Read matrix B
+    std::ifstream fileB(matrix_B_file_path);
+    std::vector<std::vector<int32_t>> matB_int32;
+    std::pair<size_t, size_t> dimensions_B = matrix_read(fileB, matB_int32);
+    matrix_read(fileB, matB_int32);
+    fileB.close();
+
+    if(dimensions_A.second != dimensions_B.first) {
+        std::cerr << "Matrix dimensions do not match for multiplication." << std::endl;
+        return -1;
+    }
+
 
     float h_A[M*N] = {0.f}, h_B[N*K] = {0.f}, h_C[M*K] = {0.f};
     for(unsigned int i = 0; i < M; i++) {
@@ -65,14 +97,31 @@ int main() {
 
     cudaMemcpy(h_C, d_C, M*K*sizeof(float), cudaMemcpyDeviceToHost);
 
-    printf("C =\n");
-    for(int i = 0; i < M; i++) {
-        for(int j = 0; j < K; j++) {
-            printf("%6.1f ", h_C[i*K + j]);
+    // printf("C =\n");
+    // for(int i = 0; i < M; i++) {
+    //     for(int j = 0; j < K; j++) {
+    //         printf("%6.1f ", h_C[i*K + j]);
+    //     }
+    //     printf("\n");
+    // }
+
+    std::ofstream fileC("output_matrix.csv");
+    if (fileC.is_open()) {
+        for (int i = 0; i < M; ++i) {
+            for (int j = 0; j < K; ++j) {
+                fileC << h_C[i * K + j];
+                if (j < K - 1) {
+                    fileC << ",";
+                }
+            }
+            fileC << "\n";
         }
-        printf("\n");
+        fileC.close();
+    } else {
+        std::cerr << "Unable to open output file." << std::endl;
     }
 
+    // Free device memory
     cudaFree(d_A);
     cudaFree(d_B);
     cudaFree(d_C);
