@@ -1,10 +1,16 @@
 #ifndef __LIB_MATRIX_CSV__
-#define __LIB__MATRIX_CSV__
+#define __LIB_MATRIX_CSV__
+#include "matrix.h"
+// to avoid name mangling, which is done by the C++ compiler, for this gcc compiled source files
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-#include <stdio.h>
-#include <stdint.h>
+void matrix_read_from_csv_int32(Matrix* mat, const char *file_path);
+void matrix_write_to_csv_int32(Matrix* mat, const char *file_path);
+void print_matrix(Matrix* mat);
 
-void matrix_read_from_csv_int32(int32_t*** matrix, const char *file_path, size_t* num_rows, size_t* num_cols);
-void matrix_write_to_csv_int32(int32_t*** matrix, const char *file_path, size_t* num_rows, size_t* num_cols);
-void print_matrix(int32_t** matrix, size_t num_rows, size_t num_cols);
-
+#ifdef __cplusplus
+}
+#endif
+#endif

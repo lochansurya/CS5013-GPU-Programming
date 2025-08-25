@@ -1,4 +1,5 @@
 ## Compiler
+CC:= gcc
 NVCC      := nvcc
 CFLAGS    := -O2
 SRC_HELPER:= matrix_csv.c
@@ -25,7 +26,7 @@ matmul_4:    main_4.cu $(OBJ_HELPER)
 
 # Object rule for helper C file
 $(OBJ_HELPER): $(SRC_HELPER) matrix_csv.h
-	$(NVCC) -c $(SRC_HELPER) -o $@
+	$(CC) -c $(SRC_HELPER) -o $@
 
 # Default target: build all programs
 all: $(PROGS)
