@@ -22,7 +22,7 @@ __global__ void matrix_multiplication_dkernel(
     unsigned int col = tid_x;
 
     if(row < num_rows && col < num_cols) {
-        int32_t Cvalue = 0;
+        int32_t Cvalue = 0; //acuumulator
         for(unsigned int k = 0; k < N; ++k) {
             Cvalue += A[row * N + k] * B[k * num_cols + col];
         }
@@ -121,6 +121,9 @@ int main(int argc, char* argv[]) {
 
     // Copy result back to host
     cudaMemcpy(C.elements, d_C, C.num_rows * C.num_cols * sizeof(int32_t), cudaMemcpyDeviceToHost);
+
+    //print matrix
+    print_matrix(&C);
 
     //Write the output matrix matrix_c.csv
     matrix_write_to_csv_int32(&C, "public_test_cases/matrix_c.csv");
