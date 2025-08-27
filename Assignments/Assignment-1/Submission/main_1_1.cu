@@ -5,21 +5,29 @@
 #include <cuda_runtime.h>
 
 __global__ void matmul_1d_dkernel(uint32_t* C, const uint32_t* A, const uint32_t* B,
-                                                 int M, int N, int K){
+                                  int M, int N, int K, int work_per_thread){
     // 1D thread id
     unsigned int bid = blockIdx.x * blockDim.x;
     unsigned int tid = bid + threadIdx.x;
     unsigned int total = M * K;
-    if (tid >= total) return;
 
-    unsigned int row = tid / K;
-    unsigned int col = tid % K;
+    // starting output index for this thread
+    unsigned int start = tid * work_per_thread;
 
-    uint32_t Cvalue = 0;
-    for (unsigned int k = 0; k < (unsigned int)N; ++k) {
-        Cvalue += A[row * N + k] * B[k * K + col];
+    // loop over multiple outputs per thread
+    for(int w = 0; w < work_per_thread; ++w){
+        unsigned int idx = start + w;
+        if (idx >= total) return;
+
+        unsigned int row = idx / K;
+        unsigned int col = idx % K;
+
+        uint32_t Cvalue = 0;
+        for (unsigned int k = 0; k < (unsigned int)N; ++k) {
+            Cvalue += A[row * N + k] * B[k * K + col];
+        }
+        C[row * K + col] = Cvalue;
     }
-    C[row * K + col] = Cvalue;
 }
 
 // Host-callable function using raw device pointers and explicit thread/block dims
@@ -31,6 +39,11 @@ extern "C" void solve(uint32_t* d_C, const uint32_t* d_A, const uint32_t* d_B,
     dim3 num_threads_per_block(block_x, 1, 1);
     dim3 num_blocks_per_grid(grid_x, 1, 1);
 
+    // compute work_per_thread based on matrix size and launch config
+    int total_outputs = M * K;
+    int total_threads = grid_x * block_x;
+    int work_per_thread = (total_outputs + total_threads - 1) / total_threads; // ceil division
+
     // timing
     cudaEvent_t start, stop;
     cudaEventCreate(&start);
@@ -38,7 +51,7 @@ extern "C" void solve(uint32_t* d_C, const uint32_t* d_A, const uint32_t* d_B,
 
     cudaEventRecord(start);
     //launch the CUDA kernel
-    matmul_1d_dkernel<<<num_blocks_per_grid, num_threads_per_block>>>(d_C, d_A, d_B, M, N, K);
+    matmul_1d_dkernel<<<num_blocks_per_grid, num_threads_per_block>>>(d_C, d_A, d_B, M, N, K, work_per_thread);
     cudaEventRecord(stop);
 
     cudaError_t err = cudaDeviceSynchronize();
@@ -72,8 +85,8 @@ int main(int argc, char* argv[]) {
     Matrix C = {0, 0, NULL};
 
     // Read matrices into the Matrix buffers
-    matrix_read_from_csv_int32(&A, matrix_A_file_path);
-    matrix_read_from_csv_int32(&B, matrix_B_file_path);
+    matrix_read_from_csv_uint32(&A, matrix_A_file_path);
+    matrix_read_from_csv_uint32(&B, matrix_B_file_path);
 
     //check the shapes of the matrices read
     if(A.num_cols != B.num_rows){
@@ -108,10 +121,10 @@ int main(int argc, char* argv[]) {
     cudaMemcpy(C.elements, d_C, C.num_rows * C.num_cols * sizeof(uint32_t), cudaMemcpyDeviceToHost);
 
     //print matrix
-    print_matrix(&C);
+    print_matrix_uint32(&C);
 
     //Write the output matrix matrix_c.csv
-    matrix_write_to_csv_int32(&C, "public_test_cases/matrix_c.csv");
+    matrix_write_to_csv_uint32(&C, "public_test_cases/matrix_c.csv");
 
     // Free device memory
     cudaFree(d_A);
