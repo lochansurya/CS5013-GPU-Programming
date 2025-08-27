@@ -4,13 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define TILE_DIM 16   // tile width and height (for shared memory)
-
-typedef struct {
-    unsigned int width;   // number of columns
-    unsigned int height;  // number of rows
-    int32_t *elements;      // linear row-major array: row * width + col
-} Matrix;
 
 // Kernel: Transpose input -> output using shared memory tiling
 __global__
@@ -39,8 +32,8 @@ void matrix_transpose_tiled_dkernel(int32_t *output, Matrix *input, unsigned int
     // -------------------------
     // 4) load from input into shared memory
     // -------------------------
-    if (global_row_in < input.height && global_col_in < input.width) {
-        unsigned int idx_in = global_row_in * input.width + global_col_in;
+    if (global_row_in < input.num_rows && global_col_in < input.num_cols) {
+        unsigned int idx_in = global_row_in * input.num_cols + global_col_in;
         tile[local_row][local_col] = input.elements[idx_in];
     } else {
         tile[local_row][local_col] = 0.0f; // padding for out-of-bounds
@@ -64,8 +57,8 @@ void matrix_transpose_tiled_dkernel(int32_t *output, Matrix *input, unsigned int
     // -------------------------
     // 7) store from shared memory transposed
     // -------------------------
-    if (global_row_out < output.height && global_col_out < output.width) {
-        unsigned int idx_out = global_row_out * output.width + global_col_out;
+    if (global_row_out < output.num_rows && global_col_out < output.num_cols) {
+        unsigned int idx_out = global_row_out * output.num_cols + global_col_out;
         output.elements[idx_out] = tile[local_col][local_row];
     }
 }
@@ -116,27 +109,27 @@ int main(int argc, char** argv) {
     // ouput matrix_csv filepath
     const char *matrix_A_T_csv_file_path = argv[2];
     Matrix A_T;
-    A_T.width = A.height;
-    A_T.height = A.width;
-    A_T.elements = (int32_t*)malloc(A_T.width * A_T.height * sizeof(int32_t));
+    A_T.num_cols = A.num_rows;
+    A_T.num_rows = A.num_cols;
+    A_T.elements = (int32_t*)malloc(A_T.num_cols * A_T.num_rows * sizeof(int32_t));
 
     int32_t *d_A, *d_A_T;
-    cudaError_t err_A = cudaMalloc(&d_A, A.width * A.height * sizeof(int32_t));
+    cudaError_t err_A = cudaMalloc(&d_A, A.num_cols * A.num_rows * sizeof(int32_t));
     
     if(err_A != cudaSuccess){
         printf("cudaMalloc Failed for d_A\n");
         return EXIT_FAILURE;
     }
     
-    cudaError_t err_A_T = cudaMalloc(&d_A_T, A_T.width * A_T.height * sizeof(int32_t));
+    cudaError_t err_A_T = cudaMalloc(&d_A_T, A_T.num_cols * A_T.num_rows * sizeof(int32_t));
 
-    if(err_A_T = cudaSuccess){
+    if(err_A_T != cudaSuccess){
         printf("cudaMalloc Failed for d_A_T\n");
         return EXIT_FAILURE;
     }
 
     cudaError_t err_H2D= cudaMemcpy(d_A, A.elements,
-                            A.width * A.height * sizeof(int32_t),
+                            A.num_cols * A.num_rows * sizeof(int32_t),
                             cudaMemcpyHostToDevice);
 
     if( err_H2D != cudaSuccess){
@@ -145,10 +138,10 @@ int main(int argc, char** argv) {
     }
 
     // Call the C wrapper
-    solve(d_A, d_A_T, A.height, A.width);
+    solve(d_A, d_A_T, A.num_rows, A.num_cols);
 
     cudaError_t err_D2H = cudaMemcpy(A_T.elements, d_A_T,
-                            A_T.width * A_T.height * sizeof(int32_t),
+                            A_T.num_cols * A_T.num_rows * sizeof(int32_t),
                             cudaMemcpyDeviceToHost);
 
     if( err_D2H != cudaSuccess){

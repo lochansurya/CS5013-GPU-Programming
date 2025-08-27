@@ -63,7 +63,7 @@ extern "C" void solve(uint32_t* d_C, const uint32_t* d_A, const uint32_t* d_B,
     cudaEventSynchronize(stop);
     float ms = 0.0f;
     cudaEventElapsedTime(&ms, start, stop);
-    printf("Kernel elapsed time: %f us \n", ms * 1000.0f);
+    printf("Kernel elapsed time: %f microseconds \n", ms * 1000.0f);
 
     cudaEventDestroy(start);
     cudaEventDestroy(stop);

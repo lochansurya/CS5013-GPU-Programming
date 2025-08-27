@@ -104,7 +104,7 @@ extern "C" void solve(uint32_t* d_C, const uint32_t* d_A, const uint32_t* d_B,
         cudaEventSynchronize(stop_coarse);
         float ms = 0.0f;
         cudaEventElapsedTime(&ms, start_coarse, stop_coarse);
-        printf("Coarsened kernel elapsed time: %f us\n", ms * 1000.0f);
+        printf("Coarsened kernel elapsed time: %f microseconds\n", ms * 1000.0f);
     }
 
     // Destroy events
