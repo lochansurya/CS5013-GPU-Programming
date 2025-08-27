@@ -6,7 +6,7 @@
 typedef struct {
     unsigned int num_cols;   // number of columns
     unsigned int num_rows;  // number of rows
-    int32_t *elements;      // linear row-major array: row * width + col
+    uint32_t *elements;      // linear row-major array: row * width + col
 } Matrix;
 
 #endif

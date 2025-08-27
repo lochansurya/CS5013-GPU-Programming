@@ -6,7 +6,7 @@
 #define MAX_BUF_SIZE 1024
 
 // Read CSV into a Matrix struct
-void matrix_read_from_csv_int32(Matrix* mat, const char *file_path) {
+void matrix_read_from_csv_uint32(Matrix* mat, const char *file_path) {
     FILE* fp = fopen(file_path, "r");
     if (!fp) {
         perror("File Opening Error");
@@ -31,9 +31,9 @@ void matrix_read_from_csv_int32(Matrix* mat, const char *file_path) {
     }
 
     // Allocate linear row-major array
-    mat->elements = malloc(mat->num_rows * mat->num_cols * sizeof(int32_t));
+    mat->elements = malloc(mat->num_rows * mat->num_cols * sizeof(uint32_t));
     if (!mat->elements) {
-        perror("Memory Allocation Error");
+        perror("Memory Allocation Error\n");
         fclose(fp);
         return;
     }
@@ -57,16 +57,16 @@ void matrix_read_from_csv_int32(Matrix* mat, const char *file_path) {
 }
 
 // Write Matrix struct to CSV
-void matrix_write_to_csv_int32(Matrix* mat, const char *file_path) {
+void matrix_write_to_csv_uint32(Matrix* mat, const char *file_path) {
     FILE* fp = fopen(file_path, "w");
     if (!fp) {
-        perror("File Opening Error");
+        perror("File Opening Error\n");
         return;
     }
 
     for (unsigned int row = 0; row < mat->num_rows; ++row) {
         for (unsigned int col = 0; col < mat->num_cols; ++col) {
-            fprintf(fp, "%d", mat->elements[row * mat->num_cols + col]);
+            fprintf(fp, "%u", mat->elements[row * mat->num_cols + col]);
             if (col < mat->num_cols - 1) {
                 fprintf(fp, ",");
             }
@@ -78,11 +78,11 @@ void matrix_write_to_csv_int32(Matrix* mat, const char *file_path) {
 }
 
 // Print matrix
-void print_matrix( Matrix* mat) {
+void print_matrix_uint32( Matrix* mat) {
     printf("matrix:\n[");
     for (unsigned int row = 0; row < mat->num_rows; ++row) {
         for (unsigned int col = 0; col < mat->num_cols; ++col) {
-            printf("%d ", mat->elements[row * mat->num_cols + col]);
+            printf("%u ", mat->elements[row * mat->num_cols + col]);
         }
         printf("\n");
     }

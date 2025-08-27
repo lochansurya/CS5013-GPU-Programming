@@ -7,7 +7,7 @@
 // CUDA kernel for matrix multiplication: C = A * B
 // Destination/Result-First API
 __global__ void matrix_multiplication_dkernel(
-    int32_t* C, const int32_t* A, const int32_t* B, int num_rows, int N, int num_cols) 
+    uint32_t* C, const uint32_t* A, const uint32_t* B, int num_rows, int N, int num_cols) 
 {   
     // Compute the Position of the Block in the Grid
     unsigned int bid_x = blockIdx.x * blockDim.x;
@@ -22,7 +22,7 @@ __global__ void matrix_multiplication_dkernel(
     unsigned int col = tid_x;
 
     if(row < num_rows && col < num_cols) {
-        int32_t Cvalue = 0; //acuumulator
+        uint32_t Cvalue = 0; //acuumulator
         for(unsigned int k = 0; k < N; ++k) {
             Cvalue += A[row * N + k] * B[k * num_cols + col];
         }
@@ -31,7 +31,7 @@ __global__ void matrix_multiplication_dkernel(
 }
 
 // Host-callable function using Matrix structs and explicit thread/block dims
-extern "C" void solve(int32_t* d_C, const int32_t* d_A, const int32_t* d_B,
+extern "C" void solve(uint32_t* d_C, const uint32_t* d_A, const uint32_t* d_B,
                       unsigned int grid_x,
                       unsigned int grid_y,
                       unsigned int block_x,
@@ -104,23 +104,23 @@ int main(int argc, char* argv[]) {
     C.num_rows = A.num_rows;
     C.num_cols = B.num_cols;
     printf("shape(C) = (%u, %u)", C.num_rows, C.num_cols);
-    C.elements = (int32_t*)malloc(C.num_rows * C.num_cols * sizeof(int32_t));
+    C.elements = (uint32_t*)malloc(C.num_rows * C.num_cols * sizeof(uint32_t));
 
     // Allocate device memory
-    int32_t *d_A, *d_B, *d_C;
-    cudaMalloc(&d_A, A.num_rows * A.num_cols * sizeof(int32_t));
-    cudaMalloc(&d_B, B.num_rows * B.num_cols * sizeof(int32_t));
-    cudaMalloc(&d_C, C.num_rows * C.num_cols * sizeof(int32_t));
+    uint32_t *d_A, *d_B, *d_C;
+    cudaMalloc(&d_A, A.num_rows * A.num_cols * sizeof(uint32_t));
+    cudaMalloc(&d_B, B.num_rows * B.num_cols * sizeof(uint32_t));
+    cudaMalloc(&d_C, C.num_rows * C.num_cols * sizeof(uint32_t));
 
     // Copy host data to device
-    cudaMemcpy(d_A, A.elements, A.num_rows * A.num_cols * sizeof(int32_t), cudaMemcpyHostToDevice);
-    cudaMemcpy(d_B, B.elements, B.num_rows * B.num_cols * sizeof(int32_t), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_A, A.elements, A.num_rows * A.num_cols * sizeof(uint32_t), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_B, B.elements, B.num_rows * B.num_cols * sizeof(uint32_t), cudaMemcpyHostToDevice);
 
     // Launch kernel
     solve(d_C, d_A, d_B, num_blocks_per_grid_x, num_blocks_per_grid_y, num_threads_per_block_x, num_threads_per_block_y, A.num_rows, A.num_cols, B.num_cols);
 
     // Copy result back to host
-    cudaMemcpy(C.elements, d_C, C.num_rows * C.num_cols * sizeof(int32_t), cudaMemcpyDeviceToHost);
+    cudaMemcpy(C.elements, d_C, C.num_rows * C.num_cols * sizeof(uint32_t), cudaMemcpyDeviceToHost);
 
     //print matrix
     print_matrix(&C);

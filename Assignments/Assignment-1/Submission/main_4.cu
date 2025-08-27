@@ -1,3 +1,4 @@
+#include "matrix.h"
 #include "matrix_csv.h"
 #include <cuda_runtime.h>
 #include <stdio.h>
@@ -13,9 +14,9 @@ typedef struct {
 
 // Kernel: Transpose input -> output using shared memory tiling
 __global__
-void transpose_tiled_kernel(Matrix input, Matrix output) {
+void matrix_transpose_tiled_dkernel(int32_t *output, Matrix *input, unsigned int tile_width) {
     // shared memory tile with +1 padding on x to avoid bank conflicts
-    __shared__ int32_t tile[TILE_DIM][TILE_DIM + 1];
+    __shared__ int32_t tile[tile_width][tile_width + 1];
 
     // -------------------------
     // 1) block origin in global coords (top-left corner of this block in the input matrix)
@@ -69,64 +70,98 @@ void transpose_tiled_kernel(Matrix input, Matrix output) {
     }
 }
 
-int main(void) {
-    const unsigned int M = 32; // rows
-    const unsigned int N = 32; // cols
+// Host-callable entry point
+extern "C"
 
-    // host allocation
-    int32_t *h_in  = (int32_t*)malloc(M * N * sizeof(int32_t));
-    int32_t *h_out = (int32_t*)malloc(M * N * sizeof(int32_t));
+void solve(const int32_t* d_A, int32_t* d_A_T,
+           unsigned int M, unsigned int N,
+           unsigned int num_rows,
+           unsigned int num_cols) {
+    dim3 dimBlock(N, 1, 1);
+    dim3 dimGrid(M, 1, 1);
 
-    // initialize input matrix with row*width+col
-    for (int r = 0; r < M; ++r) {
-        for (int c = 0; c < N; ++c) {
-            h_in[r * N + c] = (int32_t)(r * N + c);
-        }
+    cudaEvent_t start, stop;
+    cudaEventCreate(&start);
+    cudaEventCreate(&stop);
+
+    cudaEventRecord(start);
+    matrix_transpose_naive_dkernel<<<dimGrid, dimBlock>>>(d_A_T, d_A, num_rows, num_cols);
+    cudaEventRecord(stop);
+
+    cudaError_t err = cudaDeviceSynchronize();
+    if (err != cudaSuccess){
+        printf("CUDA Error: %s\n", cudaGetErrorString(err));
     }
 
-    // device allocation
-    Matrix d_in, d_out;
-    d_in.width = N; d_in.height = M;
-    d_out.width = M; d_out.height = N;
+    cudaEventSynchronize(stop);
+    float ms = 0.0f;
+    cudaEventElapsedTime(&ms, start, stop);
+    printf("Kernel elapsed time: %f us \n", ms * 1000.0f);
 
-    cudaMalloc((void**)&d_in.elements, M * N * sizeof(int32_t));
-    cudaMalloc((void**)&d_out.elements, M * N * sizeof(int32_t));
-
-    cudaMemcpy(d_in.elements, h_in, M * N * sizeof(int32_t), cudaMemcpyHostToDevice);
-
-    // launch transpose kernel
-    dim3 dimBlock(TILE_DIM, TILE_DIM);
-    dim3 dimGrid((N + dimBlock.x - 1) / dimBlock.x,
-                 (M + dimBlock.y - 1) / dimBlock.y);
-
-    transpose_tiled_kernel<<<dimGrid, dimBlock>>>(d_in, d_out);
-    cudaDeviceSynchronize();
-
-    cudaMemcpy(h_out, d_out.elements, M * N * sizeof(int32_t), cudaMemcpyDeviceToHost);
-
-    // Verify transpose
-    bool correct = true;
-    for (int r = 0; r < M; ++r) {
-        for (int c = 0; c < N; ++c) {
-            int32_t expected = h_in[r * N + c];
-            int32_t got = h_out[c * M + r];
-            if (expected != got) {
-                correct = false;
-                printf("Mismatch at input(%d,%d) -> output(%d,%d): %f != %f\n",
-                       r, c, c, r, expected, got);
-                goto end;
-            }
-        }
-    }
-
-end:
-    if (correct) printf("Matrix transpose PASSED ✅\n");
-    else         printf("Matrix transpose FAILED ❌\n");
-
-    free(h_in); free(h_out);
-    cudaFree(d_in.elements);
-    cudaFree(d_out.elements);
-
-    return 0;
+    cudaEventDestroy(start);
+    cudaEventDestroy(stop);
 }
 
+// Example host main (using Matrix helpers)
+int main(int argc, char** argv) {
+    if (argc != 3) {
+        fprintf(stderr, "Usage: %s <matrix_a.csv> <matrix_b.csv>\n", argv[0]);
+        return EXIT_FAILURE;
+    }
+
+    // input matrix csv filepath
+    const char *matrix_A_csv_file_path = argv[1];
+    Matrix A = matrix_read_from_csv_int32(matrix_A_csv_file_path);
+
+    // ouput matrix_csv filepath
+    const char *matrix_A_T_csv_file_path = argv[2];
+    Matrix A_T;
+    A_T.width = A.height;
+    A_T.height = A.width;
+    A_T.elements = (int32_t*)malloc(A_T.width * A_T.height * sizeof(int32_t));
+
+    int32_t *d_A, *d_A_T;
+    cudaError_t err_A = cudaMalloc(&d_A, A.width * A.height * sizeof(int32_t));
+    
+    if(err_A != cudaSuccess){
+        printf("cudaMalloc Failed for d_A\n");
+        return EXIT_FAILURE;
+    }
+    
+    cudaError_t err_A_T = cudaMalloc(&d_A_T, A_T.width * A_T.height * sizeof(int32_t));
+
+    if(err_A_T = cudaSuccess){
+        printf("cudaMalloc Failed for d_A_T\n");
+        return EXIT_FAILURE;
+    }
+
+    cudaError_t err_H2D= cudaMemcpy(d_A, A.elements,
+                            A.width * A.height * sizeof(int32_t),
+                            cudaMemcpyHostToDevice);
+
+    if( err_H2D != cudaSuccess){
+        printf("CUDA Error: %s\n", cudaGetErrorString(err_H2D));
+        return EXIT_FAILURE;
+    }
+
+    // Call the C wrapper
+    solve(d_A, d_A_T, A.height, A.width);
+
+    cudaError_t err_D2H = cudaMemcpy(A_T.elements, d_A_T,
+                            A_T.width * A_T.height * sizeof(int32_t),
+                            cudaMemcpyDeviceToHost);
+
+    if( err_D2H != cudaSuccess){
+        printf("CUDA Error: %s\n", cudaGetErrorString(err_D2H));
+        return EXIT_FAILURE;
+    }
+
+    matrix_write_to_csv_int32(&A_T, matrix_A_T_csv_file_path);
+
+    cudaFree(d_A);
+    cudaFree(d_A_T);
+    free(A.elements);
+    free(A_T.elements);
+
+    return EXIT_SUCCESS;
+}
