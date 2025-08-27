@@ -18,10 +18,10 @@ matmul_1_2:  main_1_2.cu $(OBJ_HELPER)
 matmul_2:    main_2.cu $(OBJ_HELPER)
 	$(NVCC) $(CFLAGS) -o $@ $^
 
-matmul_3:    main_3.cu $(OBJ_HELPER)
+mattrans_3:    main_3.cu $(OBJ_HELPER)
 	$(NVCC) $(CFLAGS) -o $@ $^
 
-matmul_4:    main_4.cu $(OBJ_HELPER)
+mattrans_4:    main_4.cu $(OBJ_HELPER)
 	$(NVCC) $(CFLAGS) -o $@ $^
 
 # Object rule for helper C file

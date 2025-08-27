@@ -41,11 +41,9 @@ if __name__ == "__main__":
     print("Sample output [0:5, 0:5]:\n", C[:5, :5])
 
     # Export result to CSV with Unix-style newlines (\n)
-    out_file = "matrix_result.csv"
+    out_file = "tests/expected_matrix_result.csv"
     with open(out_file, "w", newline="\n") as f:
         np.savetxt(f, C, fmt="%u", delimiter=",")
 
     print(f"Result exported to {out_file}")
-change sizes as needed
 
-    # Generate random uint32 matri

@@ -88,8 +88,8 @@ int main(int argc, char* argv[]) {
     Matrix C = {0, 0, NULL};
 
     // Read matrices into the Matrix buffers, from the CLI input CSV filepaths
-    matrix_read_from_csv_int32(&A, matrix_A_file_path);
-    matrix_read_from_csv_int32(&B, matrix_B_file_path);
+    matrix_read_from_csv_uint32(&A, matrix_A_file_path);
+    matrix_read_from_csv_uint32(&B, matrix_B_file_path);
 
     //check the shapes of the matrices read
     if(A.num_cols != B.num_rows){
@@ -126,7 +126,7 @@ int main(int argc, char* argv[]) {
     print_matrix(&C);
 
     //Write the output matrix matrix_c.csv
-    matrix_write_to_csv_int32(&C, "public_test_cases/matrix_c.csv");
+    matrix_write_to_csv_uint32(&C, "public_test_cases/matrix_c.csv");
 
     // have to check if the matrix multiplication is correct by running a diff between the output_matrix_mul.csv and matrix_c.csv under the public_test_cases directory
     
