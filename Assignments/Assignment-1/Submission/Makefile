@@ -9,7 +9,7 @@ OBJ_HELPER:= matrix_csv.o
 PROGS := matmul_1d matmul_1_2 matmul_2 matmul_3 matmul_4
 
 # Map program names to source files
-matmul_1d:   main_1_1.cu $(OBJ_HELPER)
+matmul_1_1:   main_1_1.cu $(OBJ_HELPER)
 	$(NVCC) $(CFLAGS) -o $@ $^
 
 matmul_1_2:  main_1_2.cu $(OBJ_HELPER)
