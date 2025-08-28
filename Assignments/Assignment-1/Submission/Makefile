@@ -6,7 +6,10 @@ SRC_HELPER:= matrix_csv.c
 OBJ_HELPER:= matrix_csv.o
 
 # Programs
-PROGS := matmul_1d matmul_1_2 matmul_2 matmul_3 matmul_4
+PROGS := matmul_1_1 matmul_1_2 matmul_2 mattrans_3 mattrans_4
+
+all: $(PROGS)
+	@echo "All programs built successfully."
 
 # Map program names to source files
 matmul_1_1:   main_1_1.cu $(OBJ_HELPER)
@@ -33,5 +36,6 @@ all: $(PROGS)
 
 # Clean
 clean:
+	@echo "Removing all generated binaries..."
 	rm -f $(PROGS) $(OBJ_HELPER)
 

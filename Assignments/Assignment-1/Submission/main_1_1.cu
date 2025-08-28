@@ -101,7 +101,7 @@ int main(int argc, char* argv[]) {
     // Allocate C matrix
     C.num_rows = A.num_rows;
     C.num_cols = B.num_cols;
-    printf("shape(C) = (%u, %u)", C.num_rows, C.num_cols);
+    printf("shape(C=AB) = (%u, %u)\n", C.num_rows, C.num_cols);
     C.elements = (uint32_t*)malloc(C.num_rows * C.num_cols * sizeof(uint32_t));
 
     // Allocate device memory
@@ -122,11 +122,16 @@ int main(int argc, char* argv[]) {
     cudaMemcpy(C.elements, d_C, C.num_rows * C.num_cols * sizeof(uint32_t), cudaMemcpyDeviceToHost);
 
     //print matrix
+    printf("==============\n");
+    printf("Printing the output matrix...\n");
     print_matrix_uint32(&C);
+    printf("==============\n");
 
     //Write the output matrix matrix_c.csv
-    matrix_write_to_csv_uint32(&C, "public_test_cases/matrix_c.csv");
-
+    printf("====================\n");
+    printf("Writing output matrix to public_test_cases/C_rect.csv...\n");
+    matrix_write_to_csv_uint32(&C, "public_test_cases/C_rect.csv");
+    printf("====================\n");
     // Free device memory
     cudaFree(d_A);
     cudaFree(d_B);
