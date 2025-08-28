@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <cuda_runtime.h>
 
-__global__ void matmul_1d_dkernel(uint32_t* C, const uint32_t* A, const uint32_t* B,
+__global__ void matmul_1d_dkernel(int32_t* C, const int32_t* A, const int32_t* B,
                                   int M, int N, int K, int work_per_thread){
     // 1D thread id
     unsigned int bid = blockIdx.x * blockDim.x;
@@ -22,7 +22,7 @@ __global__ void matmul_1d_dkernel(uint32_t* C, const uint32_t* A, const uint32_t
         unsigned int row = idx / K;
         unsigned int col = idx % K;
 
-        uint32_t Cvalue = 0;
+        int32_t Cvalue = 0;
         for (unsigned int k = 0; k < (unsigned int)N; ++k) {
             Cvalue += A[row * N + k] * B[k * K + col];
         }
@@ -31,7 +31,7 @@ __global__ void matmul_1d_dkernel(uint32_t* C, const uint32_t* A, const uint32_t
 }
 
 // Host-callable function using raw device pointers and explicit thread/block dims
-extern "C" void solve(uint32_t* d_C, const uint32_t* d_A, const uint32_t* d_B,
+extern "C" void solve(int32_t* d_C, const int32_t* d_A, const int32_t* d_B,
                       unsigned int grid_x,
                       unsigned int block_x,
                       int M, int N, int K)
@@ -63,7 +63,7 @@ extern "C" void solve(uint32_t* d_C, const uint32_t* d_A, const uint32_t* d_B,
     cudaEventSynchronize(stop);
     float ms = 0.0f;
     cudaEventElapsedTime(&ms, start, stop);
-    printf("Kernel elapsed time: %f microseconds \n", ms * 1000.0f);
+    printf("Kernel execution time: %f microseconds \n", ms * 1000.0f);
 
     cudaEventDestroy(start);
     cudaEventDestroy(stop);
@@ -102,36 +102,34 @@ int main(int argc, char* argv[]) {
     C.num_rows = A.num_rows;
     C.num_cols = B.num_cols;
     printf("shape(C=AB) = (%u, %u)\n", C.num_rows, C.num_cols);
-    C.elements = (uint32_t*)malloc(C.num_rows * C.num_cols * sizeof(uint32_t));
+    C.elements = (int32_t*)malloc(C.num_rows * C.num_cols * sizeof(int32_t));
 
     // Allocate device memory
-    uint32_t *d_A, *d_B, *d_C;
-    cudaMalloc(&d_A, A.num_rows * A.num_cols * sizeof(uint32_t));
-    cudaMalloc(&d_B, B.num_rows * B.num_cols * sizeof(uint32_t));
-    cudaMalloc(&d_C, C.num_rows * C.num_cols * sizeof(uint32_t));
+    int32_t *d_A, *d_B, *d_C;
+    cudaMalloc(&d_A, A.num_rows * A.num_cols * sizeof(int32_t));
+    cudaMalloc(&d_B, B.num_rows * B.num_cols * sizeof(int32_t));
+    cudaMalloc(&d_C, C.num_rows * C.num_cols * sizeof(int32_t));
 
     // Copy host data to device
-    cudaMemcpy(d_A, A.elements, A.num_rows * A.num_cols * sizeof(uint32_t), cudaMemcpyHostToDevice);
-    cudaMemcpy(d_B, B.elements, B.num_rows * B.num_cols * sizeof(uint32_t), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_A, A.elements, A.num_rows * A.num_cols * sizeof(int32_t), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_B, B.elements, B.num_rows * B.num_cols * sizeof(int32_t), cudaMemcpyHostToDevice);
 
     // Launch kernel
     solve(d_C, d_A, d_B, num_blocks_per_grid_x, num_threads_per_block_x,
           A.num_rows, A.num_cols, B.num_cols);
 
     // Copy result back to host
-    cudaMemcpy(C.elements, d_C, C.num_rows * C.num_cols * sizeof(uint32_t), cudaMemcpyDeviceToHost);
+    cudaMemcpy(C.elements, d_C, C.num_rows * C.num_cols * sizeof(int32_t), cudaMemcpyDeviceToHost);
 
     //print matrix
-    printf("==============\n");
-    printf("Printing the output matrix...\n");
-    print_matrix_uint32(&C);
-    printf("==============\n");
+    // printf("==============\n");
+    // printf("Printing the output matrix...\n");
+    // print_matrix_uint32(&C);
+    // printf("==============\n");
 
     //Write the output matrix matrix_c.csv
-    printf("====================\n");
-    printf("Writing output matrix to public_test_cases/C_rect.csv...\n");
-    matrix_write_to_csv_uint32(&C, "public_test_cases/C_rect.csv");
-    printf("====================\n");
+    printf("Product Matrix of size (%u, %u) stored as output_1_1_CS25MTECH11015.csv...\n", C.num_rows, C.num_cols);
+    matrix_write_to_csv_uint32(&C, "output_1_1_CS25MTECH11015.csv");
     // Free device memory
     cudaFree(d_A);
     cudaFree(d_B);

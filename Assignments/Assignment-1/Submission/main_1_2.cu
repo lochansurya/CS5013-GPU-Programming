@@ -6,14 +6,14 @@
 
 // Regular kernel: each thread computes one element
 __global__ void matrix_multiplication_regular_dkernel(
-    uint32_t* d_C, const uint32_t* d_A, const uint32_t* d_B, int M, int N, int K)
+    int32_t* d_C, const int32_t* d_A, const int32_t* d_B, int M, int N, int K)
 {
     unsigned int row = blockIdx.y * blockDim.y + threadIdx.y;
     unsigned int col = blockIdx.x * blockDim.x + threadIdx.x;
 
     if(row >= M || col >= K) return;
 
-    uint32_t tmp = 0;
+    int32_t tmp = 0;
     for(unsigned int k = 0; k < N; ++k)
         tmp += d_A[row * N + k] * d_B[k * K + col];
 
@@ -22,7 +22,7 @@ __global__ void matrix_multiplication_regular_dkernel(
 
 // Thread coarsened kernel
 __global__ void matrix_multiplication_coarsened_dkernel(
-    uint32_t* d_C, const uint32_t* d_A, const uint32_t* d_B, int M, int N, int K,
+    int32_t* d_C, const int32_t* d_A, const int32_t* d_B, int M, int N, int K,
     unsigned int work_per_thread_row, unsigned int work_per_thread_col)
 {   
     unsigned int bid_x = blockIdx.x * blockDim.x;
@@ -39,7 +39,7 @@ __global__ void matrix_multiplication_coarsened_dkernel(
             unsigned int col = tid_x + j * blockDim.x * gridDim.x;
             if(col >= K) break;
 
-            uint32_t tmp = 0;
+            int32_t tmp = 0;
             for(unsigned int k = 0; k < N; ++k)
                 tmp += d_A[row * N + k] * d_B[k * K + col];
 
@@ -48,7 +48,7 @@ __global__ void matrix_multiplication_coarsened_dkernel(
     }
 }
 
-extern "C" void solve(uint32_t* d_C, const uint32_t* d_A, const uint32_t* d_B,
+extern "C" void solve(int32_t* d_C, const int32_t* d_A, const int32_t* d_B,
                       unsigned int grid_x,
                       unsigned int grid_y,
                       unsigned int block_x,
@@ -87,7 +87,7 @@ extern "C" void solve(uint32_t* d_C, const uint32_t* d_A, const uint32_t* d_B,
         cudaEventSynchronize(stop_regular);
         float ms = 0.0f;
         cudaEventElapsedTime(&ms, start_regular, stop_regular);
-        printf("Regular kernel elapsed time: %f us\n", ms * 1000.0f);
+        printf("Kernel execution time: %f microseconds\n", ms * 1000.0f);
 
     } else {
         // Coarsened kernel timing
@@ -104,7 +104,7 @@ extern "C" void solve(uint32_t* d_C, const uint32_t* d_A, const uint32_t* d_B,
         cudaEventSynchronize(stop_coarse);
         float ms = 0.0f;
         cudaEventElapsedTime(&ms, start_coarse, stop_coarse);
-        printf("Coarsened kernel elapsed time: %f microseconds\n", ms * 1000.0f);
+        printf("Kernel execution time: %f microseconds\n", ms * 1000.0f);
     }
 
     // Destroy events
@@ -147,24 +147,31 @@ int main(int argc, char* argv[]) {
     C.num_rows = A.num_rows;
     C.num_cols = B.num_cols;
     printf("shape(C) = (%u, %u)\n", C.num_rows, C.num_cols);
-    C.elements = (uint32_t*)malloc(C.num_rows * C.num_cols * sizeof(uint32_t));
+    C.elements = (int32_t*)malloc(C.num_rows * C.num_cols * sizeof(int32_t));
 
-    uint32_t *d_A, *d_B, *d_C;
-    cudaMalloc(&d_A, A.num_rows * A.num_cols * sizeof(uint32_t));
-    cudaMalloc(&d_B, B.num_rows * B.num_cols * sizeof(uint32_t));
-    cudaMalloc(&d_C, C.num_rows * C.num_cols * sizeof(uint32_t));
+    int32_t *d_A, *d_B, *d_C;
+    cudaMalloc(&d_A, A.num_rows * A.num_cols * sizeof(int32_t));
+    cudaMalloc(&d_B, B.num_rows * B.num_cols * sizeof(int32_t));
+    cudaMalloc(&d_C, C.num_rows * C.num_cols * sizeof(int32_t));
 
-    cudaMemcpy(d_A, A.elements, A.num_rows * A.num_cols * sizeof(uint32_t), cudaMemcpyHostToDevice);
-    cudaMemcpy(d_B, B.elements, B.num_rows * B.num_cols * sizeof(uint32_t), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_A, A.elements, A.num_rows * A.num_cols * sizeof(int32_t), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_B, B.elements, B.num_rows * B.num_cols * sizeof(int32_t), cudaMemcpyHostToDevice);
 
     solve(d_C, d_A, d_B, num_blocks_per_grid_x, num_blocks_per_grid_y,
           num_threads_per_block_x, num_threads_per_block_y,
           A.num_rows, A.num_cols, B.num_cols);
 
-    cudaMemcpy(C.elements, d_C, C.num_rows * C.num_cols * sizeof(uint32_t), cudaMemcpyDeviceToHost);
+    cudaMemcpy(C.elements, d_C, C.num_rows * C.num_cols * sizeof(int32_t), cudaMemcpyDeviceToHost);
 
-    print_matrix_uint32(&C);
-    matrix_write_to_csv_uint32(&C, "public_test_cases/matrix_c.csv");
+    // printf("====================\n");
+    // printf("Printing the matrix...\n");
+    // print_matrix_uint32(&C);
+    // printf("====================\n");
+
+    //Write the output matrix to the csv file
+    printf("Product Matrix of size (%u, %u) stored as matrix_c.csv public_test_cases/output_1_2_CS25MTECH11015.csv...\n", C.num_rows, C.num_cols);
+    matrix_write_to_csv_uint32(&C, "public_test_cases/output_1_2_CS25MTECH11015.csv");
+
 
     cudaFree(d_A);
     cudaFree(d_B);

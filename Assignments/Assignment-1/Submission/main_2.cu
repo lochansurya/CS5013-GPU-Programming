@@ -10,12 +10,12 @@
 
 // CUDA kernel: Tiled matrix multiplication using shared memory
 __global__ void matrix_multiplication_tiled_dkernel(
-    uint32_t* C, uint32_t* A, uint32_t* B,
+    int32_t* C, int32_t* A, int32_t* B,
     unsigned int M, unsigned int N, unsigned int K, unsigned int tile_width)
 {
-    extern __shared__ uint32_t shm[]; // kernel-launch-time-configurable; Dynamic Memory Allocation of the Shared Memory
-    uint32_t* TILE_A = shm;
-    uint32_t* TILE_B = shm + tile_width * tile_width;
+    extern __shared__ int32_t shm[]; // kernel-launch-time-configurable; Dynamic Memory Allocation of the Shared Memory
+    int32_t* TILE_A = shm;
+    int32_t* TILE_B = shm + tile_width * tile_width;
 
     // Block Coords in the Global Memory
     unsigned int bid_x = blockIdx.x * blockDim.x ;
@@ -29,7 +29,7 @@ __global__ void matrix_multiplication_tiled_dkernel(
     unsigned int row_in_tile = threadIdx.y;
     unsigned int col_in_tile = threadIdx.x;
 
-    uint32_t tmp = 0; // accumulator
+    int32_t tmp = 0; // accumulator
     unsigned int num_tiles = (N + tile_width - 1) / tile_width;
 
     for (unsigned int phase = 0; phase < num_tiles; ++phase)
@@ -56,12 +56,12 @@ __global__ void matrix_multiplication_tiled_dkernel(
 }
 
 // Host-callable function
-extern "C" void solve(uint32_t* d_C, uint32_t* d_A, uint32_t* d_B,
+extern "C" void solve(int32_t* d_C, int32_t* d_A, int32_t* d_B,
                       int M, int N, int K, unsigned int tile_width)
 {
     dim3 block(tile_width, tile_width);
     dim3 grid((K + tile_width - 1) / tile_width, (M + tile_width - 1) / tile_width);
-    size_t shared_size_in_bytes = 2 * tile_width * tile_width * sizeof(uint32_t); // for the 2 different tiles A, B;
+    size_t shared_size_in_bytes = 2 * tile_width * tile_width * sizeof(int32_t); // for the 2 different tiles A, B;
 
     cudaEvent_t start, stop;
     cudaEventCreate(&start);
@@ -78,7 +78,7 @@ extern "C" void solve(uint32_t* d_C, uint32_t* d_A, uint32_t* d_B,
     cudaEventSynchronize(stop);
     float ms = 0.0f;
     cudaEventElapsedTime(&ms, start, stop);
-    printf("Kernel elapsed time: %f microseconds\n", ms * 1000.0f);
+    printf("Kernel execution time: %f microseconds\n", ms * 1000.0f);
 
     cudaEventDestroy(start);
     cudaEventDestroy(stop);
@@ -112,22 +112,29 @@ int main(int argc, char* argv[])
     Matrix C;
     C.num_rows = A.num_rows;
     C.num_cols = B.num_cols;
-    C.elements = (uint32_t*)malloc(C.num_rows * C.num_cols * sizeof(uint32_t));
+    C.elements = (int32_t*)malloc(C.num_rows * C.num_cols * sizeof(int32_t));
 
-    uint32_t *d_A, *d_B, *d_C;
-    cudaMalloc(&d_A, A.num_rows * A.num_cols * sizeof(uint32_t));
-    cudaMalloc(&d_B, B.num_rows * B.num_cols * sizeof(uint32_t));
-    cudaMalloc(&d_C, C.num_rows * C.num_cols * sizeof(uint32_t));
+    int32_t *d_A, *d_B, *d_C;
+    cudaMalloc(&d_A, A.num_rows * A.num_cols * sizeof(int32_t));
+    cudaMalloc(&d_B, B.num_rows * B.num_cols * sizeof(int32_t));
+    cudaMalloc(&d_C, C.num_rows * C.num_cols * sizeof(int32_t));
 
-    cudaMemcpy(d_A, A.elements, A.num_rows * A.num_cols * sizeof(uint32_t), cudaMemcpyHostToDevice);
-    cudaMemcpy(d_B, B.elements, B.num_rows * B.num_cols * sizeof(uint32_t), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_A, A.elements, A.num_rows * A.num_cols * sizeof(int32_t), cudaMemcpyHostToDevice);
+    cudaMemcpy(d_B, B.elements, B.num_rows * B.num_cols * sizeof(int32_t), cudaMemcpyHostToDevice);
 
     solve(d_C, d_A, d_B, A.num_rows, A.num_cols, B.num_cols, tile_width);
 
-    cudaMemcpy(C.elements, d_C, C.num_rows * C.num_cols * sizeof(uint32_t), cudaMemcpyDeviceToHost);
+    cudaMemcpy(C.elements, d_C, C.num_rows * C.num_cols * sizeof(int32_t), cudaMemcpyDeviceToHost);
 
 
-    matrix_write_to_csv_uint32(&C, "public_test_cases/matrix_c.csv");
+    // printf("====================\n");
+    // printf("Printing the matrix...\n");
+    // print_matrix_uint32(&C);
+    // printf("====================\n");
+
+    printf("Product Matrix of size (%u, %u) stored as matrix_c.csv output_2_CS25MTECH11015.csv...\n", C.num_rows, C.num_cols);
+    matrix_write_to_csv_uint32(&C, "output_2_CS25MTECH11015.csv");
+
 
     free(A.elements);
     free(B.elements);
