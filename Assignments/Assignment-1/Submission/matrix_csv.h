@@ -6,9 +6,9 @@
 extern "C" {
 #endif
 
-void matrix_read_from_csv_uint32(Matrix* mat, const char *file_path);
-void matrix_write_to_csv_uint32(Matrix* mat, const char *file_path);
-void print_matrix_uint32(Matrix* mat);
+void matrix_read_from_csv_int32(Matrix* mat, const char *file_path);
+void matrix_write_to_csv_int32(Matrix* mat, const char *file_path);
+void print_matrix_int32(Matrix* mat);
 
 #ifdef __cplusplus
 }

@@ -78,7 +78,8 @@ void solve(int32_t* d_A, int32_t* d_A_T,
            unsigned int num_rows,
            unsigned int num_cols,
            unsigned int shared_size_in_bytes,
-           unsigned int tile_width) {
+           unsigned int tile_width,
+           unsigned int *kernel_time_us) {
     // each block handles a tile_width x tile_width tile
     dim3 dimBlock(tile_width, tile_width, 1);
     dim3 dimGrid((num_cols + tile_width - 1) / tile_width,
@@ -105,17 +106,16 @@ void solve(int32_t* d_A, int32_t* d_A_T,
     cudaEventSynchronize(stop);
     float ms = 0.0f;
     cudaEventElapsedTime(&ms, start, stop);
-    printf("Kernel execution time: %f microseconds \n", ms * 1000.0f);
-
+    *kernel_time_us = (unsigned int)(ms * 1000.0f);
     cudaEventDestroy(start);
     cudaEventDestroy(stop);
 }
 
 // Example host main (using Matrix helpers)
 int main(int argc, char** argv) {
-    // Expect: tile_width, input.csv, output.csv
-    if (argc != 4) {
-        fprintf(stderr, "Usage: %s <tile_width> <matrix_a.csv> \n", argv[0]);
+    // Expect: tile_width, input.csv
+    if (argc != 3) {
+        fprintf(stderr, "Usage: %s <tile_width> <matrix_a.csv>\n", argv[0]);
         return EXIT_FAILURE;
     }
 
@@ -126,11 +126,11 @@ int main(int argc, char** argv) {
         return EXIT_FAILURE;
     }
 
-    // input and output matrix csv filepaths
+    // input matrix csv filepath
     const char *matrix_A_csv_file_path = argv[2];
 
     Matrix A;
-    matrix_read_from_csv_uint32(&A, matrix_A_csv_file_path);
+    matrix_read_from_csv_int32(&A, matrix_A_csv_file_path);
 
     // output matrix (transpose)
     Matrix A_T;
@@ -173,12 +173,14 @@ int main(int argc, char** argv) {
     // Dynamic shared memory size: tile_width * (tile_width + 1) to account for padded stride
     unsigned int shared_size_in_bytes = tile_width * (tile_width + 1) * (unsigned int)sizeof(int32_t);
 
+    unsigned int kernel_time_us = 0;
     // Call the C wrapper (M, N kept in signature for compatibility but unused)
-    solve(d_A, d_A_T,
-          A.num_rows, A.num_cols,
-          A.num_rows, A.num_cols,
-          shared_size_in_bytes,
-          tile_width);
+    solve(  d_A, d_A_T,
+            A.num_rows, A.num_cols,
+            A.num_rows, A.num_cols,
+            shared_size_in_bytes,
+            tile_width,
+            &kernel_time_us);
 
     cudaError_t err_D2H = cudaMemcpy(A_T.elements, d_A_T, bytes_A_T, cudaMemcpyDeviceToHost);
     if (err_D2H != cudaSuccess){
@@ -189,14 +191,17 @@ int main(int argc, char** argv) {
         return EXIT_FAILURE;
     }
 
-    // printf("====================\n");
-    // printf("Printing the matrix...\n");
-    // print_matrix_uint32(&C);
-    // printf("====================\n");
-
     printf("Product Matrix of size (%u, %u) stored as output_4_CS25MTECH11015.csv...\n", A_T.num_rows, A_T.num_cols);
-    matrix_write_to_csv_uint32(&A_T, "output_4_CS25MTECH11015.csv");
-
+    matrix_write_to_csv_int32(&A_T, "output_4_CS25MTECH11015.csv");
+    printf("Kernel execution time: %u microseconds\n", kernel_time_us);
+    // Write stats to output.txt
+    FILE* fout = fopen("output_4_CS25MTECH11015.txt", "w");
+    if (fout) {
+        unsigned int num_elements = A_T.num_rows * A_T.num_cols;
+        fprintf(fout, "%u\n", num_elements);
+        fprintf(fout, "%u\n", kernel_time_us);
+        fclose(fout);
+    }
     cudaFree(d_A);
     cudaFree(d_A_T);
     free(A.elements);

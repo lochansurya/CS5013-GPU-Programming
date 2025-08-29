@@ -1,51 +1,48 @@
-#include "matrix_csv.h"
 #include "matrix.h"
-#include <cuda_runtime.h>
+#include "matrix_csv.h"
 #include <stdio.h>
+#include <cuda_runtime.h>
+#include <stdint.h>
 #include <stdlib.h>
 
-// Kernel: transpose using 1D grid/block
-__global__
-void matrix_transpose_naive_dkernel(int32_t* output, const int32_t* input,
-                                    unsigned int num_rows, unsigned int num_cols) {
-    // 1) Global thread index
+// 1D coarsened transpose kernel
+__global__ void transpose_1d_dkernel(int32_t* A_T, const int32_t* A,
+                                     unsigned int num_rows, unsigned int num_cols,
+                                     int work_per_thread)
+{
     unsigned int tid = blockIdx.x * blockDim.x + threadIdx.x;
+    unsigned int total = num_rows * num_cols;
 
-    // 2) Total elements in the matrix
-    unsigned int total_elements = num_rows * num_cols;
+    for(int w = 0; w < work_per_thread; ++w){
+        unsigned int idx = tid + w * gridDim.x * blockDim.x;
+        if(idx >= total) break;
 
-    // 3) Check bounds
-    if(tid < total_elements) {
-        // 4) Compute global row and column in input
-        unsigned int global_row_in = tid / num_cols;
-        unsigned int global_col_in = tid % num_cols;
+        unsigned int row = idx / num_cols;
+        unsigned int col = idx % num_cols;
 
-        // 5) Compute global row and column in output (transposed)
-        unsigned int global_row_out = global_col_in;
-        unsigned int global_col_out = global_row_in;
-
-        // 6) Write transposed value
-        output[global_row_out * num_rows + global_col_out] = input[global_row_in * num_cols + global_col_in];
+        A_T[col * num_rows + row] = A[row * num_cols + col];
     }
 }
 
-// Host-callable entry point
-extern "C"
-void solve(int32_t* d_A, int32_t* d_A_T,
-           unsigned int M, unsigned int N,
-           unsigned int num_rows,
-           unsigned int num_cols) {
+// Host-callable function
+extern "C" void solve(int32_t* d_A_T, const int32_t* d_A,
+                      unsigned int grid_x, unsigned int block_x,
+                      unsigned int num_rows, unsigned int num_cols,
+                      unsigned int* kernel_time)
+{
+    int total_threads = grid_x * block_x;
+    int work_per_thread = (num_rows * num_cols + total_threads - 1) / total_threads;
+    if(work_per_thread == 0) work_per_thread = 1;
 
-    // 1D block and grid
-    unsigned int threadsPerBlock = 256; // can vary
-    unsigned int numBlocks = (num_rows * num_cols + threadsPerBlock - 1) / threadsPerBlock;
+    dim3 threads(block_x, 1, 1);
+    dim3 blocks(grid_x, 1, 1);
 
     cudaEvent_t start, stop;
     cudaEventCreate(&start);
     cudaEventCreate(&stop);
 
     cudaEventRecord(start);
-    matrix_transpose_naive_dkernel<<<numBlocks, threadsPerBlock>>>(d_A_T, d_A, num_rows, num_cols);
+    transpose_1d_dkernel<<<blocks, threads>>>(d_A_T, d_A, num_rows, num_cols, work_per_thread);
     cudaEventRecord(stop);
 
     cudaError_t err = cudaDeviceSynchronize();
@@ -56,57 +53,57 @@ void solve(int32_t* d_A, int32_t* d_A_T,
     cudaEventSynchronize(stop);
     float ms = 0.0f;
     cudaEventElapsedTime(&ms, start, stop);
-    printf("Kernel execution time: %f microseconds\n", 1000.f*ms);
+    *kernel_time = (unsigned int)(ms * 1000.0f); // microseconds
 
     cudaEventDestroy(start);
     cudaEventDestroy(stop);
 }
 
-int main(int argc, char** argv) {
-    if (argc != 3) {
-        fprintf(stderr, "Usage: %s <matrix_a.csv> <matrix_a_T.csv>\n", argv[0]);
+// Host test code
+int main(int argc, char* argv[]){
+    if(argc < 4){
+        fprintf(stderr, "Usage: %s <grid_x> <block_x> <path_to_matrix_a.csv>\n", argv[0]);
         return EXIT_FAILURE;
     }
 
-    const char *matrix_A_csv_file_path = argv[1];
+    unsigned int grid_x = atoi(argv[1]);
+    unsigned int block_x = atoi(argv[2]);
+    const char* matrix_A_file = argv[3];
 
-    Matrix A;
-    matrix_read_from_csv_uint32(&A, matrix_A_csv_file_path);
+    Matrix A = {0, 0, NULL};
+    Matrix A_T = {0, 0, NULL};
 
-    Matrix A_T;
+    matrix_read_from_csv_int32(&A, matrix_A_file);
+
     A_T.num_rows = A.num_cols;
     A_T.num_cols = A.num_rows;
     A_T.elements = (int32_t*)malloc(A_T.num_rows * A_T.num_cols * sizeof(int32_t));
 
     int32_t *d_A, *d_A_T;
-    if(cudaMalloc(&d_A, A.num_rows * A.num_cols * sizeof(int32_t)) != cudaSuccess ||
-       cudaMalloc(&d_A_T, A_T.num_rows * A_T.num_cols * sizeof(int32_t)) != cudaSuccess) {
-        printf("cudaMalloc failed\n");
-        return EXIT_FAILURE;
+    cudaMalloc(&d_A, A.num_rows * A.num_cols * sizeof(int32_t));
+    cudaMalloc(&d_A_T, A_T.num_rows * A_T.num_cols * sizeof(int32_t));
+
+    cudaMemcpy(d_A, A.elements, A.num_rows * A.num_cols * sizeof(int32_t), cudaMemcpyHostToDevice);
+
+    unsigned int kernel_time_us = 0;
+    solve(d_A_T, d_A, grid_x, block_x, A.num_rows, A.num_cols, &kernel_time_us);
+
+    cudaMemcpy(A_T.elements, d_A_T, A_T.num_rows * A_T.num_cols * sizeof(int32_t), cudaMemcpyDeviceToHost);
+
+    matrix_write_to_csv_int32(&A_T, "output_3_CS25MTECH11015.csv");
+
+    unsigned int num_elements = A_T.num_rows * A_T.num_cols;
+    printf("Transposed matrix of size %u stored as output_3_CS25MTECH11015.csv\n", num_elements);
+    printf("Kernel execution time: %.u microseconds\n", kernel_time_us);
+
+    // write the stats to the output
+    FILE* fout = fopen("output_3_CS25MTECH11015.txt", "w");
+    if(fout){
+        unsigned int num_elements = A_T.num_rows * A_T.num_cols;
+        fprintf(fout, "%u\n", num_elements);
+        fprintf(fout, "%u\n", kernel_time_us);
+        fclose(fout);
     }
-
-    if(cudaMemcpy(d_A, A.elements, A.num_rows * A.num_cols * sizeof(int32_t),
-                  cudaMemcpyHostToDevice) != cudaSuccess) {
-        printf("CUDA H2D copy failed\n");
-        return EXIT_FAILURE;
-    }
-
-    solve(d_A, d_A_T, A.num_rows, A.num_cols, A.num_rows, A.num_cols);
-
-    if(cudaMemcpy(A_T.elements, d_A_T, A_T.num_rows * A_T.num_cols * sizeof(int32_t),
-                  cudaMemcpyDeviceToHost) != cudaSuccess) {
-        printf("CUDA D2H copy failed\n");
-        return EXIT_FAILURE;
-    }
-
-    // printf("=================================\n");
-    // printf("Printing the Transposed Matrix...\n");
-    // print_matrix_uint32(&A_T);
-    // printf("=================================\n\n");
-
-    printf("Product Matrix of size (%u, %u) stored as output_3_CS25MTECH11015.csv...\n", A_T.num_rows, A_T.num_cols);
-    matrix_write_to_csv_uint32(&A_T, "output_3_CS25MTECH11015.csv");
-
 
     cudaFree(d_A);
     cudaFree(d_A_T);

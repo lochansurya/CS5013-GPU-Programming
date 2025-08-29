@@ -17,7 +17,7 @@ __global__ void matmul_1d_dkernel(int32_t* C, const int32_t* A, const int32_t* B
     // loop over multiple outputs per thread
     for(int w = 0; w < work_per_thread; ++w){
         unsigned int idx = start + w;
-        if (idx >= total) return;
+        if (idx >= total) break;
 
         unsigned int row = idx / K;
         unsigned int col = idx % K;
@@ -34,27 +34,24 @@ __global__ void matmul_1d_dkernel(int32_t* C, const int32_t* A, const int32_t* B
 extern "C" void solve(int32_t* d_C, const int32_t* d_A, const int32_t* d_B,
                       unsigned int grid_x,
                       unsigned int block_x,
-                      int M, int N, int K)
+                      int M, int N, int K,
+                      unsigned int *kernel_time)   // <---- added parameter
 {
     dim3 num_threads_per_block(block_x, 1, 1);
     dim3 num_blocks_per_grid(grid_x, 1, 1);
 
-    // compute work_per_thread based on matrix size and launch config
     int total_outputs = M * K;
     int total_threads = grid_x * block_x;
-    int work_per_thread = (total_outputs + total_threads - 1) / total_threads; // ceil division
+    int work_per_thread = (total_outputs + total_threads - 1) / total_threads;
 
-    // timing
     cudaEvent_t start, stop;
     cudaEventCreate(&start);
     cudaEventCreate(&stop);
 
     cudaEventRecord(start);
-    //launch the CUDA kernel
     matmul_1d_dkernel<<<num_blocks_per_grid, num_threads_per_block>>>(d_C, d_A, d_B, M, N, K, work_per_thread);
     cudaEventRecord(stop);
 
-	// CUDA Event Handling for Profiling; SIGNAL-based; Interrupt-based;
     cudaError_t err = cudaDeviceSynchronize();
     if (err != cudaSuccess) {
         printf("CUDA Error: %s\n", cudaGetErrorString(err));
@@ -63,7 +60,7 @@ extern "C" void solve(int32_t* d_C, const int32_t* d_A, const int32_t* d_B,
     cudaEventSynchronize(stop);
     float ms = 0.0f;
     cudaEventElapsedTime(&ms, start, stop);
-    printf("Kernel execution time: %f microseconds \n", ms * 1000.0f);
+    *kernel_time = ms * 1000.0f;   // <---- microseconds
 
     cudaEventDestroy(start);
     cudaEventDestroy(stop);
@@ -80,16 +77,13 @@ int main(int argc, char* argv[]) {
     const char *matrix_A_file_path = argv[3];
     const char *matrix_B_file_path = argv[4];
 
-    // Initialize matrices
     Matrix A = {0, 0, NULL};
     Matrix B = {0, 0, NULL};
     Matrix C = {0, 0, NULL};
 
-    // Read matrices into the Matrix buffers
-    matrix_read_from_csv_uint32(&A, matrix_A_file_path);
-    matrix_read_from_csv_uint32(&B, matrix_B_file_path);
+    matrix_read_from_csv_int32(&A, matrix_A_file_path);
+    matrix_read_from_csv_int32(&B, matrix_B_file_path);
 
-    //check the shapes of the matrices read
     if(A.num_cols != B.num_rows){
         printf("Wrong Shapes of the Input Matrices\n");
         return 0;
@@ -98,44 +92,41 @@ int main(int argc, char* argv[]) {
         printf("Shape(B) = (%u, %u)\n", B.num_rows, B.num_cols);
     }
 
-    // Allocate C matrix
     C.num_rows = A.num_rows;
     C.num_cols = B.num_cols;
-    printf("shape(C=AB) = (%u, %u)\n", C.num_rows, C.num_cols);
     C.elements = (int32_t*)malloc(C.num_rows * C.num_cols * sizeof(int32_t));
 
-    // Allocate device memory
     int32_t *d_A, *d_B, *d_C;
     cudaMalloc(&d_A, A.num_rows * A.num_cols * sizeof(int32_t));
     cudaMalloc(&d_B, B.num_rows * B.num_cols * sizeof(int32_t));
     cudaMalloc(&d_C, C.num_rows * C.num_cols * sizeof(int32_t));
 
-    // Copy host data to device
     cudaMemcpy(d_A, A.elements, A.num_rows * A.num_cols * sizeof(int32_t), cudaMemcpyHostToDevice);
     cudaMemcpy(d_B, B.elements, B.num_rows * B.num_cols * sizeof(int32_t), cudaMemcpyHostToDevice);
 
-    // Launch kernel
+    unsigned int kernel_time_us = 0.0f;
     solve(d_C, d_A, d_B, num_blocks_per_grid_x, num_threads_per_block_x,
-          A.num_rows, A.num_cols, B.num_cols);
+          A.num_rows, A.num_cols, B.num_cols, &kernel_time_us);
 
-    // Copy result back to host
     cudaMemcpy(C.elements, d_C, C.num_rows * C.num_cols * sizeof(int32_t), cudaMemcpyDeviceToHost);
 
-    //print matrix
-    // printf("==============\n");
-    // printf("Printing the output matrix...\n");
-    // print_matrix_uint32(&C);
-    // printf("==============\n");
+    matrix_write_to_csv_int32(&C, "output_1_1_CS25MTECH11015.csv");
 
-    //Write the output matrix matrix_c.csv
-    printf("Product Matrix of size (%u, %u) stored as output_1_1_CS25MTECH11015.csv...\n", C.num_rows, C.num_cols);
-    matrix_write_to_csv_uint32(&C, "output_1_1_CS25MTECH11015.csv");
-    // Free device memory
+    unsigned int num_elements = C.num_rows * C.num_cols;
+    printf("Product Matrix of size %u stored as output_1_1_CS25MTECH11015.csv\n", num_elements);
+    printf("Kernel execution time: %u microseconds\n", kernel_time_us);
+
+    FILE* fout = fopen("output_1_1_CS25MTECH11015.txt", "w");
+    if (fout) {
+        fprintf(fout, "Line1: %u\n", num_elements);
+        fprintf(fout, "Line2: %u\n", kernel_time_us);
+        fclose(fout);
+    }
+
     cudaFree(d_A);
     cudaFree(d_B);
     cudaFree(d_C);
 
-    // Free host memory
     free(A.elements);
     free(B.elements);
     free(C.elements);
