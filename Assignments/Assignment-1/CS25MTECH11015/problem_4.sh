@@ -18,7 +18,7 @@ for MATRIX in matrices/transpose/matrix_*a.csv; do
     echo "Matrix: $MATRIX" > "$OUTFILE"
 
     TRIAL_NO=1
-    for TILE_WIDTH in 8 16 32 64 128 256; do
+    for TILE_WIDTH in 2 4 8 16 32 64 128 256; do
 
         # Skip if TILE_WIDTH squared exceeds 2048
         if (( TILE_WIDTH * TILE_WIDTH > 2048 )); then
