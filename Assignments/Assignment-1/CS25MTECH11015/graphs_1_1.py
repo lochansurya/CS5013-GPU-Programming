@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python
 import matplotlib.pyplot as plt
 
 # Path to your concatenated results file
