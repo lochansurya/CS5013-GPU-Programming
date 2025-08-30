@@ -1,0 +1,73 @@
+Matrix: matrices/transpose/matrix_3a.csv
+Shape(A) = (1024, 1024)
+Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
+Kernel execution time: 2003 microseconds
+=============
+Trial No. 1
+grid_x, block_x: (64,64)
+Kernel Execution Time: 2003 microseconds
+=============
+Shape(A) = (1024, 1024)
+Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
+Kernel execution time: 1585 microseconds
+=============
+Trial No. 2
+grid_x, block_x: (64,128)
+Kernel Execution Time: 1585 microseconds
+=============
+Shape(A) = (1024, 1024)
+Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
+Kernel execution time: 2487 microseconds
+=============
+Trial No. 3
+grid_x, block_x: (64,256)
+Kernel Execution Time: 2487 microseconds
+=============
+Shape(A) = (1024, 1024)
+Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
+Kernel execution time: 1345 microseconds
+=============
+Trial No. 4
+grid_x, block_x: (128,64)
+Kernel Execution Time: 1345 microseconds
+=============
+Shape(A) = (1024, 1024)
+Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
+Kernel execution time: 2359 microseconds
+=============
+Trial No. 5
+grid_x, block_x: (128,128)
+Kernel Execution Time: 2359 microseconds
+=============
+Shape(A) = (1024, 1024)
+Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
+Kernel execution time: 1544 microseconds
+=============
+Trial No. 6
+grid_x, block_x: (128,256)
+Kernel Execution Time: 1544 microseconds
+=============
+Shape(A) = (1024, 1024)
+Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
+Kernel execution time: 2287 microseconds
+=============
+Trial No. 7
+grid_x, block_x: (256,64)
+Kernel Execution Time: 2287 microseconds
+=============
+Shape(A) = (1024, 1024)
+Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
+Kernel execution time: 1628 microseconds
+=============
+Trial No. 8
+grid_x, block_x: (256,128)
+Kernel Execution Time: 1628 microseconds
+=============
+Shape(A) = (1024, 1024)
+Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
+Kernel execution time: 2092 microseconds
+=============
+Trial No. 9
+grid_x, block_x: (256,256)
+Kernel Execution Time: 2092 microseconds
+=============

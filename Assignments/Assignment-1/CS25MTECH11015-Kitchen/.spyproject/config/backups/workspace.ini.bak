@@ -1,0 +1,12 @@
+[workspace]
+restore_data_on_startup = True
+save_data_on_exit = True
+save_history = True
+save_non_project_files = False
+project_type = 'empty-project-type'
+recent_files = ['results/results_2_0.txt', 'graphs_2.py', 'results/results_3_1.txt', 'graphs_3.py', 'results/results_4_1.txt', 'graphs_4.py', 'results/results_3_2.txt', 'graphs_1_1.py', 'graphs_1_2.py']
+
+[main]
+version = 0.2.0
+recent_files = []
+
