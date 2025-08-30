@@ -1,193 +1,2049 @@
 Matrix: matrices/matrix_1a.csv
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 1609 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 1
 =============
 2DGrid(X1,Y1): (8,8)
 2DBlock(X2,Y2): (8,8)
-Kernel Execution Time: 1609 microseconds
+Kernel Execution Time: 2516 microseconds
 =============
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 1863 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 2
 =============
 2DGrid(X1,Y1): (8,8)
 2DBlock(X2,Y2): (8,16)
-Kernel Execution Time: 1863 microseconds
+Kernel Execution Time: 2516 microseconds
 =============
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 1336 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 3
 =============
 2DGrid(X1,Y1): (8,8)
-2DBlock(X2,Y2): (16,8)
-Kernel Execution Time: 1336 microseconds
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
 =============
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 1894 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 4
 =============
 2DGrid(X1,Y1): (8,8)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1894 microseconds
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
 =============
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 1358 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 5
 =============
-2DGrid(X1,Y1): (8,16)
-2DBlock(X2,Y2): (8,8)
-Kernel Execution Time: 1358 microseconds
+2DGrid(X1,Y1): (8,8)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
 =============
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 2270 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 6
 =============
-2DGrid(X1,Y1): (8,16)
-2DBlock(X2,Y2): (8,16)
-Kernel Execution Time: 2270 microseconds
+2DGrid(X1,Y1): (8,8)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2516 microseconds
 =============
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 1685 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 7
 =============
-2DGrid(X1,Y1): (8,16)
-2DBlock(X2,Y2): (16,8)
-Kernel Execution Time: 1685 microseconds
+2DGrid(X1,Y1): (8,8)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
 =============
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 1970 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 8
 =============
-2DGrid(X1,Y1): (8,16)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1970 microseconds
+2DGrid(X1,Y1): (8,8)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
 =============
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 1443 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 9
 =============
-2DGrid(X1,Y1): (16,8)
-2DBlock(X2,Y2): (8,8)
-Kernel Execution Time: 1443 microseconds
+2DGrid(X1,Y1): (8,8)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
 =============
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 2176 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 10
 =============
-2DGrid(X1,Y1): (16,8)
-2DBlock(X2,Y2): (8,16)
-Kernel Execution Time: 2176 microseconds
+2DGrid(X1,Y1): (8,8)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
 =============
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 1258 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 11
 =============
-2DGrid(X1,Y1): (16,8)
-2DBlock(X2,Y2): (16,8)
-Kernel Execution Time: 1258 microseconds
+2DGrid(X1,Y1): (8,8)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
 =============
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 2305 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 12
 =============
-2DGrid(X1,Y1): (16,8)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2305 microseconds
+2DGrid(X1,Y1): (8,8)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
 =============
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 1719 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 13
 =============
-2DGrid(X1,Y1): (16,16)
-2DBlock(X2,Y2): (8,8)
-Kernel Execution Time: 1719 microseconds
+2DGrid(X1,Y1): (8,8)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
 =============
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 1876 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 14
 =============
-2DGrid(X1,Y1): (16,16)
-2DBlock(X2,Y2): (8,16)
-Kernel Execution Time: 1876 microseconds
+2DGrid(X1,Y1): (8,8)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
 =============
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 1702 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 15
 =============
-2DGrid(X1,Y1): (16,16)
-2DBlock(X2,Y2): (16,8)
-Kernel Execution Time: 1702 microseconds
+2DGrid(X1,Y1): (8,8)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
 =============
-Shape(A) = (64, 64)
-Shape(B) = (64, 64)
-Shape(C) = (64, 64)
-Kernel execution time: 2416 microseconds
-Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 16
 =============
+2DGrid(X1,Y1): (8,8)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 17
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (8,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 18
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (8,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 19
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 20
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 21
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 22
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 23
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 24
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 25
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 26
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 27
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 28
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 29
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 30
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 31
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 32
+=============
+2DGrid(X1,Y1): (8,16)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 33
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (8,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 34
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (8,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 35
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 36
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 37
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 38
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 39
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 40
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 41
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 42
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 43
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 44
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 45
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 46
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 47
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 48
+=============
+2DGrid(X1,Y1): (8,32)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 49
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (8,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 50
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (8,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 51
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 52
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 53
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 54
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 55
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 56
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 57
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 58
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 59
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 60
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 61
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 62
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 63
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 64
+=============
+2DGrid(X1,Y1): (8,64)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 65
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (8,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 66
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (8,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 67
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 68
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 69
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 70
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 71
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 72
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 73
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 74
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 75
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 76
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 77
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 78
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 79
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 80
+=============
+2DGrid(X1,Y1): (16,8)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 81
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (8,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 82
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (8,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 83
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 84
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 85
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 86
+=============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2416 microseconds
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 87
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 88
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 89
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 90
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 91
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 92
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 93
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 94
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 95
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 96
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 97
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (8,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 98
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (8,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 99
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 100
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 101
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 102
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 103
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 104
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 105
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 106
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 107
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 108
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 109
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 110
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 111
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 112
+=============
+2DGrid(X1,Y1): (16,32)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 113
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (8,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 114
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (8,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 115
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 116
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 117
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 118
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 119
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 120
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 121
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 122
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 123
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 124
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 125
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 126
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 127
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 128
+=============
+2DGrid(X1,Y1): (16,64)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 129
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (8,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 130
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (8,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 131
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 132
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 133
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 134
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 135
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 136
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 137
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 138
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 139
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 140
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 141
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 142
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 143
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 144
+=============
+2DGrid(X1,Y1): (32,8)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 145
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (8,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 146
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (8,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 147
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 148
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 149
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 150
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 151
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 152
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 153
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 154
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 155
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 156
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 157
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 158
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 159
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 160
+=============
+2DGrid(X1,Y1): (32,16)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 161
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (8,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 162
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (8,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 163
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 164
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 165
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 166
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 167
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 168
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 169
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 170
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 171
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 172
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 173
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 174
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 175
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 176
+=============
+2DGrid(X1,Y1): (32,32)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 177
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (8,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 178
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (8,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 179
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 180
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 181
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 182
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 183
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 184
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 185
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 186
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 187
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 188
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 189
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 190
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 191
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 192
+=============
+2DGrid(X1,Y1): (32,64)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 193
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (8,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 194
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (8,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 195
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 196
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 197
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 198
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 199
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 200
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 201
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 202
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 203
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 204
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 205
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 206
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 207
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 208
+=============
+2DGrid(X1,Y1): (64,8)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 209
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (8,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 210
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (8,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 211
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 212
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 213
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 214
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 215
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 216
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 217
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 218
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 219
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 220
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 221
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 222
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 223
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 224
+=============
+2DGrid(X1,Y1): (64,16)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 225
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (8,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 226
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (8,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 227
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 228
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 229
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 230
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 231
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 232
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 233
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 234
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 235
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 236
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 237
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 238
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 239
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 240
+=============
+2DGrid(X1,Y1): (64,32)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 241
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (8,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 242
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (8,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 243
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (8,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 244
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (8,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 245
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (16,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 246
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 247
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 248
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (16,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 249
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (32,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 250
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 251
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 252
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (32,64)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 253
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (64,8)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 254
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 255
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (64,32)
+Kernel Execution Time: 2516 microseconds
+=============
+./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
+=============
+Trial No. 256
+=============
+2DGrid(X1,Y1): (64,64)
+2DBlock(X2,Y2): (64,64)
+Kernel Execution Time: 2516 microseconds
 =============

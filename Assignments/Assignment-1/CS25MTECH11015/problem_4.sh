@@ -19,7 +19,7 @@ for MATRIX in matrices/transpose/matrix_*a.csv; do
     echo "Matrix: $MATRIX" > "$OUTFILE"
 
     TRIAL_NO=1
-    for TILE_WIDTH in 8 16 32; do
+    for TILE_WIDTH in 8 16 32 64 128 256; do
         echo "Running trial $TRIAL_NO: TileWidth=$TILE_WIDTH"
 
         ./mattrans_tiled $TILE_WIDTH "$MATRIX" &>> "$OUTFILE"

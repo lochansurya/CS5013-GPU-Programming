@@ -1,4 +1,4 @@
-Matrix: matrices/matrix_3a.csv
+Matrix: matrices/matrix_0a.csv
 ./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
 =============
 Trial No. 1
@@ -213,13 +213,5 @@ Trial No. 27
 =============
 2DGrid(X1,Y1): (8,16)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2516 microseconds
-=============
-./problem_1_2.sh: line 31: ./matmul_2d: No such file or directory
-=============
-Trial No. 28
-=============
-2DGrid(X1,Y1): (8,16)
-2DBlock(X2,Y2): (32,64)
 Kernel Execution Time: 2516 microseconds
 =============

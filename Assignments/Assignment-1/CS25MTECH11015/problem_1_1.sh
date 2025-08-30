@@ -34,8 +34,8 @@ for MATRIX in "$SCRIPT_DIR"/matrices/matrix_*a.csv; do
     echo "Matrix: $MATRIX" > "$OUTFILE"
 
     TRIAL_NO=1
-    for M in 8 16; do
-        for N in 32 16; do
+    for M in 16 32 64; do
+        for N in 16 32 64; do
             echo "Running trial $TRIAL_NO: GridBlocks=$M ThreadsPerBlock=$N"
 
             # Run CUDA kernel; exit if it fails

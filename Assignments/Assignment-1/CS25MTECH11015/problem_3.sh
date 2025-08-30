@@ -19,8 +19,8 @@ for MATRIX in matrices/transpose/matrix_*a.csv; do
     echo "Matrix: $MATRIX" > "$OUTFILE"
 
     TRIAL_NO=1
-    for M in 128 256; do
-        for N in 128 256; do
+    for M in 64 128 256; do
+        for N in 64 128 256; do
             echo "Running trial $TRIAL_NO: Size=($M,$N)"
 
             ./mattrans_basic $M $N "$MATRIX" &>> "$OUTFILE"
