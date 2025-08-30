@@ -4,7 +4,6 @@ echo "Problem-4: Tiled Transpose"
 echo "=========================="
 echo "Running Problem-4 tests..."
 
-
 mkdir -p results
 
 CONCAT_FILE="results/results_4.txt"
@@ -20,6 +19,14 @@ for MATRIX in matrices/transpose/matrix_*a.csv; do
 
     TRIAL_NO=1
     for TILE_WIDTH in 8 16 32 64 128 256; do
+
+        # Skip if TILE_WIDTH squared exceeds 2048
+        if (( TILE_WIDTH * TILE_WIDTH > 2048 )); then
+            echo "Skipping trial $TRIAL_NO: TileWidth=$TILE_WIDTH (exceeds limit)"
+            ((TRIAL_NO++))
+            continue
+        fi
+
         echo "Running trial $TRIAL_NO: TileWidth=$TILE_WIDTH"
 
         ./mattrans_tiled $TILE_WIDTH "$MATRIX" &>> "$OUTFILE"
