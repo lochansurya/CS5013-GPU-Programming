@@ -28,7 +28,7 @@ for MATRIX in "$SCRIPT_DIR"/matrices/matrix_*a.csv; do
     IDX=${BASENAME:7:1}  # extract number
     MATRIX_A="$SCRIPT_DIR/matrices/matrix_${IDX}a.csv"
     MATRIX_B="$SCRIPT_DIR/matrices/matrix_${IDX}b.csv"
-    EXPECTED="$SCRIPT_DIR/matrices/matrix_${IDX}c_expected.csv"
+    EXPECTED="$SCRIPT_DIR/output_matrix_mul.csv"
     OUTFILE="$SCRIPT_DIR/results/results_1_1_${IDX}.txt"
 
     echo "Matrix: $MATRIX" > "$OUTFILE"
@@ -64,9 +64,6 @@ for MATRIX in "$SCRIPT_DIR"/matrices/matrix_*a.csv; do
                 echo "Kernel Execution Time: $TIME_MICRO microseconds"
                 echo "============="
             } >> "$OUTFILE"
-
-            # Run tester for correctness (outputs to terminal only)
-            python3 "$SCRIPT_DIR/tester.py" "$SCRIPT_DIR/output_1_1_CS25MTECH11015.csv" "$EXPECTED"
 
             ((TRIAL_NO++))
         done

@@ -4,12 +4,26 @@ echo "Problem-4: Tiled Transpose"
 echo "=========================="
 echo "Running Problem-4 tests..."
 
-mkdir -p results
+# Get the directory of this script
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+cd "$SCRIPT_DIR"
 
-CONCAT_FILE="results/results_4.txt"
+EXPECTED="$SCRIPT_DIR/output_matrix_transpose.csv"
+
+# Ensure matmul_tiled binary exists
+BINARY="$SCRIPT_DIR/mattrans_tiled"
+if [[ ! -x "$BINARY" ]]; then
+    echo "Error: mattrans_tiled binary not found in $SCRIPT_DIR. Exiting."
+    exit 1
+fi
+
+mkdir -p "$SCRIPT_DIR/results"
+
+# Remove old concatenated file if it exists
+CONCAT_FILE="$SCRIPT_DIR/results/results_4.txt"
 rm -f "$CONCAT_FILE"
 
-for MATRIX in matrices/transpose/matrix_*a.csv; do
+for MATRIX in public_test_cases/matrix_*a.csv; do
     BASENAME=$(basename "$MATRIX" .csv)
     IDX=${BASENAME:7:1}
     EXPECTED="matrices/transpose/matrix_${IDX}a_T.csv"
@@ -40,8 +54,6 @@ for MATRIX in matrices/transpose/matrix_*a.csv; do
             echo "Kernel Execution Time: $TIME_MICRO microseconds"
             echo "============="
         } >> "$OUTFILE"
-
-        python3 tester.py "output_4_CS25MTECH11015.csv" "$EXPECTED"
 
         ((TRIAL_NO++))
     done

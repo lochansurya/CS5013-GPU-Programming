@@ -134,10 +134,10 @@ int main(int argc, char* argv[]) {
     printf("Kernel execution time: %u microseconds\n", kernel_time_us);
     printf("Matrix of size %u stored as output_1_2_CS25MTECH11015.csv\n",
            C.num_rows*C.num_cols);
-    matrix_write_to_csv_int32(&C, "output_1_2_CS25MTECH11015.csv");
+    matrix_write_to_csv_int32(&C, "public_test_casees/output_1_2_CS25MTECH11015.csv");
 
     // writing to the output to the .txt file
-    FILE* fout = fopen("output_1_2_CS25MTECH11015.txt", "w");
+    FILE* fout = fopen("public_test_cases/output_1_2_CS25MTECH11015.txt", "w");
     if (fout) {
         unsigned int num_elements = C.num_rows * C.num_cols;
         fprintf(fout, "Line1: %u\n", num_elements);

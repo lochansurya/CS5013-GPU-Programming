@@ -93,14 +93,14 @@ int main(int argc, char* argv[]){
 
     cudaMemcpy(A_T.elements, d_A_T, A_T.num_rows * A_T.num_cols * sizeof(int32_t), cudaMemcpyDeviceToHost);
 
-    matrix_write_to_csv_int32(&A_T, "output_3_CS25MTECH11015.csv");
+    matrix_write_to_csv_int32(&A_T, "public_test_cases/output_3_CS25MTECH11015.csv");
 
     unsigned int num_elements = A_T.num_rows * A_T.num_cols;
     printf("Transposed matrix of size %u stored as output_3_CS25MTECH11015.csv\n", num_elements);
     printf("Kernel execution time: %.u microseconds\n", kernel_time_us);
 
     // write the stats to the output
-    FILE* fout = fopen("output_3_CS25MTECH11015.txt", "w");
+    FILE* fout = fopen("public_test_cases/output_3_CS25MTECH11015.txt", "w");
     if(fout){
         unsigned int num_elements = A_T.num_rows * A_T.num_cols;
         fprintf(fout, "%u\n", num_elements);

@@ -23,15 +23,7 @@ make all
 echo "Build completed."
 echo "=========================="
 
-echo "=========================="
-echo "Generating the matrices for matrix-matrix multiplication..."
-python3 matrices_generator.py
-echo "=========================="
 
-echo "=========================="
-echo "Generating the matrices for matrix transpose..."
-python3 transpose_generator.py
-echo "=========================="
 
 # Create results directory
 mkdir -p results

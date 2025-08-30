@@ -1,0 +1,46 @@
+Matrix: matrices/transpose/matrix_*a.csv
+File Opening Error: No such file or directory
+Shape(A) = (0, 0)
+Product Matrix of size (0, 0) stored as output_4_CS25MTECH11015.csv...
+Kernel execution time: 1699 microseconds
+=============
+Trial No. 1
+TileWidth: 2
+Kernel Execution Time: 1953 microseconds
+=============
+File Opening Error: No such file or directory
+Shape(A) = (0, 0)
+Product Matrix of size (0, 0) stored as output_4_CS25MTECH11015.csv...
+Kernel execution time: 2829 microseconds
+=============
+Trial No. 2
+TileWidth: 4
+Kernel Execution Time: 1953 microseconds
+=============
+File Opening Error: No such file or directory
+Shape(A) = (0, 0)
+Product Matrix of size (0, 0) stored as output_4_CS25MTECH11015.csv...
+Kernel execution time: 2083 microseconds
+=============
+Trial No. 3
+TileWidth: 8
+Kernel Execution Time: 1953 microseconds
+=============
+File Opening Error: No such file or directory
+Shape(A) = (0, 0)
+Product Matrix of size (0, 0) stored as output_4_CS25MTECH11015.csv...
+Kernel execution time: 2267 microseconds
+=============
+Trial No. 4
+TileWidth: 16
+Kernel Execution Time: 1953 microseconds
+=============
+File Opening Error: No such file or directory
+Shape(A) = (0, 0)
+Product Matrix of size (0, 0) stored as output_4_CS25MTECH11015.csv...
+Kernel execution time: 1805 microseconds
+=============
+Trial No. 5
+TileWidth: 32
+Kernel Execution Time: 1953 microseconds
+=============

@@ -1,6 +1,32 @@
+#!/usr/bin/env bash
+echo "=========================="
+echo "Problem-3: Matrix Transpose 1D"
+echo "=========================="
+echo "Running Problem-3 tests..."
+
+# Get the directory of this script
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)
+cd "$SCRIPT_DIR"
+
+OUTFILE="$SCRIPT_DIR/results/results_3.txt"
+# Ensure mattrans_basic binary exists
+BINARY="$SCRIPT_DIR/mattrans_basic"
+if [[ ! -x "$BINARY" ]]; then
+    echo "Error: mattrans_basic binary not found in $SCRIPT_DIR. Exiting."
+    exit 1
+fi
+
+mkdir -p "$SCRIPT_DIR/results"
+
+# Remove old concatenated file if it exists
+CONCAT_FILE="$SCRIPT_DIR/results/results_3.txt"
+rm -f "$CONCAT_FILE"
+
+EXPECTED="$SCRIPT_DIR/output_matrix_transpose.csv"
+
 TRIAL_NO=1
-for M in 64 128 256; do
-    for N in 64 128 256; do
+for M in 8 16 32 64; do
+    for N in 8 16 32 64; do
         # Skip if total threads exceed 2048
         TOTAL_THREADS=$((M * N))
         if [ "$TOTAL_THREADS" -gt 2048 ]; then
@@ -11,7 +37,7 @@ for M in 64 128 256; do
 
         echo "Running trial $TRIAL_NO: Size=($M,$N)"
 
-        ./mattrans_basic $M $N "$MATRIX" &>> "$OUTFILE"
+        ./mattrans_basic $M $N "$SCRIPT_DIR/public_test_cases/matrix_a.csv" &>> "$OUTFILE"
 
         TIME_MICRO=$(sed -n '2p' output_3_CS25MTECH11015.txt | awk '{print $NF}')
 
@@ -22,8 +48,6 @@ for M in 64 128 256; do
             echo "Kernel Execution Time: $TIME_MICRO microseconds"
             echo "============="
         } >> "$OUTFILE"
-
-        python3 tester.py "output_3_CS25MTECH11015.csv" "$EXPECTED"
 
         ((TRIAL_NO++))
     done

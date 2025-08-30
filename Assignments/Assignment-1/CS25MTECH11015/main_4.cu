@@ -194,10 +194,10 @@ int main(int argc, char** argv) {
     }
 
     printf("Product Matrix of size (%u, %u) stored as output_4_CS25MTECH11015.csv...\n", A_T.num_rows, A_T.num_cols);
-    matrix_write_to_csv_int32(&A_T, "output_4_CS25MTECH11015.csv");
+    matrix_write_to_csv_int32(&A_T, "public_test_cases/output_4_CS25MTECH11015.csv");
     printf("Kernel execution time: %u microseconds\n", kernel_time_us);
     // Write stats to output.txt
-    FILE* fout = fopen("output_4_CS25MTECH11015.txt", "w");
+    FILE* fout = fopen("public_test_cases/output_4_CS25MTECH11015.txt", "w");
     if (fout) {
         unsigned int num_elements = A_T.num_rows * A_T.num_cols;
         fprintf(fout, "%u\n", num_elements);

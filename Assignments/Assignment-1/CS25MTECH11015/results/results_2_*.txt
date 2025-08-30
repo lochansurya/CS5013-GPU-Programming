@@ -79,5 +79,3 @@ Trial No. 5
 TileWidth: 128
 Kernel Execution Time: 59 microseconds
 =============
-
-

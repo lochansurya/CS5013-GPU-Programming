@@ -182,14 +182,14 @@ int main(int argc, char* argv[])
     cudaMemcpy(C.elements, d_C, C.num_rows * C.num_cols * sizeof(int32_t), cudaMemcpyDeviceToHost);
 
     // Write output matrix
-    matrix_write_to_csv_int32(&C, "output_2_CS25MTECH11015.csv");
+    matrix_write_to_csv_int32(&C, "public_test_cases/output_2_CS25MTECH11015.csv");
 
     unsigned int num_elements = C.num_rows * C.num_cols;
     printf("Product Matrix of size %u stored as output_2_CS25MTECH11015.csv\n", num_elements);
     printf("Kernel execution time: %u microseconds\n", kernel_time_us);
 
     // Write stats to output.txt
-    FILE* fout = fopen("output_2_CS25MTECH11015.txt", "w");
+    FILE* fout = fopen("public_test_cases/output_2_CS25MTECH11015.txt", "w");
     if (fout) {
         fprintf(fout, "%u\n", num_elements);
         fprintf(fout, "%u\n", kernel_time_us);
