@@ -1,61 +1,71 @@
 Matrix: matrices/matrix_1a.csv
-Kernel Execution Time: 88 microseconds
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Kernel Execution Time: 86 microseconds
 Global Memory Reads : 260000
 Global Memory Writes: 10000
 Shared Memory Reads : 2249728
 Shared Memory Writes: 281216
 Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
-Kernel execution time: 88 microseconds
+Kernel execution time: 86 microseconds
 =============
 Trial No. 1
 TileWidth: 8
-Kernel Execution Time: 88 microseconds
+Kernel Execution Time: 86 microseconds
 =============
-Kernel Execution Time: 90 microseconds
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Kernel Execution Time: 89 microseconds
 Global Memory Reads : 140000
 Global Memory Writes: 10000
 Shared Memory Reads : 2809856
 Shared Memory Writes: 175616
 Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
-Kernel execution time: 90 microseconds
+Kernel execution time: 89 microseconds
 =============
 Trial No. 2
 TileWidth: 16
-Kernel Execution Time: 90 microseconds
+Kernel Execution Time: 89 microseconds
 =============
-Kernel Execution Time: 105 microseconds
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Kernel Execution Time: 159 microseconds
 Global Memory Reads : 80000
 Global Memory Writes: 10000
 Shared Memory Reads : 4194304
 Shared Memory Writes: 131072
 Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
-Kernel execution time: 105 microseconds
+Kernel execution time: 159 microseconds
 =============
 Trial No. 3
 TileWidth: 32
-Kernel Execution Time: 105 microseconds
+Kernel Execution Time: 159 microseconds
 =============
-Kernel Execution Time: 26 microseconds
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Kernel Execution Time: 33 microseconds
 Global Memory Reads : 0
 Global Memory Writes: 0
 Shared Memory Reads : 0
 Shared Memory Writes: 0
 Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
-Kernel execution time: 26 microseconds
+Kernel execution time: 33 microseconds
 =============
 Trial No. 4
 TileWidth: 64
-Kernel Execution Time: 26 microseconds
+Kernel Execution Time: 33 microseconds
 =============
-Kernel Execution Time: 36 microseconds
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Kernel Execution Time: 32 microseconds
 Global Memory Reads : 0
 Global Memory Writes: 0
 Shared Memory Reads : 0
 Shared Memory Writes: 0
 Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
-Kernel execution time: 36 microseconds
+Kernel execution time: 32 microseconds
 =============
 Trial No. 5
 TileWidth: 128
-Kernel Execution Time: 36 microseconds
+Kernel Execution Time: 32 microseconds
 =============

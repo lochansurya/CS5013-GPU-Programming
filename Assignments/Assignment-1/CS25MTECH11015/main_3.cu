@@ -75,6 +75,9 @@ int main(int argc, char* argv[]){
 
     matrix_read_from_csv_int32(&A, matrix_A_file);
 
+    printf("Shape(A) = (%u, %u)\n", A.num_rows, A.num_cols);
+
+
     A_T.num_rows = A.num_cols;
     A_T.num_cols = A.num_rows;
     A_T.elements = (int32_t*)malloc(A_T.num_rows * A_T.num_cols * sizeof(int32_t));

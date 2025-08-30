@@ -1,43 +1,49 @@
 Matrix: matrices/transpose/matrix_1a.csv
+Shape(A) = (64, 64)
 Product Matrix of size (64, 64) stored as output_4_CS25MTECH11015.csv...
-Kernel execution time: 2412 microseconds
+Kernel execution time: 1667 microseconds
 =============
 Trial No. 1
 TileWidth: 8
-Kernel Execution Time: 2412 microseconds
+Kernel Execution Time: 1667 microseconds
 =============
+Shape(A) = (64, 64)
 Product Matrix of size (64, 64) stored as output_4_CS25MTECH11015.csv...
-Kernel execution time: 1176 microseconds
+Kernel execution time: 2321 microseconds
 =============
 Trial No. 2
 TileWidth: 16
-Kernel Execution Time: 1176 microseconds
+Kernel Execution Time: 2321 microseconds
 =============
+Shape(A) = (64, 64)
 Product Matrix of size (64, 64) stored as output_4_CS25MTECH11015.csv...
-Kernel execution time: 2268 microseconds
+Kernel execution time: 1584 microseconds
 =============
 Trial No. 3
 TileWidth: 32
-Kernel Execution Time: 2268 microseconds
+Kernel Execution Time: 1584 microseconds
 =============
+Shape(A) = (64, 64)
 Product Matrix of size (64, 64) stored as output_4_CS25MTECH11015.csv...
-Kernel execution time: 1377 microseconds
+Kernel execution time: 1965 microseconds
 =============
 Trial No. 4
 TileWidth: 64
-Kernel Execution Time: 1377 microseconds
+Kernel Execution Time: 1965 microseconds
 =============
+Shape(A) = (64, 64)
 Product Matrix of size (64, 64) stored as output_4_CS25MTECH11015.csv...
-Kernel execution time: 2381 microseconds
+Kernel execution time: 1750 microseconds
 =============
 Trial No. 5
 TileWidth: 128
-Kernel Execution Time: 2381 microseconds
+Kernel Execution Time: 1750 microseconds
 =============
+Shape(A) = (64, 64)
 Product Matrix of size (64, 64) stored as output_4_CS25MTECH11015.csv...
-Kernel execution time: 1658 microseconds
+Kernel execution time: 2154 microseconds
 =============
 Trial No. 6
 TileWidth: 256
-Kernel Execution Time: 1658 microseconds
+Kernel Execution Time: 2154 microseconds
 =============

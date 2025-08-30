@@ -132,6 +132,8 @@ int main(int argc, char** argv) {
     Matrix A;
     matrix_read_from_csv_int32(&A, matrix_A_csv_file_path);
 
+    printf("Shape(A) = (%u, %u)\n", A.num_rows, A.num_cols);
+
     // output matrix (transpose)
     Matrix A_T;
     A_T.num_cols = A.num_rows;

@@ -93,10 +93,11 @@ extern "C" void solve(int32_t* d_C, int32_t* d_A, int32_t* d_B,
     cudaEventCreate(&stop);
 
     // Reset counters before launch
-    cudaMemcpyToSymbol(d_gmem_reads, 0, sizeof(unsigned long long));
-    cudaMemcpyToSymbol(d_gmem_writes, 0, sizeof(unsigned long long));
-    cudaMemcpyToSymbol(d_smem_reads, 0, sizeof(unsigned long long));
-    cudaMemcpyToSymbol(d_smem_writes, 0, sizeof(unsigned long long));
+    unsigned long long zero = 0;
+    cudaMemcpyToSymbol(d_gmem_reads, &zero, sizeof(unsigned long long));
+    cudaMemcpyToSymbol(d_gmem_writes, &zero, sizeof(unsigned long long));
+    cudaMemcpyToSymbol(d_smem_reads, &zero, sizeof(unsigned long long));
+    cudaMemcpyToSymbol(d_smem_writes, &zero, sizeof(unsigned long long));
 
     cudaEventRecord(start);
     matrix_multiplication_tiled_dkernel<<<grid, block, shared_size_in_bytes>>>(
@@ -149,11 +150,12 @@ int main(int argc, char* argv[])
     matrix_read_from_csv_int32(&A, matrix_A_file_path);
     matrix_read_from_csv_int32(&B, matrix_B_file_path);
 
-    if (A.num_cols != B.num_rows) {
-        fprintf(stderr, "Error: Incompatible matrix dimensions\n");
-        free(A.elements);
-        free(B.elements);
-        return 1;
+    if(A.num_cols != B.num_rows){
+        printf("Wrong Shapes of the Input Matrices\n");
+        return 0;
+    }else{
+        printf("Shape(A) = (%u, %u)\n", A.num_rows, A.num_cols);
+        printf("Shape(B) = (%u, %u)\n", B.num_rows, B.num_cols);
     }
 
     // Allocate C matrix

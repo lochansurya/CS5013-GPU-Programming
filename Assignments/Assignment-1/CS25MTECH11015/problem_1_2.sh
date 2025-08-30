@@ -23,9 +23,17 @@ for MATRIX in matrices/matrix_*a.csv; do
 
     TRIAL_NO=1
     for X1 in 1 4 16; do
-        for Y1 in 1 4 16 ; do
+        for Y1 in 1 4 16; do
             for X2 in 16 32 64; do
-                for Y2 in 16 32 64; do
+                for Y2 in 16 32; do
+
+                    # Skip invalid block sizes
+                    if (( X2 * Y2 > 1024 )); then
+                        echo "Skipping trial $TRIAL_NO: Invalid block size ($X2 x $Y2) = $((X2*Y2)) > 1024"
+                        ((TRIAL_NO++))
+                        continue
+                    fi
+
                     echo "Running trial $TRIAL_NO: 2DGrid=($X1,$Y1) 2DBlock=($X2,$Y2)"
 
                     ./matmul_2d $X1 $Y1 $X2 $Y2 "$MATRIX_A" "$MATRIX_B" &>> "$OUTFILE"
