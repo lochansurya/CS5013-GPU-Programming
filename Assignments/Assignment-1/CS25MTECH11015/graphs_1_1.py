@@ -3,7 +3,7 @@ import os
 import matplotlib.pyplot as plt
 
 # Paths
-RESULTS_FILE = "results/results_1_1.txt"
+RESULTS_FILE = "results/results_1_1_2.txt"
 PLOTS_DIRECTORY = "plots"
 
 Ms, Ns, times = [], [], []
@@ -32,7 +32,12 @@ labels = [f"({m},{n})" for m, n in zip(Ms, Ns)]
 
 # Plot
 plt.figure(figsize=(12, 6))
-plt.bar(labels, times, color='skyblue')
+bars = plt.bar(labels, times, color='skyblue', edgecolor= None)
+
+# Highlight fastest runtime
+min_index = times.index(min(times))
+bars[min_index].set_color("lightgreen")
+
 plt.xlabel("(GridBlocks M, ThreadsPerBlock N)")
 plt.ylabel("Kernel Execution Time (µs)")
 plt.title("Problem 1_1: Runtime vs (M, N) pairs")
@@ -50,7 +55,9 @@ if shapeA and shapeB:
 else:
     plot_file = os.path.join(PLOTS_DIRECTORY, "problem1_1.png")
 
-plt.savefig(plot_file)
+plt.savefig(plot_file, dpi=300)
 plt.show()
+plt.close()
 
 print(f"Plot saved to {plot_file}")
+print(f"Fastest runtime: {labels[min_index]} -> {times[min_index]} µs")
