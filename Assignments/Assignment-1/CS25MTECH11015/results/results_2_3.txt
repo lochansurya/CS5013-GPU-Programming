@@ -1,36 +1,61 @@
 Matrix: matrices/matrix_3a.csv
+Kernel Execution Time: 68 microseconds
+Global Memory Reads : 130000
+Global Memory Writes: 10000
+Shared Memory Reads : 1211392
+Shared Memory Writes: 151424
 Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
-Kernel execution time: 1983 microseconds
+Kernel execution time: 68 microseconds
 =============
 Trial No. 1
 TileWidth: 8
-Kernel Execution Time: 1983 microseconds
+Kernel Execution Time: 68 microseconds
 =============
+Kernel Execution Time: 72 microseconds
+Global Memory Reads : 70000
+Global Memory Writes: 10000
+Shared Memory Reads : 1605632
+Shared Memory Writes: 100352
 Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
-Kernel execution time: 1704 microseconds
+Kernel execution time: 72 microseconds
 =============
 Trial No. 2
 TileWidth: 16
-Kernel Execution Time: 1704 microseconds
+Kernel Execution Time: 72 microseconds
 =============
+Kernel Execution Time: 80 microseconds
+Global Memory Reads : 40000
+Global Memory Writes: 10000
+Shared Memory Reads : 2097152
+Shared Memory Writes: 65536
 Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
-Kernel execution time: 2404 microseconds
+Kernel execution time: 80 microseconds
 =============
 Trial No. 3
 TileWidth: 32
-Kernel Execution Time: 2404 microseconds
+Kernel Execution Time: 80 microseconds
 =============
+Kernel Execution Time: 27 microseconds
+Global Memory Reads : 0
+Global Memory Writes: 0
+Shared Memory Reads : 0
+Shared Memory Writes: 0
 Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
-Kernel execution time: 1672 microseconds
+Kernel execution time: 27 microseconds
 =============
 Trial No. 4
 TileWidth: 64
-Kernel Execution Time: 1672 microseconds
+Kernel Execution Time: 27 microseconds
 =============
+Kernel Execution Time: 29 microseconds
+Global Memory Reads : 0
+Global Memory Writes: 0
+Shared Memory Reads : 0
+Shared Memory Writes: 0
 Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
-Kernel execution time: 2245 microseconds
+Kernel execution time: 29 microseconds
 =============
 Trial No. 5
 TileWidth: 128
-Kernel Execution Time: 2245 microseconds
+Kernel Execution Time: 29 microseconds
 =============

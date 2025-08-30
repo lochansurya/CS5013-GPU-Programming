@@ -1,330 +1,330 @@
 Matrix: matrices/transpose/matrix_1a.csv
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2473 microseconds
+Kernel execution time: 2046 microseconds
 =============
 Trial No. 1
 Matrix Size: (64,64)
-Kernel Execution Time: 2473 microseconds
+Kernel Execution Time: 2046 microseconds
 =============
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1352 microseconds
+Kernel execution time: 2019 microseconds
 =============
 Trial No. 2
 Matrix Size: (64,128)
-Kernel Execution Time: 1352 microseconds
+Kernel Execution Time: 2019 microseconds
 =============
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2209 microseconds
+Kernel execution time: 1834 microseconds
 =============
 Trial No. 3
 Matrix Size: (64,256)
-Kernel Execution Time: 2209 microseconds
+Kernel Execution Time: 1834 microseconds
 =============
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1618 microseconds
+Kernel execution time: 2148 microseconds
 =============
 Trial No. 4
 Matrix Size: (128,64)
-Kernel Execution Time: 1618 microseconds
+Kernel Execution Time: 2148 microseconds
 =============
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2188 microseconds
+Kernel execution time: 1451 microseconds
 =============
 Trial No. 5
 Matrix Size: (128,128)
-Kernel Execution Time: 2188 microseconds
+Kernel Execution Time: 1451 microseconds
 =============
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1326 microseconds
+Kernel execution time: 1747 microseconds
 =============
 Trial No. 6
 Matrix Size: (128,256)
-Kernel Execution Time: 1326 microseconds
-=============
-Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2071 microseconds
-=============
-Trial No. 7
-Matrix Size: (256,64)
-Kernel Execution Time: 2071 microseconds
+Kernel Execution Time: 1747 microseconds
 =============
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
 Kernel execution time: 1484 microseconds
 =============
-Trial No. 8
-Matrix Size: (256,128)
+Trial No. 7
+Matrix Size: (256,64)
 Kernel Execution Time: 1484 microseconds
 =============
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2046 microseconds
+Kernel execution time: 2385 microseconds
+=============
+Trial No. 8
+Matrix Size: (256,128)
+Kernel Execution Time: 2385 microseconds
+=============
+Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
+Kernel execution time: 1208 microseconds
 =============
 Trial No. 9
 Matrix Size: (256,256)
-Kernel Execution Time: 2046 microseconds
+Kernel Execution Time: 1208 microseconds
 =============
 
 
 Matrix: matrices/transpose/matrix_2a.csv
 Transposed matrix of size 16384 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1516 microseconds
+Kernel execution time: 1975 microseconds
 =============
 Trial No. 1
 Matrix Size: (64,64)
-Kernel Execution Time: 1516 microseconds
+Kernel Execution Time: 1975 microseconds
 =============
 Transposed matrix of size 16384 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1968 microseconds
+Kernel execution time: 1892 microseconds
 =============
 Trial No. 2
 Matrix Size: (64,128)
-Kernel Execution Time: 1968 microseconds
+Kernel Execution Time: 1892 microseconds
 =============
 Transposed matrix of size 16384 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1361 microseconds
+Kernel execution time: 2497 microseconds
 =============
 Trial No. 3
 Matrix Size: (64,256)
-Kernel Execution Time: 1361 microseconds
+Kernel Execution Time: 2497 microseconds
 =============
 Transposed matrix of size 16384 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2237 microseconds
+Kernel execution time: 1371 microseconds
 =============
 Trial No. 4
 Matrix Size: (128,64)
-Kernel Execution Time: 2237 microseconds
+Kernel Execution Time: 1371 microseconds
 =============
 Transposed matrix of size 16384 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1297 microseconds
+Kernel execution time: 2603 microseconds
 =============
 Trial No. 5
 Matrix Size: (128,128)
-Kernel Execution Time: 1297 microseconds
+Kernel Execution Time: 2603 microseconds
 =============
 Transposed matrix of size 16384 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1786 microseconds
+Kernel execution time: 1371 microseconds
 =============
 Trial No. 6
 Matrix Size: (128,256)
-Kernel Execution Time: 1786 microseconds
+Kernel Execution Time: 1371 microseconds
 =============
 Transposed matrix of size 16384 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1340 microseconds
+Kernel execution time: 2119 microseconds
 =============
 Trial No. 7
 Matrix Size: (256,64)
-Kernel Execution Time: 1340 microseconds
+Kernel Execution Time: 2119 microseconds
 =============
 Transposed matrix of size 16384 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1911 microseconds
+Kernel execution time: 1356 microseconds
 =============
 Trial No. 8
 Matrix Size: (256,128)
-Kernel Execution Time: 1911 microseconds
+Kernel Execution Time: 1356 microseconds
 =============
 Transposed matrix of size 16384 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1290 microseconds
+Kernel execution time: 1826 microseconds
 =============
 Trial No. 9
 Matrix Size: (256,256)
-Kernel Execution Time: 1290 microseconds
+Kernel Execution Time: 1826 microseconds
 =============
 
 
 Matrix: matrices/transpose/matrix_3a.csv
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2072 microseconds
+Kernel execution time: 1827 microseconds
 =============
 Trial No. 1
 Matrix Size: (64,64)
-Kernel Execution Time: 2072 microseconds
+Kernel Execution Time: 1827 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1461 microseconds
+Kernel execution time: 2414 microseconds
 =============
 Trial No. 2
 Matrix Size: (64,128)
-Kernel Execution Time: 1461 microseconds
+Kernel Execution Time: 2414 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2187 microseconds
+Kernel execution time: 1706 microseconds
 =============
 Trial No. 3
 Matrix Size: (64,256)
-Kernel Execution Time: 2187 microseconds
+Kernel Execution Time: 1706 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1457 microseconds
+Kernel execution time: 2095 microseconds
 =============
 Trial No. 4
 Matrix Size: (128,64)
-Kernel Execution Time: 1457 microseconds
+Kernel Execution Time: 2095 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2373 microseconds
+Kernel execution time: 1753 microseconds
 =============
 Trial No. 5
 Matrix Size: (128,128)
-Kernel Execution Time: 2373 microseconds
+Kernel Execution Time: 1753 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1723 microseconds
+Kernel execution time: 1704 microseconds
 =============
 Trial No. 6
 Matrix Size: (128,256)
-Kernel Execution Time: 1723 microseconds
+Kernel Execution Time: 1704 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2113 microseconds
+Kernel execution time: 1842 microseconds
 =============
 Trial No. 7
 Matrix Size: (256,64)
-Kernel Execution Time: 2113 microseconds
+Kernel Execution Time: 1842 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1283 microseconds
+Kernel execution time: 1999 microseconds
 =============
 Trial No. 8
 Matrix Size: (256,128)
-Kernel Execution Time: 1283 microseconds
+Kernel Execution Time: 1999 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2261 microseconds
+Kernel execution time: 1307 microseconds
 =============
 Trial No. 9
 Matrix Size: (256,256)
-Kernel Execution Time: 2261 microseconds
+Kernel Execution Time: 1307 microseconds
 =============
 
 
 Matrix: matrices/transpose/matrix_4a.csv
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1380 microseconds
+Kernel execution time: 2294 microseconds
 =============
 Trial No. 1
 Matrix Size: (64,64)
-Kernel Execution Time: 1380 microseconds
+Kernel Execution Time: 2294 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2373 microseconds
+Kernel execution time: 1488 microseconds
 =============
 Trial No. 2
 Matrix Size: (64,128)
-Kernel Execution Time: 2373 microseconds
+Kernel Execution Time: 1488 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1700 microseconds
+Kernel execution time: 2611 microseconds
 =============
 Trial No. 3
 Matrix Size: (64,256)
-Kernel Execution Time: 1700 microseconds
+Kernel Execution Time: 2611 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2341 microseconds
+Kernel execution time: 1489 microseconds
 =============
 Trial No. 4
 Matrix Size: (128,64)
-Kernel Execution Time: 2341 microseconds
+Kernel Execution Time: 1489 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1353 microseconds
+Kernel execution time: 2201 microseconds
 =============
 Trial No. 5
 Matrix Size: (128,128)
-Kernel Execution Time: 1353 microseconds
+Kernel Execution Time: 2201 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1909 microseconds
+Kernel execution time: 1515 microseconds
 =============
 Trial No. 6
 Matrix Size: (128,256)
-Kernel Execution Time: 1909 microseconds
+Kernel Execution Time: 1515 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1475 microseconds
+Kernel execution time: 2282 microseconds
 =============
 Trial No. 7
 Matrix Size: (256,64)
-Kernel Execution Time: 1475 microseconds
+Kernel Execution Time: 2282 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2342 microseconds
+Kernel execution time: 1409 microseconds
 =============
 Trial No. 8
 Matrix Size: (256,128)
-Kernel Execution Time: 2342 microseconds
+Kernel Execution Time: 1409 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1353 microseconds
+Kernel execution time: 2344 microseconds
 =============
 Trial No. 9
 Matrix Size: (256,256)
-Kernel Execution Time: 1353 microseconds
+Kernel Execution Time: 2344 microseconds
 =============
 
 
 Matrix: matrices/transpose/matrix_5a.csv
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2446 microseconds
+Kernel execution time: 1673 microseconds
 =============
 Trial No. 1
 Matrix Size: (64,64)
-Kernel Execution Time: 2446 microseconds
+Kernel Execution Time: 1673 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1786 microseconds
+Kernel execution time: 2208 microseconds
 =============
 Trial No. 2
 Matrix Size: (64,128)
-Kernel Execution Time: 1786 microseconds
+Kernel Execution Time: 2208 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2110 microseconds
+Kernel execution time: 1444 microseconds
 =============
 Trial No. 3
 Matrix Size: (64,256)
-Kernel Execution Time: 2110 microseconds
+Kernel Execution Time: 1444 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1872 microseconds
+Kernel execution time: 2271 microseconds
 =============
 Trial No. 4
 Matrix Size: (128,64)
-Kernel Execution Time: 1872 microseconds
+Kernel Execution Time: 2271 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1903 microseconds
+Kernel execution time: 1835 microseconds
 =============
 Trial No. 5
 Matrix Size: (128,128)
-Kernel Execution Time: 1903 microseconds
+Kernel Execution Time: 1835 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1424 microseconds
+Kernel execution time: 2575 microseconds
 =============
 Trial No. 6
 Matrix Size: (128,256)
-Kernel Execution Time: 1424 microseconds
+Kernel Execution Time: 2575 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2515 microseconds
+Kernel execution time: 1512 microseconds
 =============
 Trial No. 7
 Matrix Size: (256,64)
-Kernel Execution Time: 2515 microseconds
+Kernel Execution Time: 1512 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1569 microseconds
+Kernel execution time: 2453 microseconds
 =============
 Trial No. 8
 Matrix Size: (256,128)
-Kernel Execution Time: 1569 microseconds
+Kernel Execution Time: 2453 microseconds
 =============
 Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2359 microseconds
+Kernel execution time: 1575 microseconds
 =============
 Trial No. 9
 Matrix Size: (256,256)
-Kernel Execution Time: 2359 microseconds
+Kernel Execution Time: 1575 microseconds
 =============
 
 

@@ -6,54 +6,75 @@
 #include "matrix.h"
 #include "matrix_csv.h"
 #include <cuda_runtime.h>
+#include <cuda.h>
 #include <stdio.h>
 #include <cstdint>
+
+// ================= NEW: Instrumentation Counters =================
+__device__ unsigned long long d_gmem_reads = 0;
+__device__ unsigned long long d_gmem_writes = 0;
+__device__ unsigned long long d_smem_reads = 0;
+__device__ unsigned long long d_smem_writes = 0;
 
 // CUDA kernel: Tiled matrix multiplication using shared memory
 __global__ void matrix_multiplication_tiled_dkernel(
     int32_t* d_C, int32_t* d_A, int32_t* d_B,
     unsigned int M, unsigned int N, unsigned int K, unsigned int tile_width)
 {
-    extern __shared__ int32_t shm[]; // kernel-launch-time-configurable; Dynamic Memory Allocation of the Shared Memory
+    extern __shared__ int32_t shm[];
     int32_t* TILE_A = shm;
-    int32_t* TILE_B = shm + tile_width * (tile_width + 1); // to avoid shared memory bank conflicts
+    int32_t* TILE_B = shm + tile_width * (tile_width + 1); // +1 to avoid bank conflicts
 
-    // Block Coords in the Global Memory
-    unsigned int bid_x = blockIdx.x * blockDim.x ;
+    unsigned int bid_x = blockIdx.x * blockDim.x;
     unsigned int bid_y = blockIdx.y * blockDim.y;
-
-    // Thread Coords in the Global Memory
     unsigned int tid_x = bid_x + threadIdx.x;
     unsigned int tid_y = bid_y + threadIdx.y;
 
-    // Row and Col in the Global Memory Array
     unsigned int row_in_tile = threadIdx.y;
     unsigned int col_in_tile = threadIdx.x;
 
-    int32_t tmp = 0; // accumulator
+    int32_t tmp = 0;
     unsigned int num_tiles = (N + tile_width - 1) / tile_width;
 
     for (unsigned int phase = 0; phase < num_tiles; ++phase)
     {
         unsigned int effective_col_inside_tile = phase * tile_width + col_in_tile;
-        TILE_A[row_in_tile * tile_width + col_in_tile] =
-            (tid_y < M && effective_col_inside_tile < N) ? d_A[tid_y * N + effective_col_inside_tile] : 0; // Halo Cells
+
+        if (tid_y < M && effective_col_inside_tile < N) {
+            TILE_A[row_in_tile * tile_width + col_in_tile] =
+                d_A[tid_y * N + effective_col_inside_tile];
+            atomicAdd(&d_gmem_reads, 1ULL);
+        } else {
+            TILE_A[row_in_tile * tile_width + col_in_tile] = 0;
+        }
+        atomicAdd(&d_smem_writes, 1ULL);
 
         unsigned int effective_row_inside_tile = phase * tile_width + row_in_tile;
-        TILE_B[row_in_tile * tile_width + col_in_tile] =
-            (tid_x < K && effective_row_inside_tile < N) ? d_B[effective_row_inside_tile * K + tid_x] : 0; // Halo Cells
 
-        __syncthreads(); // Barrier for Race Condition Avoidance between threads
+        if (tid_x < K && effective_row_inside_tile < N) {
+            TILE_B[row_in_tile * tile_width + col_in_tile] =
+                d_B[effective_row_inside_tile * K + tid_x];
+            atomicAdd(&d_gmem_reads, 1ULL);
+        } else {
+            TILE_B[row_in_tile * tile_width + col_in_tile] = 0;
+        }
+        atomicAdd(&d_smem_writes, 1ULL);
 
-        for (unsigned int k = 0; k < tile_width; ++k)
+        __syncthreads();  // To Avoid Data Race
+
+        for (unsigned int k = 0; k < tile_width; ++k) {
             tmp += TILE_A[row_in_tile * tile_width + k] *
                    TILE_B[k * tile_width + col_in_tile];
+            atomicAdd(&d_smem_reads, 2ULL); // one read from TILE_A + one from TILE_B
+        }
 
-        __syncthreads();
+        __syncthreads(); // To make the right update visible
     }
 
-    if (tid_y < M && tid_x < K)
+    if (tid_y < M && tid_x < K) {
         d_C[tid_y * K + tid_x] = tmp;
+        atomicAdd(&d_gmem_writes, 1ULL);
+    }
 }
 
 // Host-callable function
@@ -62,13 +83,20 @@ extern "C" void solve(int32_t* d_C, int32_t* d_A, int32_t* d_B,
                       unsigned int *kernel_time)  
 {
     dim3 block(tile_width, tile_width);
-    dim3 grid((K + tile_width - 1) / tile_width, (M + tile_width - 1) / tile_width);
-    size_t shared_size_in_bytes = 2 * tile_width * (tile_width + 1) * sizeof(int32_t); // for the 2 different tiles A, B;
+    dim3 grid((K + tile_width - 1) / tile_width,
+              (M + tile_width - 1) / tile_width);
+    size_t shared_size_in_bytes =
+        2 * tile_width * (tile_width + 1) * sizeof(int32_t);
 
-    // CUDA Event Handling for Profiling
     cudaEvent_t start, stop;
     cudaEventCreate(&start);
     cudaEventCreate(&stop);
+
+    // Reset counters before launch
+    cudaMemcpyToSymbol(d_gmem_reads, 0, sizeof(unsigned long long));
+    cudaMemcpyToSymbol(d_gmem_writes, 0, sizeof(unsigned long long));
+    cudaMemcpyToSymbol(d_smem_reads, 0, sizeof(unsigned long long));
+    cudaMemcpyToSymbol(d_smem_writes, 0, sizeof(unsigned long long));
 
     cudaEventRecord(start);
     matrix_multiplication_tiled_dkernel<<<grid, block, shared_size_in_bytes>>>(
@@ -81,11 +109,26 @@ extern "C" void solve(int32_t* d_C, int32_t* d_A, int32_t* d_B,
     cudaEventSynchronize(stop);
     float ms = 0.0f;
     cudaEventElapsedTime(&ms, start, stop);
-    *kernel_time = ms * 1000.0f; // store in microseconds
+    *kernel_time = ms * 1000.0f;
 
     cudaEventDestroy(start);
     cudaEventDestroy(stop);
+
+    // Copy counters back to host
+    unsigned long long h_gmem_reads, h_gmem_writes, h_smem_reads, h_smem_writes;
+    cudaMemcpyFromSymbol(&h_gmem_reads, d_gmem_reads, sizeof(unsigned long long));
+    cudaMemcpyFromSymbol(&h_gmem_writes, d_gmem_writes, sizeof(unsigned long long));
+    cudaMemcpyFromSymbol(&h_smem_reads, d_smem_reads, sizeof(unsigned long long));
+    cudaMemcpyFromSymbol(&h_smem_writes, d_smem_writes, sizeof(unsigned long long));
+
+    // Print results to stdout only
+    printf("Kernel Execution Time: %u microseconds\n", *kernel_time);
+    printf("Global Memory Reads : %llu\n", h_gmem_reads);
+    printf("Global Memory Writes: %llu\n", h_gmem_writes);
+    printf("Shared Memory Reads : %llu\n", h_smem_reads);
+    printf("Shared Memory Writes: %llu\n", h_smem_writes);
 }
+
 
 
 int main(int argc, char* argv[])
