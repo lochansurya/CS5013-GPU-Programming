@@ -173,7 +173,7 @@ int main(int argc, char* argv[])
     cudaMemcpy(d_B, B.elements, B.num_rows * B.num_cols * sizeof(int32_t), cudaMemcpyHostToDevice);
 
     // Launch kernel
-    unsigned int kernel_time_us = 0.0f;
+    unsigned int kernel_time_us = 0;
     solve(d_C, d_A, d_B, A.num_rows, A.num_cols, B.num_cols, tile_width, &kernel_time_us);
 
     // Copy result back to host
