@@ -1,0 +1,29 @@
+Matrix: matrices/transpose/matrix_4a.csv
+Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
+Kernel execution time: 1927 microseconds
+=============
+Trial No. 1
+Matrix Size: (128,128)
+Kernel Execution Time: 1927 microseconds
+=============
+Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
+Kernel execution time: 1597 microseconds
+=============
+Trial No. 2
+Matrix Size: (128,256)
+Kernel Execution Time: 1597 microseconds
+=============
+Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
+Kernel execution time: 2376 microseconds
+=============
+Trial No. 3
+Matrix Size: (256,128)
+Kernel Execution Time: 2376 microseconds
+=============
+Transposed matrix of size 1048576 stored as output_3_CS25MTECH11015.csv
+Kernel execution time: 1646 microseconds
+=============
+Trial No. 4
+Matrix Size: (256,256)
+Kernel Execution Time: 1646 microseconds
+=============

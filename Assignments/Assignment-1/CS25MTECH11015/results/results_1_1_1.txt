@@ -1,0 +1,45 @@
+Matrix: /u/student/2025/cs25mtech11015/CS5013-GPU-Programming/Assignments/Assignment-1/CS25MTECH11015/matrices/matrix_1a.csv
+Shape(A) = (64, 64)
+Shape(B) = (64, 64)
+Product Matrix of size 4096 stored as output_1_1_CS25MTECH11015.csv
+Kernel execution time: 2364 microseconds
+=============
+Trial No. 1
+=============
+#Thread Blocks(M): 8
+#Threads Per Block(N): 32
+Kernel Execution Time: 2364 microseconds
+=============
+Shape(A) = (64, 64)
+Shape(B) = (64, 64)
+Product Matrix of size 4096 stored as output_1_1_CS25MTECH11015.csv
+Kernel execution time: 2244 microseconds
+=============
+Trial No. 2
+=============
+#Thread Blocks(M): 8
+#Threads Per Block(N): 16
+Kernel Execution Time: 2244 microseconds
+=============
+Shape(A) = (64, 64)
+Shape(B) = (64, 64)
+Product Matrix of size 4096 stored as output_1_1_CS25MTECH11015.csv
+Kernel execution time: 1329 microseconds
+=============
+Trial No. 3
+=============
+#Thread Blocks(M): 16
+#Threads Per Block(N): 32
+Kernel Execution Time: 1329 microseconds
+=============
+Shape(A) = (64, 64)
+Shape(B) = (64, 64)
+Product Matrix of size 4096 stored as output_1_1_CS25MTECH11015.csv
+Kernel execution time: 2021 microseconds
+=============
+Trial No. 4
+=============
+#Thread Blocks(M): 16
+#Threads Per Block(N): 16
+Kernel Execution Time: 2021 microseconds
+=============

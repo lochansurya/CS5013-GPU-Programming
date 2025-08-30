@@ -1,0 +1,22 @@
+Matrix: matrices/matrix_1a.csv
+Product Matrix of size 4096 stored as output_2_CS25MTECH11015.csv
+Kernel execution time: 1810 microseconds
+=============
+Trial No. 1
+TileWidth: 8
+Kernel Execution Time: 1810 microseconds
+=============
+Product Matrix of size 4096 stored as output_2_CS25MTECH11015.csv
+Kernel execution time: 2496 microseconds
+=============
+Trial No. 2
+TileWidth: 16
+Kernel Execution Time: 2496 microseconds
+=============
+Product Matrix of size 4096 stored as output_2_CS25MTECH11015.csv
+Kernel execution time: 1592 microseconds
+=============
+Trial No. 3
+TileWidth: 32
+Kernel Execution Time: 1592 microseconds
+=============
