@@ -20,7 +20,7 @@ def generate_rectangular_matrices(output_dir="matrices", max_entries=10000):
     os.makedirs(output_dir, exist_ok=True)
     
     # Example rectangle sizes (rows x cols)
-    sizes = [(64, 64), (128, 128), (10000, 10000), (100, 50), (50, 200), (150, 60), (60, 150)]
+    sizes = [(128, 128), (10000, 10000), (100, 50)]
     
     for i, (rows, cols) in enumerate(sizes, start=1):
         if rows * cols > max_entries:
