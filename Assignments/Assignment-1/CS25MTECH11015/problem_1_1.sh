@@ -23,7 +23,7 @@ CONCAT_FILE="$SCRIPT_DIR/results/results_1_1.txt"
 rm -f "$CONCAT_FILE"
 
 # Loop through input matrices
-for MATRIX in "$SCRIPT_DIR"/matrices/matrix_*a.csv; do
+for MATRIX in "$SCRIPT_DIR"/public_test_cases/matrix_*a.csv; do
     BASENAME=$(basename "$MATRIX" .csv)
     IDX=${BASENAME:7:1}  # extract number
     MATRIX_A="$SCRIPT_DIR/matrices/matrix_${IDX}a.csv"

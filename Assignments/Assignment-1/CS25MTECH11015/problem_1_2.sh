@@ -18,7 +18,7 @@ mkdir -p "$SCRIPT_DIR/results"
 CONCAT_FILE="$SCRIPT_DIR/results/results_1_2.txt"
 rm -f "$CONCAT_FILE"
 
-for MATRIX in public_test_cases/matrix_*a.csv; do
+for MATRIX in "$SCRIPT_DIR"/public_test_cases/matrix_*a.csv; do
     BASENAME=$(basename "$MATRIX" .csv)
     IDX=${BASENAME:7:1}
     MATRIX_A="public_test_cases/matrix_${IDX}a.csv"
