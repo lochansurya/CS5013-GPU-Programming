@@ -37,9 +37,12 @@ for M in 2 4 8 16 32 64; do
 
         echo "Running trial $TRIAL_NO: Size=($M,$N)"
 
-        ./mattrans_basic $M $N "$SCRIPT_DIR/public_test_cases/matrix_a.csv" &>> "$OUTFILE"
+        # Run binary and capture stdout
+        OUTPUT=$(./mattrans_basic $M $N "$SCRIPT_DIR/public_test_cases/matrix_a.csv")
+        echo "$OUTPUT" >> "$OUTFILE"
 
-        TIME_MICRO=$(sed -n '2p' output_3_CS25MTECH11015.txt | awk '{print $NF}')
+        # Extract time from captured output
+        TIME_MICRO=$(echo "$OUTPUT" | grep "Kernel execution time" | awk '{print $(NF-1)}')
 
         {
             echo "============="
