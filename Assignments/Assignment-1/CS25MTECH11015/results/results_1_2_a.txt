@@ -1,0 +1,721 @@
+Matrix: public_test_cases/matrix_a.csv
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2246 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 1
+=============
+2DGrid(X1,Y1): (1,1)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1588 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 2
+=============
+2DGrid(X1,Y1): (1,1)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1875 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 3
+=============
+2DGrid(X1,Y1): (1,1)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1936 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 4
+=============
+2DGrid(X1,Y1): (1,1)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2296 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 5
+=============
+2DGrid(X1,Y1): (1,1)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1928 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 7
+=============
+2DGrid(X1,Y1): (1,4)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2347 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 8
+=============
+2DGrid(X1,Y1): (1,4)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1480 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 9
+=============
+2DGrid(X1,Y1): (1,4)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2453 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 10
+=============
+2DGrid(X1,Y1): (1,4)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1449 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 11
+=============
+2DGrid(X1,Y1): (1,4)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2506 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 13
+=============
+2DGrid(X1,Y1): (1,16)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1520 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 14
+=============
+2DGrid(X1,Y1): (1,16)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2378 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 15
+=============
+2DGrid(X1,Y1): (1,16)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1493 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 16
+=============
+2DGrid(X1,Y1): (1,16)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2043 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 17
+=============
+2DGrid(X1,Y1): (1,16)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1457 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 19
+=============
+2DGrid(X1,Y1): (4,1)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2252 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 20
+=============
+2DGrid(X1,Y1): (4,1)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1815 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 21
+=============
+2DGrid(X1,Y1): (4,1)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2396 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 22
+=============
+2DGrid(X1,Y1): (4,1)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1542 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 23
+=============
+2DGrid(X1,Y1): (4,1)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2289 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 25
+=============
+2DGrid(X1,Y1): (4,4)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1729 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 26
+=============
+2DGrid(X1,Y1): (4,4)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2181 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 27
+=============
+2DGrid(X1,Y1): (4,4)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1903 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 28
+=============
+2DGrid(X1,Y1): (4,4)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2413 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 29
+=============
+2DGrid(X1,Y1): (4,4)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1792 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 31
+=============
+2DGrid(X1,Y1): (4,16)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2135 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 32
+=============
+2DGrid(X1,Y1): (4,16)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1687 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 33
+=============
+2DGrid(X1,Y1): (4,16)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2518 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 34
+=============
+2DGrid(X1,Y1): (4,16)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1636 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 35
+=============
+2DGrid(X1,Y1): (4,16)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2529 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 37
+=============
+2DGrid(X1,Y1): (16,1)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1613 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 38
+=============
+2DGrid(X1,Y1): (16,1)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2161 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 39
+=============
+2DGrid(X1,Y1): (16,1)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1637 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 40
+=============
+2DGrid(X1,Y1): (16,1)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1837 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 41
+=============
+2DGrid(X1,Y1): (16,1)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1803 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 43
+=============
+2DGrid(X1,Y1): (16,4)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2356 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 44
+=============
+2DGrid(X1,Y1): (16,4)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1585 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 45
+=============
+2DGrid(X1,Y1): (16,4)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2038 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 46
+=============
+2DGrid(X1,Y1): (16,4)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1567 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 47
+=============
+2DGrid(X1,Y1): (16,4)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2113 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 49
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1655 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 50
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2140 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 51
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 1582 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 52
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 1449 microseconds
+=============
+File Opening Error: No such file or directory
+File Opening Error: No such file or directory
+File Opening Error
+: No such file or directory
+Shape(A) = (0, 0)
+Shape(B) = (0, 0)
+Shape(C) = (0, 0)
+Kernel execution time: 2293 microseconds
+Matrix of size 0 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 53
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1449 microseconds
+=============
