@@ -25,8 +25,8 @@ rm -f "$CONCAT_FILE"
 EXPECTED="$SCRIPT_DIR/output_matrix_transpose.csv"
 
 TRIAL_NO=1
-for M in 8 16 32 64; do
-    for N in 8 16 32 64; do
+for M in 2 4 8 16 32 64; do
+    for N in 2 4 8 16 32 64; do
         # Skip if total threads exceed 2048
         TOTAL_THREADS=$((M * N))
         if [ "$TOTAL_THREADS" -gt 2048 ]; then
