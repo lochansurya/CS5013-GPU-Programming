@@ -1,280 +1,280 @@
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1843 microseconds
+Kernel execution time: 1959 microseconds
 =============
 Trial No. 1
 grid_x, block_x: (2,2)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1959 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2058 microseconds
+Kernel execution time: 2341 microseconds
 =============
 Trial No. 2
 grid_x, block_x: (2,4)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 2341 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1729 microseconds
+Kernel execution time: 1361 microseconds
 =============
 Trial No. 3
 grid_x, block_x: (2,8)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1361 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2101 microseconds
+Kernel execution time: 1966 microseconds
 =============
 Trial No. 4
 grid_x, block_x: (2,16)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1966 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1872 microseconds
+Kernel execution time: 1568 microseconds
 =============
 Trial No. 5
 grid_x, block_x: (2,32)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1568 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2380 microseconds
+Kernel execution time: 1879 microseconds
 =============
 Trial No. 6
 grid_x, block_x: (2,64)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1879 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1498 microseconds
+Kernel execution time: 1435 microseconds
 =============
 Trial No. 7
 grid_x, block_x: (4,2)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1435 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 3133 microseconds
+Kernel execution time: 2224 microseconds
 =============
 Trial No. 8
 grid_x, block_x: (4,4)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 2224 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1695 microseconds
+Kernel execution time: 1366 microseconds
 =============
 Trial No. 9
 grid_x, block_x: (4,8)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1366 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2370 microseconds
+Kernel execution time: 1876 microseconds
 =============
 Trial No. 10
 grid_x, block_x: (4,16)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1876 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1766 microseconds
+Kernel execution time: 1589 microseconds
 =============
 Trial No. 11
 grid_x, block_x: (4,32)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1589 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2195 microseconds
+Kernel execution time: 2146 microseconds
 =============
 Trial No. 12
 grid_x, block_x: (4,64)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 2146 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1547 microseconds
+Kernel execution time: 1389 microseconds
 =============
 Trial No. 13
 grid_x, block_x: (8,2)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1389 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2320 microseconds
+Kernel execution time: 1700 microseconds
 =============
 Trial No. 14
 grid_x, block_x: (8,4)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1700 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1607 microseconds
+Kernel execution time: 1748 microseconds
 =============
 Trial No. 15
 grid_x, block_x: (8,8)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1748 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2457 microseconds
+Kernel execution time: 2042 microseconds
 =============
 Trial No. 16
 grid_x, block_x: (8,16)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 2042 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1841 microseconds
+Kernel execution time: 1460 microseconds
 =============
 Trial No. 17
 grid_x, block_x: (8,32)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1460 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2086 microseconds
+Kernel execution time: 2279 microseconds
 =============
 Trial No. 18
 grid_x, block_x: (8,64)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 2279 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2014 microseconds
+Kernel execution time: 1550 microseconds
 =============
 Trial No. 19
 grid_x, block_x: (16,2)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1550 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2395 microseconds
+Kernel execution time: 2336 microseconds
 =============
 Trial No. 20
 grid_x, block_x: (16,4)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 2336 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1648 microseconds
+Kernel execution time: 1613 microseconds
 =============
 Trial No. 21
 grid_x, block_x: (16,8)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1613 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2552 microseconds
+Kernel execution time: 2149 microseconds
 =============
 Trial No. 22
 grid_x, block_x: (16,16)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 2149 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1826 microseconds
+Kernel execution time: 1354 microseconds
 =============
 Trial No. 23
 grid_x, block_x: (16,32)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1354 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2083 microseconds
+Kernel execution time: 2122 microseconds
 =============
 Trial No. 24
 grid_x, block_x: (16,64)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 2122 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1466 microseconds
+Kernel execution time: 1254 microseconds
 =============
 Trial No. 25
 grid_x, block_x: (32,2)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1254 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2053 microseconds
+Kernel execution time: 2158 microseconds
 =============
 Trial No. 26
 grid_x, block_x: (32,4)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 2158 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1462 microseconds
+Kernel execution time: 1416 microseconds
 =============
 Trial No. 27
 grid_x, block_x: (32,8)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1416 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2191 microseconds
+Kernel execution time: 2059 microseconds
 =============
 Trial No. 28
 grid_x, block_x: (32,16)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 2059 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1191 microseconds
+Kernel execution time: 1397 microseconds
 =============
 Trial No. 29
 grid_x, block_x: (32,32)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1397 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2072 microseconds
+Kernel execution time: 2116 microseconds
 =============
 Trial No. 30
 grid_x, block_x: (32,64)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 2116 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1427 microseconds
+Kernel execution time: 1577 microseconds
 =============
 Trial No. 31
 grid_x, block_x: (64,2)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1577 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2307 microseconds
+Kernel execution time: 2056 microseconds
 =============
 Trial No. 32
 grid_x, block_x: (64,4)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 2056 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1446 microseconds
+Kernel execution time: 1608 microseconds
 =============
 Trial No. 33
 grid_x, block_x: (64,8)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1608 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1772 microseconds
+Kernel execution time: 2300 microseconds
 =============
 Trial No. 34
 grid_x, block_x: (64,16)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 2300 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1952 microseconds
+Kernel execution time: 1434 microseconds
 =============
 Trial No. 35
 grid_x, block_x: (64,32)
-Kernel Execution Time: 2136 microseconds
+Kernel Execution Time: 1434 microseconds
 =============
