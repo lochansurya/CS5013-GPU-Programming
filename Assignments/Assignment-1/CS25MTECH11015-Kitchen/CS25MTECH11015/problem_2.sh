@@ -21,7 +21,7 @@ for MATRIX in matrices/matrix_*a.csv; do
     echo "Matrix: $MATRIX" > "$OUTFILE"
 
     TRIAL_NO=1
-    for TILE_WIDTH in 8 16 32 64 128; do
+    for TILE_WIDTH in 1 2 4 8 16 32 64 128; do
         echo "Running trial $TRIAL_NO: TileWidth=$TILE_WIDTH"
 
         ./matmul_tiled $TILE_WIDTH "$MATRIX_A" "$MATRIX_B" &>> "$OUTFILE"

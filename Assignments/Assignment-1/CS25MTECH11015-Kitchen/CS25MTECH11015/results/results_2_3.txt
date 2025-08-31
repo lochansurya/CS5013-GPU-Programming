@@ -1,71 +1,113 @@
 Matrix: matrices/matrix_3a.csv
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
-Kernel Execution Time: 72 microseconds
+Kernel Execution Time: 1548 microseconds
+Global Memory Reads : 1000000
+Global Memory Writes: 10000
+Shared Memory Reads : 1000000
+Shared Memory Writes: 1000000
+Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
+Kernel execution time: 1548 microseconds
+=============
+Trial No. 1
+TileWidth: 1
+Kernel Execution Time: 1548 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Kernel Execution Time: 346 microseconds
+Global Memory Reads : 500000
+Global Memory Writes: 10000
+Shared Memory Reads : 1000000
+Shared Memory Writes: 500000
+Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
+Kernel execution time: 346 microseconds
+=============
+Trial No. 2
+TileWidth: 2
+Kernel Execution Time: 346 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Kernel Execution Time: 91 microseconds
+Global Memory Reads : 250000
+Global Memory Writes: 10000
+Shared Memory Reads : 1040000
+Shared Memory Writes: 260000
+Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
+Kernel execution time: 91 microseconds
+=============
+Trial No. 3
+TileWidth: 4
+Kernel Execution Time: 91 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Kernel Execution Time: 117 microseconds
 Global Memory Reads : 130000
 Global Memory Writes: 10000
 Shared Memory Reads : 1211392
 Shared Memory Writes: 151424
 Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
-Kernel execution time: 72 microseconds
+Kernel execution time: 117 microseconds
 =============
-Trial No. 1
+Trial No. 4
 TileWidth: 8
-Kernel Execution Time: 72 microseconds
+Kernel Execution Time: 117 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
-Kernel Execution Time: 123 microseconds
+Kernel Execution Time: 121 microseconds
 Global Memory Reads : 70000
 Global Memory Writes: 10000
 Shared Memory Reads : 1605632
 Shared Memory Writes: 100352
 Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
-Kernel execution time: 123 microseconds
+Kernel execution time: 121 microseconds
 =============
-Trial No. 2
+Trial No. 5
 TileWidth: 16
-Kernel Execution Time: 123 microseconds
+Kernel Execution Time: 121 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
-Kernel Execution Time: 123 microseconds
+Kernel Execution Time: 71 microseconds
 Global Memory Reads : 40000
 Global Memory Writes: 10000
 Shared Memory Reads : 2097152
 Shared Memory Writes: 65536
 Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
-Kernel execution time: 123 microseconds
+Kernel execution time: 71 microseconds
 =============
-Trial No. 3
+Trial No. 6
 TileWidth: 32
-Kernel Execution Time: 123 microseconds
+Kernel Execution Time: 71 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
-Kernel Execution Time: 32 microseconds
+Kernel Execution Time: 79 microseconds
 Global Memory Reads : 0
 Global Memory Writes: 0
 Shared Memory Reads : 0
 Shared Memory Writes: 0
 Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
-Kernel execution time: 32 microseconds
+Kernel execution time: 79 microseconds
 =============
-Trial No. 4
+Trial No. 7
 TileWidth: 64
-Kernel Execution Time: 32 microseconds
+Kernel Execution Time: 79 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
-Kernel Execution Time: 32 microseconds
+Kernel Execution Time: 51 microseconds
 Global Memory Reads : 0
 Global Memory Writes: 0
 Shared Memory Reads : 0
 Shared Memory Writes: 0
 Product Matrix of size 10000 stored as output_2_CS25MTECH11015.csv
-Kernel execution time: 32 microseconds
+Kernel execution time: 51 microseconds
 =============
-Trial No. 5
+Trial No. 8
 TileWidth: 128
-Kernel Execution Time: 32 microseconds
+Kernel Execution Time: 51 microseconds
 =============
