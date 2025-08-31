@@ -1,6 +1,6 @@
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1522 microseconds
+Kernel execution time: 1828 microseconds
 =============
 Trial No. 1
 grid_x, block_x: (8,8)
@@ -8,7 +8,7 @@ Kernel Execution Time: 2136 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2371 microseconds
+Kernel execution time: 1942 microseconds
 =============
 Trial No. 2
 grid_x, block_x: (8,16)
@@ -16,7 +16,7 @@ Kernel Execution Time: 2136 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1694 microseconds
+Kernel execution time: 1488 microseconds
 =============
 Trial No. 3
 grid_x, block_x: (8,32)
@@ -24,7 +24,7 @@ Kernel Execution Time: 2136 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2471 microseconds
+Kernel execution time: 1905 microseconds
 =============
 Trial No. 4
 grid_x, block_x: (8,64)
@@ -32,7 +32,7 @@ Kernel Execution Time: 2136 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1766 microseconds
+Kernel execution time: 1409 microseconds
 =============
 Trial No. 5
 grid_x, block_x: (16,8)
@@ -40,7 +40,7 @@ Kernel Execution Time: 2136 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2593 microseconds
+Kernel execution time: 1775 microseconds
 =============
 Trial No. 6
 grid_x, block_x: (16,16)
@@ -48,7 +48,7 @@ Kernel Execution Time: 2136 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1715 microseconds
+Kernel execution time: 1504 microseconds
 =============
 Trial No. 7
 grid_x, block_x: (16,32)
@@ -56,7 +56,7 @@ Kernel Execution Time: 2136 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2632 microseconds
+Kernel execution time: 2157 microseconds
 =============
 Trial No. 8
 grid_x, block_x: (16,64)
@@ -64,7 +64,7 @@ Kernel Execution Time: 2136 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1441 microseconds
+Kernel execution time: 1586 microseconds
 =============
 Trial No. 9
 grid_x, block_x: (32,8)
@@ -72,7 +72,7 @@ Kernel Execution Time: 2136 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2508 microseconds
+Kernel execution time: 2039 microseconds
 =============
 Trial No. 10
 grid_x, block_x: (32,16)
@@ -80,7 +80,7 @@ Kernel Execution Time: 2136 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1583 microseconds
+Kernel execution time: 1603 microseconds
 =============
 Trial No. 11
 grid_x, block_x: (32,32)
@@ -88,7 +88,7 @@ Kernel Execution Time: 2136 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2064 microseconds
+Kernel execution time: 2086 microseconds
 =============
 Trial No. 12
 grid_x, block_x: (32,64)
@@ -96,7 +96,7 @@ Kernel Execution Time: 2136 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 1587 microseconds
+Kernel execution time: 1641 microseconds
 =============
 Trial No. 13
 grid_x, block_x: (64,8)
@@ -104,7 +104,7 @@ Kernel Execution Time: 2136 microseconds
 =============
 Shape(A) = (64, 64)
 Transposed matrix of size 4096 stored as output_3_CS25MTECH11015.csv
-Kernel execution time: 2438 microseconds
+Kernel execution time: 2099 microseconds
 =============
 Trial No. 14
 grid_x, block_x: (64,16)
