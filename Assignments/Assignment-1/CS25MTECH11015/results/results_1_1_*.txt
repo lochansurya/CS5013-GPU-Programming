@@ -4,7 +4,7 @@ File Opening Error: No such file or directory
 Shape(A) = (0, 0)
 Shape(B) = (0, 0)
 Product Matrix of size 0 stored as output_1_1_CS25MTECH11015.csv
-Kernel execution time: 1805 microseconds
+Kernel execution time: 1718 microseconds
 =============
 Trial No. 1
 =============
@@ -17,7 +17,7 @@ File Opening Error: No such file or directory
 Shape(A) = (0, 0)
 Shape(B) = (0, 0)
 Product Matrix of size 0 stored as output_1_1_CS25MTECH11015.csv
-Kernel execution time: 2728 microseconds
+Kernel execution time: 2214 microseconds
 =============
 Trial No. 2
 =============
@@ -30,7 +30,7 @@ File Opening Error: No such file or directory
 Shape(A) = (0, 0)
 Shape(B) = (0, 0)
 Product Matrix of size 0 stored as output_1_1_CS25MTECH11015.csv
-Kernel execution time: 1814 microseconds
+Kernel execution time: 1981 microseconds
 =============
 Trial No. 3
 =============
@@ -43,7 +43,7 @@ File Opening Error: No such file or directory
 Shape(A) = (0, 0)
 Shape(B) = (0, 0)
 Product Matrix of size 0 stored as output_1_1_CS25MTECH11015.csv
-Kernel execution time: 2541 microseconds
+Kernel execution time: 1833 microseconds
 =============
 Trial No. 4
 =============
@@ -56,7 +56,7 @@ File Opening Error: No such file or directory
 Shape(A) = (0, 0)
 Shape(B) = (0, 0)
 Product Matrix of size 0 stored as output_1_1_CS25MTECH11015.csv
-Kernel execution time: 1457 microseconds
+Kernel execution time: 1270 microseconds
 =============
 Trial No. 5
 =============
@@ -69,7 +69,7 @@ File Opening Error: No such file or directory
 Shape(A) = (0, 0)
 Shape(B) = (0, 0)
 Product Matrix of size 0 stored as output_1_1_CS25MTECH11015.csv
-Kernel execution time: 2964 microseconds
+Kernel execution time: 2291 microseconds
 =============
 Trial No. 6
 =============
@@ -82,7 +82,7 @@ File Opening Error: No such file or directory
 Shape(A) = (0, 0)
 Shape(B) = (0, 0)
 Product Matrix of size 0 stored as output_1_1_CS25MTECH11015.csv
-Kernel execution time: 1490 microseconds
+Kernel execution time: 1696 microseconds
 =============
 Trial No. 7
 =============
@@ -95,7 +95,7 @@ File Opening Error: No such file or directory
 Shape(A) = (0, 0)
 Shape(B) = (0, 0)
 Product Matrix of size 0 stored as output_1_1_CS25MTECH11015.csv
-Kernel execution time: 2662 microseconds
+Kernel execution time: 2394 microseconds
 =============
 Trial No. 8
 =============
@@ -108,7 +108,7 @@ File Opening Error: No such file or directory
 Shape(A) = (0, 0)
 Shape(B) = (0, 0)
 Product Matrix of size 0 stored as output_1_1_CS25MTECH11015.csv
-Kernel execution time: 1556 microseconds
+Kernel execution time: 1161 microseconds
 =============
 Trial No. 9
 =============
