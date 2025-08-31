@@ -2,542 +2,542 @@ Matrix: matrices/matrix_0a.csv
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2416 microseconds
+Kernel execution time: 2375 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 1
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2416 microseconds
+Kernel Execution Time: 2375 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1262 microseconds
+Kernel execution time: 1485 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 2
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1262 microseconds
+Kernel Execution Time: 1485 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1836 microseconds
+Kernel execution time: 1973 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 3
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1836 microseconds
+Kernel Execution Time: 1973 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1336 microseconds
+Kernel execution time: 1450 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 4
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1336 microseconds
+Kernel Execution Time: 1450 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2369 microseconds
+Kernel execution time: 2515 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 5
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2369 microseconds
+Kernel Execution Time: 2515 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1548 microseconds
+Kernel execution time: 1432 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 7
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1548 microseconds
+Kernel Execution Time: 1432 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2102 microseconds
+Kernel execution time: 2380 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 8
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2102 microseconds
+Kernel Execution Time: 2380 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1747 microseconds
+Kernel execution time: 2060 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 9
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1747 microseconds
+Kernel Execution Time: 2060 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2478 microseconds
+Kernel execution time: 1903 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 10
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2478 microseconds
+Kernel Execution Time: 1903 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1775 microseconds
+Kernel execution time: 1469 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 11
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1775 microseconds
+Kernel Execution Time: 1469 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2306 microseconds
+Kernel execution time: 1823 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 13
 =============
 2DGrid(X1,Y1): (1,16)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2306 microseconds
+Kernel Execution Time: 1823 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2088 microseconds
+Kernel execution time: 1686 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 14
 =============
 2DGrid(X1,Y1): (1,16)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2088 microseconds
+Kernel Execution Time: 1686 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2313 microseconds
+Kernel execution time: 1949 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 15
 =============
 2DGrid(X1,Y1): (1,16)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2313 microseconds
+Kernel Execution Time: 1949 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1463 microseconds
+Kernel execution time: 1658 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 16
 =============
 2DGrid(X1,Y1): (1,16)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1463 microseconds
+Kernel Execution Time: 1658 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2514 microseconds
+Kernel execution time: 1815 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 17
 =============
 2DGrid(X1,Y1): (1,16)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2514 microseconds
+Kernel Execution Time: 1815 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1471 microseconds
+Kernel execution time: 1652 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 19
 =============
 2DGrid(X1,Y1): (4,1)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1471 microseconds
+Kernel Execution Time: 1652 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2411 microseconds
+Kernel execution time: 2320 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 20
 =============
 2DGrid(X1,Y1): (4,1)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2411 microseconds
+Kernel Execution Time: 2320 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1682 microseconds
+Kernel execution time: 1871 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 21
 =============
 2DGrid(X1,Y1): (4,1)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1682 microseconds
+Kernel Execution Time: 1871 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2096 microseconds
+Kernel execution time: 2129 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 22
 =============
 2DGrid(X1,Y1): (4,1)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2096 microseconds
+Kernel Execution Time: 2129 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1670 microseconds
+Kernel execution time: 1488 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 23
 =============
 2DGrid(X1,Y1): (4,1)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1670 microseconds
+Kernel Execution Time: 1488 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1861 microseconds
+Kernel execution time: 2045 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 25
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1861 microseconds
+Kernel Execution Time: 2045 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1507 microseconds
+Kernel execution time: 1929 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 26
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1507 microseconds
+Kernel Execution Time: 1929 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2283 microseconds
+Kernel execution time: 2099 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 27
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2283 microseconds
+Kernel Execution Time: 2099 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1628 microseconds
+Kernel execution time: 1404 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 28
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1628 microseconds
+Kernel Execution Time: 1404 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1915 microseconds
+Kernel execution time: 2330 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 29
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1915 microseconds
+Kernel Execution Time: 2330 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1996 microseconds
+Kernel execution time: 1641 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 31
 =============
 2DGrid(X1,Y1): (4,16)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1996 microseconds
+Kernel Execution Time: 1641 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2042 microseconds
+Kernel execution time: 1815 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 32
 =============
 2DGrid(X1,Y1): (4,16)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2042 microseconds
+Kernel Execution Time: 1815 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1473 microseconds
+Kernel execution time: 1660 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 33
 =============
 2DGrid(X1,Y1): (4,16)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1473 microseconds
+Kernel Execution Time: 1660 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2307 microseconds
+Kernel execution time: 1988 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 34
 =============
 2DGrid(X1,Y1): (4,16)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2307 microseconds
+Kernel Execution Time: 1988 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1459 microseconds
+Kernel execution time: 1344 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 35
 =============
 2DGrid(X1,Y1): (4,16)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1459 microseconds
+Kernel Execution Time: 1344 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2137 microseconds
+Kernel execution time: 2006 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 37
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2137 microseconds
+Kernel Execution Time: 2006 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1791 microseconds
+Kernel execution time: 1711 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 38
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1791 microseconds
+Kernel Execution Time: 1711 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2118 microseconds
+Kernel execution time: 1854 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 39
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2118 microseconds
+Kernel Execution Time: 1854 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1298 microseconds
+Kernel execution time: 1385 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 40
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1298 microseconds
+Kernel Execution Time: 1385 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2482 microseconds
+Kernel execution time: 1807 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 41
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2482 microseconds
+Kernel Execution Time: 1807 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1535 microseconds
+Kernel execution time: 1865 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 43
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1535 microseconds
+Kernel Execution Time: 1865 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2187 microseconds
+Kernel execution time: 1887 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 44
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2187 microseconds
+Kernel Execution Time: 1887 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1849 microseconds
+Kernel execution time: 1156 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 45
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1849 microseconds
+Kernel Execution Time: 1156 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2559 microseconds
+Kernel execution time: 2263 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 46
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2559 microseconds
+Kernel Execution Time: 2263 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1499 microseconds
+Kernel execution time: 1437 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 47
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1499 microseconds
+Kernel Execution Time: 1437 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2313 microseconds
+Kernel execution time: 1749 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 49
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2313 microseconds
+Kernel Execution Time: 1749 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1501 microseconds
+Kernel execution time: 1395 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 50
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1501 microseconds
+Kernel Execution Time: 1395 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1895 microseconds
+Kernel execution time: 2360 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 51
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1895 microseconds
+Kernel Execution Time: 2360 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 1536 microseconds
+Kernel execution time: 1805 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 52
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1536 microseconds
+Kernel Execution Time: 1805 microseconds
 =============
 Shape(A) = (64, 64)
 Shape(B) = (64, 64)
 Shape(C) = (64, 64)
-Kernel execution time: 2075 microseconds
+Kernel execution time: 2404 microseconds
 Matrix of size 4096 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 53
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2075 microseconds
+Kernel Execution Time: 2404 microseconds
 =============
 
 
@@ -545,542 +545,542 @@ Matrix: matrices/matrix_1a.csv
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2232 microseconds
+Kernel execution time: 2418 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 1
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2232 microseconds
+Kernel Execution Time: 2418 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2744 microseconds
+Kernel execution time: 2836 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 2
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2744 microseconds
+Kernel Execution Time: 2836 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1999 microseconds
+Kernel execution time: 1808 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 3
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1999 microseconds
+Kernel Execution Time: 1808 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2367 microseconds
+Kernel execution time: 2590 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 4
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2367 microseconds
+Kernel Execution Time: 2590 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2182 microseconds
+Kernel execution time: 2278 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 5
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2182 microseconds
+Kernel Execution Time: 2278 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1969 microseconds
+Kernel execution time: 2032 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 7
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1969 microseconds
+Kernel Execution Time: 2032 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1797 microseconds
+Kernel execution time: 1819 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 8
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1797 microseconds
+Kernel Execution Time: 1819 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2295 microseconds
+Kernel execution time: 2616 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 9
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2295 microseconds
+Kernel Execution Time: 2616 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1535 microseconds
+Kernel execution time: 1538 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 10
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1535 microseconds
+Kernel Execution Time: 1538 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2387 microseconds
+Kernel execution time: 2220 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 11
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2387 microseconds
+Kernel Execution Time: 2220 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1756 microseconds
+Kernel execution time: 1379 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 13
 =============
 2DGrid(X1,Y1): (1,16)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1756 microseconds
+Kernel Execution Time: 1379 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2365 microseconds
+Kernel execution time: 2422 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 14
 =============
 2DGrid(X1,Y1): (1,16)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2365 microseconds
+Kernel Execution Time: 2422 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1820 microseconds
+Kernel execution time: 1388 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 15
 =============
 2DGrid(X1,Y1): (1,16)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1820 microseconds
+Kernel Execution Time: 1388 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1911 microseconds
+Kernel execution time: 2303 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 16
 =============
 2DGrid(X1,Y1): (1,16)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1911 microseconds
+Kernel Execution Time: 2303 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1080 microseconds
+Kernel execution time: 1579 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 17
 =============
 2DGrid(X1,Y1): (1,16)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1080 microseconds
+Kernel Execution Time: 1579 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1912 microseconds
+Kernel execution time: 2368 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 19
 =============
 2DGrid(X1,Y1): (4,1)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1912 microseconds
+Kernel Execution Time: 2368 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1382 microseconds
+Kernel execution time: 1680 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 20
 =============
 2DGrid(X1,Y1): (4,1)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1382 microseconds
+Kernel Execution Time: 1680 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2096 microseconds
+Kernel execution time: 2397 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 21
 =============
 2DGrid(X1,Y1): (4,1)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2096 microseconds
+Kernel Execution Time: 2397 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1511 microseconds
+Kernel execution time: 1615 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 22
 =============
 2DGrid(X1,Y1): (4,1)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1511 microseconds
+Kernel Execution Time: 1615 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2149 microseconds
+Kernel execution time: 2524 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 23
 =============
 2DGrid(X1,Y1): (4,1)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2149 microseconds
+Kernel Execution Time: 2524 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1403 microseconds
+Kernel execution time: 1664 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 25
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1403 microseconds
+Kernel Execution Time: 1664 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2177 microseconds
+Kernel execution time: 1994 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 26
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2177 microseconds
+Kernel Execution Time: 1994 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1957 microseconds
+Kernel execution time: 1588 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 27
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1957 microseconds
+Kernel Execution Time: 1588 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1900 microseconds
+Kernel execution time: 2247 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 28
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1900 microseconds
+Kernel Execution Time: 2247 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1850 microseconds
+Kernel execution time: 1383 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 29
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1850 microseconds
+Kernel Execution Time: 1383 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1824 microseconds
+Kernel execution time: 2038 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 31
 =============
 2DGrid(X1,Y1): (4,16)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1824 microseconds
+Kernel Execution Time: 2038 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1355 microseconds
+Kernel execution time: 1715 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 32
 =============
 2DGrid(X1,Y1): (4,16)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1355 microseconds
+Kernel Execution Time: 1715 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2164 microseconds
+Kernel execution time: 2015 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 33
 =============
 2DGrid(X1,Y1): (4,16)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2164 microseconds
+Kernel Execution Time: 2015 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1725 microseconds
+Kernel execution time: 1261 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 34
 =============
 2DGrid(X1,Y1): (4,16)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1725 microseconds
+Kernel Execution Time: 1261 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1782 microseconds
+Kernel execution time: 2057 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 35
 =============
 2DGrid(X1,Y1): (4,16)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1782 microseconds
+Kernel Execution Time: 2057 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1255 microseconds
+Kernel execution time: 1411 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 37
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1255 microseconds
+Kernel Execution Time: 1411 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1868 microseconds
+Kernel execution time: 1987 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 38
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1868 microseconds
+Kernel Execution Time: 1987 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1722 microseconds
+Kernel execution time: 1152 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 39
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1722 microseconds
+Kernel Execution Time: 1152 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2474 microseconds
+Kernel execution time: 2311 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 40
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2474 microseconds
+Kernel Execution Time: 2311 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1314 microseconds
+Kernel execution time: 1708 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 41
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1314 microseconds
+Kernel Execution Time: 1708 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1950 microseconds
+Kernel execution time: 2374 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 43
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1950 microseconds
+Kernel Execution Time: 2374 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1718 microseconds
+Kernel execution time: 1404 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 44
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1718 microseconds
+Kernel Execution Time: 1404 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1793 microseconds
+Kernel execution time: 2246 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 45
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1793 microseconds
+Kernel Execution Time: 2246 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1645 microseconds
+Kernel execution time: 1662 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 46
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1645 microseconds
+Kernel Execution Time: 1662 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2401 microseconds
+Kernel execution time: 2015 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 47
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2401 microseconds
+Kernel Execution Time: 2015 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1511 microseconds
+Kernel execution time: 1404 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 49
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1511 microseconds
+Kernel Execution Time: 1404 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2315 microseconds
+Kernel execution time: 2088 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 50
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2315 microseconds
+Kernel Execution Time: 2088 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1594 microseconds
+Kernel execution time: 1045 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 51
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1594 microseconds
+Kernel Execution Time: 1045 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2763 microseconds
+Kernel execution time: 2396 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 52
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2763 microseconds
+Kernel Execution Time: 2396 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1575 microseconds
+Kernel execution time: 1762 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 53
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1575 microseconds
+Kernel Execution Time: 1762 microseconds
 =============
 
 
@@ -1088,254 +1088,86 @@ Matrix: matrices/matrix_2a.csv
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 3078 microseconds
+Kernel execution time: 2652 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 1
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 3078 microseconds
+Kernel Execution Time: 2652 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1951 microseconds
+Kernel execution time: 1774 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 2
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1951 microseconds
+Kernel Execution Time: 1774 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2491 microseconds
+Kernel execution time: 1959 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 3
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2491 microseconds
+Kernel Execution Time: 1959 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1958 microseconds
+Kernel execution time: 1870 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 4
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1958 microseconds
+Kernel Execution Time: 1870 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2588 microseconds
+Kernel execution time: 2652 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 5
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2588 microseconds
+Kernel Execution Time: 2652 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1770 microseconds
+Kernel execution time: 1640 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 7
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1770 microseconds
+Kernel Execution Time: 1640 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2072 microseconds
+Kernel execution time: 2058 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 8
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2072 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2029 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 9
-=============
-2DGrid(X1,Y1): (1,4)
-2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2029 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2515 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 10
-=============
-2DGrid(X1,Y1): (1,4)
-2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2515 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1593 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 11
-=============
-2DGrid(X1,Y1): (1,4)
-2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1593 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2503 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 13
-=============
-2DGrid(X1,Y1): (1,16)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2503 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1609 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 14
-=============
-2DGrid(X1,Y1): (1,16)
-2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1609 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2895 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 15
-=============
-2DGrid(X1,Y1): (1,16)
-2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2895 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1820 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 16
-=============
-2DGrid(X1,Y1): (1,16)
-2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1820 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2152 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 17
-=============
-2DGrid(X1,Y1): (1,16)
-2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2152 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2076 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 19
-=============
-2DGrid(X1,Y1): (4,1)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2076 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2286 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 20
-=============
-2DGrid(X1,Y1): (4,1)
-2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2286 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1719 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 21
-=============
-2DGrid(X1,Y1): (4,1)
-2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1719 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2276 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 22
-=============
-2DGrid(X1,Y1): (4,1)
-2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2276 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1901 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 23
-=============
-2DGrid(X1,Y1): (4,1)
-2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1901 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2446 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 25
-=============
-2DGrid(X1,Y1): (4,4)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2446 microseconds
+Kernel Execution Time: 2058 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
@@ -1343,119 +1175,215 @@ Shape(C) = (100, 100)
 Kernel execution time: 1527 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
-Trial No. 26
+Trial No. 9
 =============
-2DGrid(X1,Y1): (4,4)
-2DBlock(X2,Y2): (16,32)
+2DGrid(X1,Y1): (1,4)
+2DBlock(X2,Y2): (32,16)
 Kernel Execution Time: 1527 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2084 microseconds
+Kernel execution time: 2409 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 10
+=============
+2DGrid(X1,Y1): (1,4)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2409 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1813 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 11
+=============
+2DGrid(X1,Y1): (1,4)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1813 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2188 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 13
+=============
+2DGrid(X1,Y1): (1,16)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2188 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1576 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 14
+=============
+2DGrid(X1,Y1): (1,16)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1576 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1942 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 15
+=============
+2DGrid(X1,Y1): (1,16)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1942 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1473 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 16
+=============
+2DGrid(X1,Y1): (1,16)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 1473 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2534 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 17
+=============
+2DGrid(X1,Y1): (1,16)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2534 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1994 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 19
+=============
+2DGrid(X1,Y1): (4,1)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1994 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2069 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 20
+=============
+2DGrid(X1,Y1): (4,1)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2069 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1854 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 21
+=============
+2DGrid(X1,Y1): (4,1)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1854 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1972 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 22
+=============
+2DGrid(X1,Y1): (4,1)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 1972 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1652 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 23
+=============
+2DGrid(X1,Y1): (4,1)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1652 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1858 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 25
+=============
+2DGrid(X1,Y1): (4,4)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1858 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1612 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 26
+=============
+2DGrid(X1,Y1): (4,4)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1612 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2026 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 27
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2084 microseconds
+Kernel Execution Time: 2026 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 26362 microseconds
+Kernel execution time: 1629 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 28
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 26362 microseconds
+Kernel Execution Time: 1629 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2414 microseconds
+Kernel execution time: 1945 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 29
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2414 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1430 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 31
-=============
-2DGrid(X1,Y1): (4,16)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1430 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1759 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 32
-=============
-2DGrid(X1,Y1): (4,16)
-2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1759 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1844 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 33
-=============
-2DGrid(X1,Y1): (4,16)
-2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1844 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2318 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 34
-=============
-2DGrid(X1,Y1): (4,16)
-2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2318 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1716 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 35
-=============
-2DGrid(X1,Y1): (4,16)
-2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1716 microseconds
-=============
-Shape(A) = (100, 100)
-Shape(B) = (100, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1960 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 37
-=============
-2DGrid(X1,Y1): (16,1)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1960 microseconds
+Kernel Execution Time: 1945 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
@@ -1463,167 +1391,239 @@ Shape(C) = (100, 100)
 Kernel execution time: 1608 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
-Trial No. 38
+Trial No. 31
 =============
-2DGrid(X1,Y1): (16,1)
-2DBlock(X2,Y2): (16,32)
+2DGrid(X1,Y1): (4,16)
+2DBlock(X2,Y2): (16,16)
 Kernel Execution Time: 1608 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2073 microseconds
+Kernel execution time: 2493 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 32
+=============
+2DGrid(X1,Y1): (4,16)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2493 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1695 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 33
+=============
+2DGrid(X1,Y1): (4,16)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1695 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2023 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 34
+=============
+2DGrid(X1,Y1): (4,16)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2023 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1469 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 35
+=============
+2DGrid(X1,Y1): (4,16)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1469 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2835 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 37
+=============
+2DGrid(X1,Y1): (16,1)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2835 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1761 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 38
+=============
+2DGrid(X1,Y1): (16,1)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1761 microseconds
+=============
+Shape(A) = (100, 100)
+Shape(B) = (100, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2271 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 39
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2073 microseconds
+Kernel Execution Time: 2271 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1487 microseconds
+Kernel execution time: 1747 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 40
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1487 microseconds
+Kernel Execution Time: 1747 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1970 microseconds
+Kernel execution time: 2487 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 41
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1970 microseconds
+Kernel Execution Time: 2487 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1372 microseconds
+Kernel execution time: 1874 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 43
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1372 microseconds
+Kernel Execution Time: 1874 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1878 microseconds
+Kernel execution time: 2539 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 44
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1878 microseconds
+Kernel Execution Time: 2539 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1811 microseconds
+Kernel execution time: 1780 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 45
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1811 microseconds
+Kernel Execution Time: 1780 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2004 microseconds
+Kernel execution time: 2562 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 46
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2004 microseconds
+Kernel Execution Time: 2562 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1900 microseconds
+Kernel execution time: 1386 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 47
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1900 microseconds
+Kernel Execution Time: 1386 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1809 microseconds
+Kernel execution time: 2581 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 49
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1809 microseconds
+Kernel Execution Time: 2581 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1679 microseconds
+Kernel execution time: 1617 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 50
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1679 microseconds
+Kernel Execution Time: 1617 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1956 microseconds
+Kernel execution time: 2169 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 51
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1956 microseconds
+Kernel Execution Time: 2169 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1400 microseconds
+Kernel execution time: 1335 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 52
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1400 microseconds
+Kernel Execution Time: 1335 microseconds
 =============
 Shape(A) = (100, 100)
 Shape(B) = (100, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2162 microseconds
+Kernel execution time: 1966 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 53
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2162 microseconds
+Kernel Execution Time: 1966 microseconds
 =============
 
 
@@ -1631,821 +1631,266 @@ Matrix: matrices/matrix_3a.csv
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1604 microseconds
+Kernel execution time: 1883 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 1
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1604 microseconds
+Kernel Execution Time: 1883 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1969 microseconds
+Kernel execution time: 2819 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 2
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1969 microseconds
+Kernel Execution Time: 2819 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1722 microseconds
+Kernel execution time: 1906 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 3
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1722 microseconds
+Kernel Execution Time: 1906 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2440 microseconds
+Kernel execution time: 2568 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 4
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2440 microseconds
+Kernel Execution Time: 2568 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1762 microseconds
+Kernel execution time: 1955 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 5
 =============
 2DGrid(X1,Y1): (1,1)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1762 microseconds
+Kernel Execution Time: 1955 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1956 microseconds
+Kernel execution time: 2505 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 7
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1956 microseconds
+Kernel Execution Time: 2505 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1640 microseconds
+Kernel execution time: 1936 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 8
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1640 microseconds
+Kernel Execution Time: 1936 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2268 microseconds
+Kernel execution time: 2429 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 9
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2268 microseconds
+Kernel Execution Time: 2429 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1600 microseconds
+Kernel execution time: 1815 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 10
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1600 microseconds
+Kernel Execution Time: 1815 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1829 microseconds
+Kernel execution time: 2292 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 11
 =============
 2DGrid(X1,Y1): (1,4)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1829 microseconds
+Kernel Execution Time: 2292 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2081 microseconds
+Kernel execution time: 1613 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 13
 =============
 2DGrid(X1,Y1): (1,16)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2081 microseconds
+Kernel Execution Time: 1613 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1895 microseconds
+Kernel execution time: 2090 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 14
 =============
 2DGrid(X1,Y1): (1,16)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1895 microseconds
+Kernel Execution Time: 2090 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1320 microseconds
+Kernel execution time: 1967 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 15
 =============
 2DGrid(X1,Y1): (1,16)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1320 microseconds
+Kernel Execution Time: 1967 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2066 microseconds
+Kernel execution time: 2540 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 16
 =============
 2DGrid(X1,Y1): (1,16)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2066 microseconds
+Kernel Execution Time: 2540 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2137 microseconds
+Kernel execution time: 1661 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 17
 =============
 2DGrid(X1,Y1): (1,16)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2137 microseconds
+Kernel Execution Time: 1661 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2354 microseconds
+Kernel execution time: 2178 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 19
 =============
 2DGrid(X1,Y1): (4,1)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2354 microseconds
+Kernel Execution Time: 2178 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1234 microseconds
+Kernel execution time: 1527 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 20
 =============
 2DGrid(X1,Y1): (4,1)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1234 microseconds
+Kernel Execution Time: 1527 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1795 microseconds
+Kernel execution time: 2370 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 21
 =============
 2DGrid(X1,Y1): (4,1)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1795 microseconds
+Kernel Execution Time: 2370 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1333 microseconds
+Kernel execution time: 1752 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 22
 =============
 2DGrid(X1,Y1): (4,1)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1333 microseconds
+Kernel Execution Time: 1752 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2693 microseconds
+Kernel execution time: 2290 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 23
 =============
 2DGrid(X1,Y1): (4,1)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2693 microseconds
+Kernel Execution Time: 2290 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1746 microseconds
+Kernel execution time: 1615 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 25
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1746 microseconds
+Kernel Execution Time: 1615 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1797 microseconds
+Kernel execution time: 2443 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 26
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1797 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1442 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 27
-=============
-2DGrid(X1,Y1): (4,4)
-2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1442 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2460 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 28
-=============
-2DGrid(X1,Y1): (4,4)
-2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2460 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1478 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 29
-=============
-2DGrid(X1,Y1): (4,4)
-2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1478 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2179 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 31
-=============
-2DGrid(X1,Y1): (4,16)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2179 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1467 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 32
-=============
-2DGrid(X1,Y1): (4,16)
-2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1467 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1634 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 33
-=============
-2DGrid(X1,Y1): (4,16)
-2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1634 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1560 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 34
-=============
-2DGrid(X1,Y1): (4,16)
-2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1560 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2324 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 35
-=============
-2DGrid(X1,Y1): (4,16)
-2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2324 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1600 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 37
-=============
-2DGrid(X1,Y1): (16,1)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1600 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2306 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 38
-=============
-2DGrid(X1,Y1): (16,1)
-2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2306 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1294 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 39
-=============
-2DGrid(X1,Y1): (16,1)
-2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1294 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2174 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 40
-=============
-2DGrid(X1,Y1): (16,1)
-2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2174 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1775 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 41
-=============
-2DGrid(X1,Y1): (16,1)
-2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1775 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2278 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 43
-=============
-2DGrid(X1,Y1): (16,4)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2278 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1410 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 44
-=============
-2DGrid(X1,Y1): (16,4)
-2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1410 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2164 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 45
-=============
-2DGrid(X1,Y1): (16,4)
-2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2164 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1118 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 46
-=============
-2DGrid(X1,Y1): (16,4)
-2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1118 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1544 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 47
-=============
-2DGrid(X1,Y1): (16,4)
-2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1544 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1826 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 49
-=============
-2DGrid(X1,Y1): (16,16)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1826 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2029 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 50
-=============
-2DGrid(X1,Y1): (16,16)
-2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2029 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1687 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 51
-=============
-2DGrid(X1,Y1): (16,16)
-2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1687 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2436 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 52
-=============
-2DGrid(X1,Y1): (16,16)
-2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2436 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1396 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 53
-=============
-2DGrid(X1,Y1): (16,16)
-2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1396 microseconds
-=============
-
-
-Matrix: matrices/matrix_4a.csv
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2003 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 1
-=============
-2DGrid(X1,Y1): (1,1)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2003 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1978 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 2
-=============
-2DGrid(X1,Y1): (1,1)
-2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1978 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1987 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 3
-=============
-2DGrid(X1,Y1): (1,1)
-2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1987 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1969 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 4
-=============
-2DGrid(X1,Y1): (1,1)
-2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1969 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1701 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 5
-=============
-2DGrid(X1,Y1): (1,1)
-2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1701 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1972 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 7
-=============
-2DGrid(X1,Y1): (1,4)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1972 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2317 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 8
-=============
-2DGrid(X1,Y1): (1,4)
-2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2317 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1744 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 9
-=============
-2DGrid(X1,Y1): (1,4)
-2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1744 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2503 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 10
-=============
-2DGrid(X1,Y1): (1,4)
-2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2503 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1944 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 11
-=============
-2DGrid(X1,Y1): (1,4)
-2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1944 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2137 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 13
-=============
-2DGrid(X1,Y1): (1,16)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2137 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1935 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 14
-=============
-2DGrid(X1,Y1): (1,16)
-2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1935 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2357 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 15
-=============
-2DGrid(X1,Y1): (1,16)
-2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2357 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1850 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 16
-=============
-2DGrid(X1,Y1): (1,16)
-2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1850 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2239 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 17
-=============
-2DGrid(X1,Y1): (1,16)
-2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2239 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1667 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 19
-=============
-2DGrid(X1,Y1): (4,1)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1667 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1872 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 20
-=============
-2DGrid(X1,Y1): (4,1)
-2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1872 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1586 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 21
-=============
-2DGrid(X1,Y1): (4,1)
-2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1586 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2236 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 22
-=============
-2DGrid(X1,Y1): (4,1)
-2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2236 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1487 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 23
-=============
-2DGrid(X1,Y1): (4,1)
-2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1487 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2120 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 25
-=============
-2DGrid(X1,Y1): (4,4)
-2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2120 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 1536 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 26
-=============
-2DGrid(X1,Y1): (4,4)
-2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1536 microseconds
-=============
-Shape(A) = (100, 50)
-Shape(B) = (50, 100)
-Shape(C) = (100, 100)
-Kernel execution time: 2105 microseconds
-Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
-=============
-Trial No. 27
-=============
-2DGrid(X1,Y1): (4,4)
-2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2105 microseconds
+Kernel Execution Time: 2443 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
@@ -2453,263 +1898,818 @@ Shape(C) = (100, 100)
 Kernel execution time: 1707 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
-Trial No. 28
+Trial No. 27
 =============
 2DGrid(X1,Y1): (4,4)
-2DBlock(X2,Y2): (32,32)
+2DBlock(X2,Y2): (32,16)
 Kernel Execution Time: 1707 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1760 microseconds
+Kernel execution time: 2545 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 28
+=============
+2DGrid(X1,Y1): (4,4)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2545 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2013 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 29
 =============
 2DGrid(X1,Y1): (4,4)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1760 microseconds
+Kernel Execution Time: 2013 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1355 microseconds
+Kernel execution time: 2552 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 31
 =============
 2DGrid(X1,Y1): (4,16)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1355 microseconds
+Kernel Execution Time: 2552 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2209 microseconds
+Kernel execution time: 1492 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 32
 =============
 2DGrid(X1,Y1): (4,16)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2209 microseconds
+Kernel Execution Time: 1492 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1747 microseconds
+Kernel execution time: 1995 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 33
 =============
 2DGrid(X1,Y1): (4,16)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1747 microseconds
+Kernel Execution Time: 1995 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2152 microseconds
+Kernel execution time: 1855 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 34
 =============
 2DGrid(X1,Y1): (4,16)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2152 microseconds
+Kernel Execution Time: 1855 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1396 microseconds
+Kernel execution time: 2236 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 35
 =============
 2DGrid(X1,Y1): (4,16)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1396 microseconds
+Kernel Execution Time: 2236 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2053 microseconds
+Kernel execution time: 1513 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 37
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2053 microseconds
+Kernel Execution Time: 1513 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1505 microseconds
+Kernel execution time: 2261 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 38
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1505 microseconds
+Kernel Execution Time: 2261 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2050 microseconds
+Kernel execution time: 1775 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 39
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2050 microseconds
+Kernel Execution Time: 1775 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1717 microseconds
+Kernel execution time: 2378 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 40
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1717 microseconds
+Kernel Execution Time: 2378 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2154 microseconds
+Kernel execution time: 1737 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 41
 =============
 2DGrid(X1,Y1): (16,1)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2154 microseconds
+Kernel Execution Time: 1737 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1418 microseconds
+Kernel execution time: 2020 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 43
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 1418 microseconds
+Kernel Execution Time: 2020 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2239 microseconds
+Kernel execution time: 1693 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 44
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 2239 microseconds
+Kernel Execution Time: 1693 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1416 microseconds
+Kernel execution time: 2448 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 45
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 1416 microseconds
+Kernel Execution Time: 2448 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2278 microseconds
+Kernel execution time: 1586 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 46
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 2278 microseconds
+Kernel Execution Time: 1586 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1813 microseconds
+Kernel execution time: 1961 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 47
 =============
 2DGrid(X1,Y1): (16,4)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 1813 microseconds
+Kernel Execution Time: 1961 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2315 microseconds
+Kernel execution time: 1863 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 49
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (16,16)
-Kernel Execution Time: 2315 microseconds
+Kernel Execution Time: 1863 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1816 microseconds
+Kernel execution time: 2524 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 50
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (16,32)
-Kernel Execution Time: 1816 microseconds
+Kernel Execution Time: 2524 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2084 microseconds
+Kernel execution time: 1904 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 51
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (32,16)
-Kernel Execution Time: 2084 microseconds
+Kernel Execution Time: 1904 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 1655 microseconds
+Kernel execution time: 2246 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 52
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (32,32)
-Kernel Execution Time: 1655 microseconds
+Kernel Execution Time: 2246 microseconds
 =============
 Shape(A) = (100, 50)
 Shape(B) = (50, 100)
 Shape(C) = (100, 100)
-Kernel execution time: 2100 microseconds
+Kernel execution time: 1801 microseconds
 Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
 =============
 Trial No. 53
 =============
 2DGrid(X1,Y1): (16,16)
 2DBlock(X2,Y2): (64,16)
-Kernel Execution Time: 2100 microseconds
+Kernel Execution Time: 1801 microseconds
+=============
+
+
+Matrix: matrices/matrix_4a.csv
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2404 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 1
+=============
+2DGrid(X1,Y1): (1,1)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2404 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1564 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 2
+=============
+2DGrid(X1,Y1): (1,1)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1564 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2236 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 3
+=============
+2DGrid(X1,Y1): (1,1)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2236 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2094 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 4
+=============
+2DGrid(X1,Y1): (1,1)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2094 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2010 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 5
+=============
+2DGrid(X1,Y1): (1,1)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2010 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1618 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 7
+=============
+2DGrid(X1,Y1): (1,4)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1618 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1853 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 8
+=============
+2DGrid(X1,Y1): (1,4)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1853 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1630 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 9
+=============
+2DGrid(X1,Y1): (1,4)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1630 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2187 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 10
+=============
+2DGrid(X1,Y1): (1,4)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2187 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1615 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 11
+=============
+2DGrid(X1,Y1): (1,4)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1615 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2254 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 13
+=============
+2DGrid(X1,Y1): (1,16)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2254 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1692 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 14
+=============
+2DGrid(X1,Y1): (1,16)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1692 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2369 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 15
+=============
+2DGrid(X1,Y1): (1,16)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2369 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1916 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 16
+=============
+2DGrid(X1,Y1): (1,16)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 1916 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2613 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 17
+=============
+2DGrid(X1,Y1): (1,16)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2613 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1611 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 19
+=============
+2DGrid(X1,Y1): (4,1)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1611 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2668 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 20
+=============
+2DGrid(X1,Y1): (4,1)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2668 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1784 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 21
+=============
+2DGrid(X1,Y1): (4,1)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1784 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2496 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 22
+=============
+2DGrid(X1,Y1): (4,1)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2496 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1840 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 23
+=============
+2DGrid(X1,Y1): (4,1)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1840 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2091 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 25
+=============
+2DGrid(X1,Y1): (4,4)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2091 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1563 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 26
+=============
+2DGrid(X1,Y1): (4,4)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1563 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1974 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 27
+=============
+2DGrid(X1,Y1): (4,4)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1974 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1495 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 28
+=============
+2DGrid(X1,Y1): (4,4)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 1495 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2311 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 29
+=============
+2DGrid(X1,Y1): (4,4)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2311 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1536 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 31
+=============
+2DGrid(X1,Y1): (4,16)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1536 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2536 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 32
+=============
+2DGrid(X1,Y1): (4,16)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2536 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1791 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 33
+=============
+2DGrid(X1,Y1): (4,16)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1791 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2812 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 34
+=============
+2DGrid(X1,Y1): (4,16)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2812 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1624 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 35
+=============
+2DGrid(X1,Y1): (4,16)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1624 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2320 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 37
+=============
+2DGrid(X1,Y1): (16,1)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 2320 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1940 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 38
+=============
+2DGrid(X1,Y1): (16,1)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1940 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1957 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 39
+=============
+2DGrid(X1,Y1): (16,1)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1957 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1208 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 40
+=============
+2DGrid(X1,Y1): (16,1)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 1208 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2158 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 41
+=============
+2DGrid(X1,Y1): (16,1)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2158 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1378 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 43
+=============
+2DGrid(X1,Y1): (16,4)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1378 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2219 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 44
+=============
+2DGrid(X1,Y1): (16,4)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 2219 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1902 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 45
+=============
+2DGrid(X1,Y1): (16,4)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 1902 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2430 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 46
+=============
+2DGrid(X1,Y1): (16,4)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 2430 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1710 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 47
+=============
+2DGrid(X1,Y1): (16,4)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 1710 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1778 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 49
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (16,16)
+Kernel Execution Time: 1778 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1367 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 50
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (16,32)
+Kernel Execution Time: 1367 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2093 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 51
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (32,16)
+Kernel Execution Time: 2093 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 1654 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 52
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (32,32)
+Kernel Execution Time: 1654 microseconds
+=============
+Shape(A) = (100, 50)
+Shape(B) = (50, 100)
+Shape(C) = (100, 100)
+Kernel execution time: 2129 microseconds
+Matrix of size 10000 stored as output_1_2_CS25MTECH11015.csv
+=============
+Trial No. 53
+=============
+2DGrid(X1,Y1): (16,16)
+2DBlock(X2,Y2): (64,16)
+Kernel Execution Time: 2129 microseconds
 =============
 
 

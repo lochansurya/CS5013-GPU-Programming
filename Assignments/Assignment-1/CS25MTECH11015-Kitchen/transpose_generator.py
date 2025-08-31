@@ -11,7 +11,7 @@ rows_cols_list = [
     (128, 128),
     (1024, 1024),
     (2048, 512),
-    (512, 2048)
+    (2048, 2048)
 ]  # list of (rows, cols) for each matrix
 
 input_dir = "matrices"

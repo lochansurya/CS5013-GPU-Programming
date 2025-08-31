@@ -1,41 +1,41 @@
 Matrix: matrices/transpose/matrix_5a.csv
-Shape(A) = (512, 2048)
-Product Matrix of size (2048, 512) stored as output_4_CS25MTECH11015.csv...
-Kernel execution time: 1913 microseconds
+Shape(A) = (2048, 2048)
+Product Matrix of size (2048, 2048) stored as output_4_CS25MTECH11015.csv...
+Kernel execution time: 3659 microseconds
 =============
 Trial No. 1
 TileWidth: 2
-Kernel Execution Time: 1913 microseconds
+Kernel Execution Time: 3659 microseconds
 =============
-Shape(A) = (512, 2048)
-Product Matrix of size (2048, 512) stored as output_4_CS25MTECH11015.csv...
-Kernel execution time: 2243 microseconds
+Shape(A) = (2048, 2048)
+Product Matrix of size (2048, 2048) stored as output_4_CS25MTECH11015.csv...
+Kernel execution time: 1688 microseconds
 =============
 Trial No. 2
 TileWidth: 4
-Kernel Execution Time: 2243 microseconds
+Kernel Execution Time: 1688 microseconds
 =============
-Shape(A) = (512, 2048)
-Product Matrix of size (2048, 512) stored as output_4_CS25MTECH11015.csv...
-Kernel execution time: 1426 microseconds
+Shape(A) = (2048, 2048)
+Product Matrix of size (2048, 2048) stored as output_4_CS25MTECH11015.csv...
+Kernel execution time: 1846 microseconds
 =============
 Trial No. 3
 TileWidth: 8
-Kernel Execution Time: 1426 microseconds
+Kernel Execution Time: 1846 microseconds
 =============
-Shape(A) = (512, 2048)
-Product Matrix of size (2048, 512) stored as output_4_CS25MTECH11015.csv...
-Kernel execution time: 2338 microseconds
+Shape(A) = (2048, 2048)
+Product Matrix of size (2048, 2048) stored as output_4_CS25MTECH11015.csv...
+Kernel execution time: 1287 microseconds
 =============
 Trial No. 4
 TileWidth: 16
-Kernel Execution Time: 2338 microseconds
+Kernel Execution Time: 1287 microseconds
 =============
-Shape(A) = (512, 2048)
-Product Matrix of size (2048, 512) stored as output_4_CS25MTECH11015.csv...
-Kernel execution time: 1577 microseconds
+Shape(A) = (2048, 2048)
+Product Matrix of size (2048, 2048) stored as output_4_CS25MTECH11015.csv...
+Kernel execution time: 1886 microseconds
 =============
 Trial No. 5
 TileWidth: 32
-Kernel Execution Time: 1577 microseconds
+Kernel Execution Time: 1886 microseconds
 =============
