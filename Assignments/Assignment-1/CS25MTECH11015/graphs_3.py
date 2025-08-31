@@ -3,7 +3,7 @@ import re
 import matplotlib.pyplot as plt
 
 # Paths
-RESULTS_FILE = "results/results_3_1.txt"
+RESULTS_FILE = "results/results_3.txt"
 PLOTS_DIRECTORY = "plots"
 PLOT_FILE = os.path.join(PLOTS_DIRECTORY, "problem3_1_transpose.png")
 os.makedirs(PLOTS_DIRECTORY, exist_ok=True)
