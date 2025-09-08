@@ -4,7 +4,7 @@
 #include <cuda.h>
 #include <cuda_runtime.h>
 
-#define NUM_THREADS_PER_BLOCK 256
+#define NUM_THREADS_PER_BLOCK 1024
 
 // ------------------- Device Helper -------------------
 __device__ void swap(int *a, int *b) {
