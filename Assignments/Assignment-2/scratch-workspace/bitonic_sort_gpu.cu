@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <cuda.h>
 #include <cuda_runtime.h>
+#include <time.h> // to use the clock_gettime(), clock(), etc.. for time profiling the whole process;
 
 #define NUM_THREADS_PER_BLOCK 1024
 
