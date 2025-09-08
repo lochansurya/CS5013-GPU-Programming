@@ -2,7 +2,6 @@
 #include <stdint.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 
 
 
@@ -15,7 +14,7 @@ Arrays* read_from_csv_uint32(const char *input_csv_file_path){
     }
     
     // upper bounds on the number of arrays N, and the length of an array L
-    const size_t N = 1 << 15; // >= 30K
+    const size_t N = 1 << 15; // 30K
     const size_t L = 1 << 7; // 128
 
 
@@ -25,10 +24,8 @@ Arrays* read_from_csv_uint32(const char *input_csv_file_path){
 
     if(!arrays->arr || !arrays->offsets){
         printf("Memory allocation for the struct Arrays failed!\n");
-        // delete in the LIFO order
-        free(arrays->offsets);
         free(arrays->arr);
-        free(arrays);
+        free(arrays->offsets);
         fclose(fp_in);
         return NULL;
     }
@@ -47,12 +44,12 @@ Arrays* read_from_csv_uint32(const char *input_csv_file_path){
         size_t base = arrays->total_len;
 
         // record the start offset
-        arrays->offsets[arrays->num_arrays] = base;
+        arrays->offset[arrays->num_arrays] = base;
         
         // start reading the elements
         for(size_t i = 0; i < len; ++i){
             token = strtok(NULL, ",");
-            arrays->arr[base + i] = token ? (uint32_t)strtoul(token, NULL, 10): 0;
+            arrays->arr[base + i] = token ? atoi(token): 0;
         }
         
         arrays->total_len += len;
@@ -85,7 +82,7 @@ void write_to_csv_uint32(const char *output_csv_file_path, const Arrays *arrays)
          
         // first, write the array length to the output csv file
         fprintf(fp_out, "%zu", arr_len);
-        for(size_t j = start; j < end; ++j){
+        for(uint32_t j = start; j < end; ++j){
             fprintf(fp_out, ",%u", arrays->arr[j]); 
         }
         fprintf(fp_out, "\n");
