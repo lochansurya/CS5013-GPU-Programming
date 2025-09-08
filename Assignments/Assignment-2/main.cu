@@ -153,21 +153,39 @@ extern "C" void solver(Arrays *arrays, int max_array_len){
 
     cudaMemcpy(d_arr, arrays->arr, N * sizeof(uint32_t), cudaMemcpyHostToDevice);
     cudaMemcpy(d_offsets, arrays->offsets, (num_arrays + 1) * sizeof(uint32_t), cudaMemcpyHostToDevice);
-
+    
+    // Compute threads per block (cap at 1024)
     int num_threads_per_block = 48*1024 / (max_array_len * sizeof(uint32_t));
-    int num_blocks_per_grid = (num_arrays + num_threads_per_block - 1) / num_threads_per_block;
+    if(num_threads_per_block > 1024) num_threads_per_block = 1024;
+    if(num_threads_per_block < 1) num_threads_per_block = 1;
 
-    // Allocate double shared memory: local + temp
+    int num_blocks_per_grid = (num_arrays + num_threads_per_block - 1) / num_threads_per_block;
+    
+    printf("Number of Threads Per Block= %d\n", num_threads_per_block);
+    printf("Number of Blocks Per Grid= %d\n", num_blocks_per_grid);
+
     size_t shared_size_in_num_bytes = num_threads_per_block * max_array_len * sizeof(uint32_t);
 
+    // Launch kernel
     thread_per_array_radix_sort<<<num_blocks_per_grid, num_threads_per_block, shared_size_in_num_bytes>>>(d_arr, d_offsets, num_arrays, max_array_len);
-    cudaDeviceSynchronize();
+
+    // Check for errors
+    cudaError_t err = cudaGetLastError();
+    if (err != cudaSuccess) {
+        fprintf(stderr, "Kernel launch error: %s\n", cudaGetErrorString(err));
+    }
+
+    err = cudaDeviceSynchronize();
+    if (err != cudaSuccess) {
+        fprintf(stderr, "CUDA sync error: %s\n", cudaGetErrorString(err));
+    }
 
     cudaMemcpy(arrays->arr, d_arr, N * sizeof(uint32_t), cudaMemcpyDeviceToHost);
 
     cudaFree(d_arr);
     cudaFree(d_offsets);
 }
+
 
 // ---------------------------- Main ----------------------------
 int main(int argc, char *argv[]){
