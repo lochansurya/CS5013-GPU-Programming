@@ -84,7 +84,7 @@ void write_to_csv_file_uint32(const char *output_csv_file_path, const Arrays *ar
         for(size_t j = start; j < end; ++j){
             fprintf(fp_out, ",%u", arrays->arr[j]);
         }
-        fprintf(fp_out, "\n");
+        fprintf(fp_out, "\r\n");
     }
     fclose(fp_out);
 }
