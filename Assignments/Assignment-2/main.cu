@@ -189,25 +189,17 @@ extern "C" void solver(Arrays *arrays, int max_array_len){
 
 // ---------------------------- Main ----------------------------
 int main(int argc, char *argv[]){
-    if(argc != 6){
-        std::cerr << "Usage: " << argv[0] << " <input_csv_file> -L <length_upper_bound> -o <output_csv_file>\n";
+    if(argc != 4){
+        std::cerr << "Usage: " << argv[0] << " <input_csv_file> -o <output_csv_file>\n";
         return 1;
     }
 
     const char *input_file = argv[1];
-    const char *flag_L = argv[2];
-    const char *length_str = argv[3];
-    const char *flag_o = argv[4];
-    const char *output_file = argv[5];
+    const char *flag_o     = argv[2];
+    const char *output_file= argv[3];
 
-    if(strcmp(flag_L, "-L") != 0 || strcmp(flag_o, "-o") != 0){
-        std::cerr << "Invalid flags.\n";
-        return 1;
-    }
-
-    int max_array_len = std::atoi(length_str);
-    if(max_array_len <= 0){
-        std::cerr << "Invalid length upper bound.\n";
+    if(strcmp(flag_o, "-o") != 0){
+        std::cerr << "Invalid flags. Expected -o.\n";
         return 1;
     }
 
@@ -217,6 +209,13 @@ int main(int argc, char *argv[]){
         return 1;
     }
 
+    // auto-detect maximum array length
+    int max_array_len = 0;
+    for(size_t i = 0; i < arrays->num_arrays; i++){
+        int len = arrays->offsets[i+1] - arrays->offsets[i];
+        if(len > max_array_len) max_array_len = len;
+    }
+
     solver(arrays, max_array_len);
     write_to_csv_file_uint32(output_file, arrays);
     free_arrays(arrays);
@@ -224,3 +223,4 @@ int main(int argc, char *argv[]){
     std::cout << "Sorting completed. Output written to " << output_file << "\n";
     return 0;
 }
+
