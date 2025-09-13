@@ -6,20 +6,27 @@
 #include <iostream>
 #include <cstdlib>
 
-// ---------------------------- Arrays struct & CSV APIs(Destination-First) ----------------------------
+//-----------------------------CUDA Timers-----------------------------
+struct cudaTimers{
+    cudaEvent_t start;
+    cudaEvent_t stop;
+};
+typedef struct cudaTimers CudaTimers;
+
+// ---------------------------- Arrays struct & CSV APIs (Destination-First)----------------------------
 struct arrays{
     uint32_t *arr;
     uint32_t *offsets;
     size_t num_arrays;
     size_t total_len;
 };
-
 typedef struct arrays Arrays;
 
 Arrays* read_from_csv_file_uint32(const char* input_csv_file_path);
 void write_to_csv_file_uint32(const char *output_file_path, const Arrays *arrays);
 void free_arrays(Arrays *arrays);
 
+// ---------------------------- CSV Functions ----------------------------
 Arrays* read_from_csv_file_uint32(const char *input_csv_file_path){
     Arrays* arrays = (Arrays*)malloc(sizeof(Arrays));
     FILE *fp_in = fopen(input_csv_file_path, "r");
@@ -96,7 +103,7 @@ void free_arrays(Arrays *arrays){
     free(arrays);
 }
 
-// ---------------------------- Block-per-array Odd-Even Sort Kernel with Early Exit ----------------------------
+// ---------------------------- Block-per-array Odd-Even Sort Kernel ----------------------------
 __global__ void block_per_array_oddeven_sort(uint32_t *d_arr, uint32_t *d_offsets, size_t num_arrays) {
     int array_idx = blockIdx.x;
     if (array_idx >= (int)num_arrays) return;
@@ -106,43 +113,44 @@ __global__ void block_per_array_oddeven_sort(uint32_t *d_arr, uint32_t *d_offset
     size_t len   = end - start;
     if (len <= 1) return;
 
-    extern __shared__ uint32_t s_mem[];
-    uint32_t *local = s_mem;
-    __shared__ int isSorted;
+    __shared__ bool block_swapped;
 
-    // Cooperative load
-    for (size_t i = threadIdx.x; i < len; i += blockDim.x) {
-        local[i] = d_arr[start + i];
-    }
-    __syncthreads();
-
-    for (size_t phase = 0; phase < len; ++phase) {
-        if (threadIdx.x == 0) isSorted = 1; // assume sorted
+    for (size_t iter = 0; iter < len; ++iter) {
+        if(threadIdx.x == 0) block_swapped = false;
         __syncthreads();
 
-        size_t parity = phase & 1;
-        for (size_t i = 2 * threadIdx.x + parity; i + 1 < len; i += 2 * blockDim.x) {
-            if (local[i] > local[i + 1]) {
-                uint32_t tmp = local[i];
-                local[i]     = local[i + 1];
-                local[i + 1] = tmp;
-                atomicExch(&isSorted, 0); // mark unsorted
+        // Even phase
+        for (size_t i = threadIdx.x * 2; i + 1 < len; i += blockDim.x * 2) {
+            size_t idx = start + i;
+            if (d_arr[idx] > d_arr[idx + 1]) {
+                uint32_t tmp = d_arr[idx];
+                d_arr[idx]   = d_arr[idx + 1];
+                d_arr[idx + 1] = tmp;
+                block_swapped = true;
             }
         }
         __syncthreads();
 
-        if (isSorted) break; // early exit
-    }
+        // Odd phase
+        for (size_t i = threadIdx.x * 2 + 1; i + 1 < len; i += blockDim.x * 2) {
+            size_t idx = start + i;
+            if (d_arr[idx] > d_arr[idx + 1]) {
+                uint32_t tmp = d_arr[idx];
+                d_arr[idx]   = d_arr[idx + 1];
+                d_arr[idx + 1] = tmp;
+                block_swapped = true;
+            }
+        }
+        __syncthreads();
 
-    // Write back
-    for (size_t i = threadIdx.x; i < len; i += blockDim.x) {
-        d_arr[start + i] = local[i];
+        // early exit
+        if(!block_swapped) break;
     }
 }
 
 // ---------------------------- Solver ----------------------------
-extern "C" void solver(Arrays *arrays, int max_array_len){
-    if(!arrays || arrays->num_arrays == 0) return;
+extern "C" void solver(Arrays *arrays, int max_array_len) {
+    if (!arrays || arrays->num_arrays == 0) return;
 
     uint32_t *d_arr = nullptr;
     uint32_t *d_offsets = nullptr;
@@ -154,8 +162,8 @@ extern "C" void solver(Arrays *arrays, int max_array_len){
 
     cudaMemcpy(d_arr, arrays->arr, N * sizeof(uint32_t), cudaMemcpyHostToDevice);
     cudaMemcpy(d_offsets, arrays->offsets, (num_arrays + 1) * sizeof(uint32_t), cudaMemcpyHostToDevice);
-    
-    int threads_per_block = (max_array_len + 1) / 2;
+
+    int threads_per_block = max_array_len;
     if (threads_per_block > 1024) threads_per_block = 1024;
     if (threads_per_block < 1) threads_per_block = 1;
 
@@ -164,15 +172,24 @@ extern "C" void solver(Arrays *arrays, int max_array_len){
     printf("Threads per block = %d\n", threads_per_block);
     printf("Blocks per grid   = %d\n", blocks_per_grid);
 
-    size_t shared_size = (size_t)max_array_len * sizeof(uint32_t);
+    CudaTimers timers;
+    cudaEventCreate(&timers.start);
+    cudaEventCreate(&timers.stop);
+    cudaEventRecord(timers.start);
 
-    block_per_array_oddeven_sort<<<blocks_per_grid, threads_per_block, shared_size>>>(d_arr, d_offsets, num_arrays);
+    block_per_array_oddeven_sort<<<blocks_per_grid, threads_per_block>>>(d_arr, d_offsets, num_arrays);
+
+    cudaEventRecord(timers.stop);
+    cudaEventSynchronize(timers.stop);
+
+    float elapsed_time;
+    cudaEventElapsedTime(&elapsed_time, timers.start, timers.stop);
+    printf("Elapsed time: %.4f ms\n", elapsed_time);
 
     cudaError_t err = cudaGetLastError();
     if (err != cudaSuccess) {
         fprintf(stderr, "Kernel launch error: %s\n", cudaGetErrorString(err));
     }
-
     err = cudaDeviceSynchronize();
     if (err != cudaSuccess) {
         fprintf(stderr, "CUDA sync error: %s\n", cudaGetErrorString(err));
