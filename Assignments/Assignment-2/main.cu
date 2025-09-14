@@ -6,6 +6,10 @@
 #include <iostream>
 #include <cstdlib>
 
+#define FULL_MASK 0xffffffff
+
+const unsigned int WARP_SIZE = 32;
+
 //-----------------------------CUDA Timers-----------------------------
 struct cudaTimers{
     cudaEvent_t start;
@@ -20,7 +24,6 @@ struct arrays{
     size_t num_arrays;
     size_t total_len;
 };
-
 typedef struct arrays Arrays;
 
 Arrays* read_from_csv_file_uint32(const char* input_csv_file_path);
@@ -103,62 +106,64 @@ void free_arrays(Arrays *arrays){
     free(arrays);
 }
 
-// ---------------------------- Multi-threaded Block-per-array Bitonic Kernel ----------------------------
-__global__ void block_per_array_bitonic_sort(uint32_t *d_arr, uint32_t *d_offsets, size_t num_arrays) {
-    extern __shared__ uint32_t s_data[];
+// ---------------------------- Warp-per-array Odd-Even Sort Kernel (general, len <= 128) ----------------------------
+__global__ void warp_per_array_oddeven_sort(uint32_t *d_arr, uint32_t *d_offsets, size_t num_arrays) {
+    unsigned int tid_x   = blockIdx.x * blockDim.x + threadIdx.x;
+    unsigned int warp_id = tid_x / WARP_SIZE;
+    if (warp_id >= num_arrays) return;
 
-    size_t array_idx = blockIdx.x;
-    if (array_idx >= num_arrays) return;
+    unsigned int lane = threadIdx.x % WARP_SIZE;
+    unsigned int mask = __activemask();
 
-    size_t start = d_offsets[array_idx];
-    size_t len   = d_offsets[array_idx + 1] - start;
-    size_t tid = threadIdx.x;
+    size_t start = d_offsets[warp_id];
+    size_t end = d_offsets[warp_id + 1];
+    size_t len   = end - start;
+    if (len <= 1 || len > 128) return; // arrays must fit in shared buffer
 
-    // Load array into shared memory
-    for (size_t i = tid; i < len; i += blockDim.x) {
-        s_data[i] = d_arr[start + i];
+    // Shared memory buffer: 128 elements per warp, up to 4 warps per block
+    __shared__ uint32_t shmem[128 * 4];
+    uint32_t *local = &shmem[(threadIdx.x / WARP_SIZE) * 128];
+
+    // -------------------- Load array into shared memory (strided) --------------------
+    for (size_t i = lane; i < len; i += WARP_SIZE) {
+        local[i] = d_arr[start + i];
     }
-    
-    // Pad with max values for bitonic sort
-    for (size_t i = len + tid; i < blockDim.x; i += blockDim.x) {
-        s_data[i] = UINT32_MAX;
-    }
-    __syncthreads();
+    __syncwarp(mask);
 
-    // Find next power of 2 >= len
-    size_t n = 1;
-    while (n < len) n <<= 1;
+    // -------------------- Odd-even sort --------------------
+    for (size_t pass = 0; pass < len; ++pass) {
+        int swap_flag = 0;
 
-    // Bitonic sort
-    for (size_t k = 2; k <= n; k <<= 1) {
-        for (size_t j = k >> 1; j > 0; j >>= 1) {
-            size_t i = tid;
-            while (i < n) {
-                size_t ixj = i ^ j;
-                if (ixj > i && ixj < n) {
-                    bool ascending = ((i & k) == 0);
-                    if ((ascending && s_data[i] > s_data[ixj]) ||
-                        (!ascending && s_data[i] < s_data[ixj])) {
-                        uint32_t tmp = s_data[i];
-                        s_data[i] = s_data[ixj];
-                        s_data[ixj] = tmp;
-                    }
+        for (size_t i = lane; i + 1 < len; i += WARP_SIZE) {
+            if ((i % 2) == (pass % 2)) {
+                uint32_t a = local[i];
+                uint32_t b = local[i + 1];
+                if (a > b) {
+                    local[i]     = b;
+                    local[i + 1] = a;
+                    swap_flag    = 1;
                 }
-                i += blockDim.x;
             }
-            __syncthreads();
         }
+
+        __syncwarp(mask);
+
+        // if no swaps in this pass, array is sorted
+        if (__all_sync(mask, swap_flag)) break;
     }
 
-    // Write back only the original array length
-    for (size_t i = tid; i < len; i += blockDim.x) {
-        d_arr[start + i] = s_data[i];
+    // -------------------- Write back to global memory (strided) --------------------
+    for (size_t i = lane; i < len; i += WARP_SIZE) {
+        d_arr[start + i] = local[i];
     }
 }
 
 
+
+
+
 // ---------------------------- Solver ----------------------------
-extern "C" void solver(Arrays *arrays, uint32_t max_array_len){
+extern "C" void solver(Arrays *arrays, int max_array_len){
     if(!arrays || arrays->num_arrays == 0) return;
 
     uint32_t *d_arr = nullptr;
@@ -171,30 +176,22 @@ extern "C" void solver(Arrays *arrays, uint32_t max_array_len){
 
     cudaMemcpy(d_arr, arrays->arr, N * sizeof(uint32_t), cudaMemcpyHostToDevice);
     cudaMemcpy(d_offsets, arrays->offsets, (num_arrays + 1) * sizeof(uint32_t), cudaMemcpyHostToDevice);
-    
-    // thread calculation
-    int num_threads_per_block = min(1024, (int)max_array_len);
-    int max_threads_by_shared_mem = 48*1024 / (max_array_len * sizeof(uint32_t));
-    num_threads_per_block = min(num_threads_per_block, max_threads_by_shared_mem);
-    if(num_threads_per_block < 1) num_threads_per_block = 1;
 
-    // One block per array, not divided by threads
-    int num_blocks_per_grid = num_arrays;
-    
-    // Correct shared memory size
-    size_t shared_size_in_num_bytes = max_array_len * sizeof(uint32_t);
+    unsigned int num_warps_per_block = 4;       // 4 warps = 128 threads
+    const unsigned int num_threads_per_warp = WARP_SIZE;
+    unsigned int num_threads_per_block = num_warps_per_block * num_threads_per_warp;
+    unsigned int num_warps = (unsigned int)num_arrays;
+    unsigned int num_blocks_per_grid = (num_warps + num_warps_per_block - 1) / num_warps_per_block;
 
-    printf("Number of Threads Per Block= %d\n", num_threads_per_block);
-    printf("Number of Blocks Per Grid= %d\n", num_blocks_per_grid);
-    printf("Shared memory size= %zu bytes\n", shared_size_in_num_bytes);
+    printf("Threads per block = %d\n", num_threads_per_block);
+    printf("Blocks per grid   = %d\n", num_blocks_per_grid);
 
     CudaTimers timers;
     cudaEventCreate(&timers.start);
     cudaEventCreate(&timers.stop);
     cudaEventRecord(timers.start);
 
-    // Launch kernel
-    block_per_array_bitonic_sort<<<num_blocks_per_grid, num_threads_per_block, shared_size_in_num_bytes>>>(d_arr, d_offsets, num_arrays);
+    warp_per_array_oddeven_sort<<<num_blocks_per_grid, num_threads_per_block>>>(d_arr, d_offsets, num_arrays);
 
     cudaEventRecord(timers.stop);
     cudaEventSynchronize(timers.stop);
@@ -202,7 +199,7 @@ extern "C" void solver(Arrays *arrays, uint32_t max_array_len){
     float elapsed_time;
     cudaEventElapsedTime(&elapsed_time, timers.start, timers.stop);
     printf("Elapsed time: %.4f ms\n", elapsed_time);
-    
+
     cudaError_t err = cudaGetLastError();
     if (err != cudaSuccess) {
         fprintf(stderr, "Kernel launch error: %s\n", cudaGetErrorString(err));
@@ -241,10 +238,9 @@ int main(int argc, char *argv[]){
         return 1;
     }
 
-    // auto-detect maximum array length
-    uint32_t max_array_len = 0;
+    int max_array_len = 0;
     for(size_t i = 0; i < arrays->num_arrays; i++){
-        uint32_t len = arrays->offsets[i+1] - arrays->offsets[i];
+        int len = arrays->offsets[i+1] - arrays->offsets[i];
         if(len > max_array_len) max_array_len = len;
     }
 
@@ -255,4 +251,3 @@ int main(int argc, char *argv[]){
     std::cout << "Sorting completed. Output written to " << output_file << "\n";
     return 0;
 }
-

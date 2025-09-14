@@ -6,6 +6,17 @@
 #include <iostream>
 #include <cstdlib>
 
+#define FULL_MASK 0xffffffff
+
+const unsigned int WARP_SIZE = 32;
+
+//-----------------------------CUDA Timers-----------------------------
+struct cudaTimers{
+    cudaEvent_t start;
+    cudaEvent_t stop;
+};
+typedef struct cudaTimers CudaTimers;
+
 // ---------------------------- Arrays struct & CSV APIs(Destination-First) ----------------------------
 struct arrays{
     uint32_t *arr;
@@ -13,7 +24,6 @@ struct arrays{
     size_t num_arrays;
     size_t total_len;
 };
-
 typedef struct arrays Arrays;
 
 Arrays* read_from_csv_file_uint32(const char* input_csv_file_path);
@@ -96,56 +106,61 @@ void free_arrays(Arrays *arrays){
     free(arrays);
 }
 
-// ---------------------------- Warp-per-array Odd-Even Sort Kernel ----------------------------
+// ---------------------------- Warp-per-array Odd-Even Sort Kernel (general, len <= 128) ----------------------------
 __global__ void warp_per_array_oddeven_sort(uint32_t *d_arr, uint32_t *d_offsets, size_t num_arrays) {
-    unsigned warp_id = blockIdx.x * (blockDim.x / warpSize) + threadIdx.x / warpSize;
+    unsigned int tid_x   = blockIdx.x * blockDim.x + threadIdx.x;
+    unsigned int warp_id = tid_x / WARP_SIZE;
     if (warp_id >= num_arrays) return;
 
-    unsigned lane = threadIdx.x % warpSize;
-    unsigned mask = 0xffffffff;
+    unsigned int lane = threadIdx.x % WARP_SIZE;
+    unsigned int mask = __activemask();
 
     size_t start = d_offsets[warp_id];
-    size_t end   = d_offsets[warp_id + 1];
+    size_t end = d_offsets[warp_id + 1];
     size_t len   = end - start;
+    if (len <= 1 || len > 128) return; // arrays must fit in shared buffer
 
-    if (len <= 1) return;
+    // Shared memory buffer: 128 elements per warp, up to 4 warps per block
+    __shared__ uint32_t shmem[128 * 4];
+    uint32_t *local = &shmem[(threadIdx.x / WARP_SIZE) * 128];
 
-    // Shared memory buffer: allocate per warp
-    __shared__ uint32_t shmem[128 * 4];  // support up to 4 warps per block
-    uint32_t* local = &shmem[(threadIdx.x / warpSize) * 128];
-
-    // Cooperative load into shared memory
-    for (size_t i = lane; i < len; i += warpSize) {
+    // -------------------- Load array into shared memory (strided) --------------------
+    for (size_t i = lane; i < len; i += WARP_SIZE) {
         local[i] = d_arr[start + i];
     }
-    __syncwarp();
+    __syncwarp(mask);
 
-    // Odd-even sort with early exit
-    for (size_t phase = 0; phase < len; ++phase) {
-        bool swapped = false;
+    // -------------------- Odd-even sort --------------------
+    for (size_t pass = 0; pass < len; ++pass) {
+        int swap_flag = 0;
 
-        // Each lane handles a strided set of pairs
-        for (size_t i = lane; i + 1 < len; i += warpSize) {
-            if ((i % 2) == (phase % 2)) {
-                if (local[i] > local[i + 1]) {
-                    uint32_t tmp = local[i];
-                    local[i] = local[i + 1];
-                    local[i + 1] = tmp;
-                    swapped = true;
+        for (size_t i = lane; i + 1 < len; i += WARP_SIZE) {
+            if ((i % 2) == (pass % 2)) {
+                uint32_t a = local[i];
+                uint32_t b = local[i + 1];
+                if (a > b) {
+                    local[i]     = b;
+                    local[i + 1] = a;
+                    swap_flag    = 1;
                 }
             }
         }
 
-        // Warp-wide vote: exit if no swaps
-        if (!__any_sync(mask, swapped)) break;
-        __syncwarp();
+        __syncwarp(mask);
+
+        // if no swaps in this pass, array is sorted
+        if (__all_sync(mask, swap_flag)) break;
     }
 
-    // Write back to global memory
-    for (size_t i = lane; i < len; i += warpSize) {
+    // -------------------- Write back to global memory (strided) --------------------
+    for (size_t i = lane; i < len; i += WARP_SIZE) {
         d_arr[start + i] = local[i];
     }
 }
+
+
+
+
 
 // ---------------------------- Solver ----------------------------
 extern "C" void solver(Arrays *arrays, int max_array_len){
@@ -162,15 +177,28 @@ extern "C" void solver(Arrays *arrays, int max_array_len){
     cudaMemcpy(d_arr, arrays->arr, N * sizeof(uint32_t), cudaMemcpyHostToDevice);
     cudaMemcpy(d_offsets, arrays->offsets, (num_arrays + 1) * sizeof(uint32_t), cudaMemcpyHostToDevice);
 
-    int warps_per_block = 4;  // 4 warps = 128 threads
-    int threads_per_block = warps_per_block * warpSize;
-    int num_warps = (int)num_arrays;
-    int blocks_per_grid = (num_warps + warps_per_block - 1) / warps_per_block;
+    unsigned int num_warps_per_block = 4;       // 4 warps = 128 threads
+    const unsigned int num_threads_per_warp = WARP_SIZE;
+    unsigned int num_threads_per_block = num_warps_per_block * num_threads_per_warp;
+    unsigned int num_warps = (unsigned int)num_arrays;
+    unsigned int num_blocks_per_grid = (num_warps + num_warps_per_block - 1) / num_warps_per_block;
 
-    printf("Threads per block = %d\n", threads_per_block);
-    printf("Blocks per grid   = %d\n", blocks_per_grid);
+    printf("Threads per block = %d\n", num_threads_per_block);
+    printf("Blocks per grid   = %d\n", num_blocks_per_grid);
 
-    warp_per_array_oddeven_sort<<<blocks_per_grid, threads_per_block>>>(d_arr, d_offsets, num_arrays);
+    CudaTimers timers;
+    cudaEventCreate(&timers.start);
+    cudaEventCreate(&timers.stop);
+    cudaEventRecord(timers.start);
+
+    warp_per_array_oddeven_sort<<<num_blocks_per_grid, num_threads_per_block>>>(d_arr, d_offsets, num_arrays);
+
+    cudaEventRecord(timers.stop);
+    cudaEventSynchronize(timers.stop);
+
+    float elapsed_time;
+    cudaEventElapsedTime(&elapsed_time, timers.start, timers.stop);
+    printf("Elapsed time: %.4f ms\n", elapsed_time);
 
     cudaError_t err = cudaGetLastError();
     if (err != cudaSuccess) {
