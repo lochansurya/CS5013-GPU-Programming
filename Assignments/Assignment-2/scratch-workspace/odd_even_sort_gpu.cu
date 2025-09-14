@@ -96,46 +96,53 @@ void free_arrays(Arrays *arrays){
     free(arrays);
 }
 
-// ---------------------------- Block-per-array Odd-Even Sort Kernel with Early Exit ----------------------------
-__global__ void block_per_array_oddeven_sort(uint32_t *d_arr, uint32_t *d_offsets, size_t num_arrays) {
-    int array_idx = blockIdx.x;
-    if (array_idx >= (int)num_arrays) return;
+// ---------------------------- Warp-per-array Odd-Even Sort Kernel ----------------------------
+__global__ void warp_per_array_oddeven_sort(uint32_t *d_arr, uint32_t *d_offsets, size_t num_arrays) {
+    unsigned warp_id = blockIdx.x * (blockDim.x / warpSize) + threadIdx.x / warpSize;
+    if (warp_id >= num_arrays) return;
 
-    size_t start = d_offsets[array_idx];
-    size_t end   = d_offsets[array_idx + 1];
+    unsigned lane = threadIdx.x % warpSize;
+    unsigned mask = 0xffffffff;
+
+    size_t start = d_offsets[warp_id];
+    size_t end   = d_offsets[warp_id + 1];
     size_t len   = end - start;
+
     if (len <= 1) return;
 
-    extern __shared__ uint32_t s_mem[];
-    uint32_t *local = s_mem;
-    __shared__ int isSorted;
+    // Shared memory buffer: allocate per warp
+    __shared__ uint32_t shmem[128 * 4];  // support up to 4 warps per block
+    uint32_t* local = &shmem[(threadIdx.x / warpSize) * 128];
 
-    // Cooperative load
-    for (size_t i = threadIdx.x; i < len; i += blockDim.x) {
+    // Cooperative load into shared memory
+    for (size_t i = lane; i < len; i += warpSize) {
         local[i] = d_arr[start + i];
     }
-    __syncthreads();
+    __syncwarp();
 
+    // Odd-even sort with early exit
     for (size_t phase = 0; phase < len; ++phase) {
-        if (threadIdx.x == 0) isSorted = 1; // assume sorted
-        __syncthreads();
+        bool swapped = false;
 
-        size_t parity = phase & 1;
-        for (size_t i = 2 * threadIdx.x + parity; i + 1 < len; i += 2 * blockDim.x) {
-            if (local[i] > local[i + 1]) {
-                uint32_t tmp = local[i];
-                local[i]     = local[i + 1];
-                local[i + 1] = tmp;
-                atomicExch(&isSorted, 0); // mark unsorted
+        // Each lane handles a strided set of pairs
+        for (size_t i = lane; i + 1 < len; i += warpSize) {
+            if ((i % 2) == (phase % 2)) {
+                if (local[i] > local[i + 1]) {
+                    uint32_t tmp = local[i];
+                    local[i] = local[i + 1];
+                    local[i + 1] = tmp;
+                    swapped = true;
+                }
             }
         }
-        __syncthreads();
 
-        if (isSorted) break; // early exit
+        // Warp-wide vote: exit if no swaps
+        if (!__any_sync(mask, swapped)) break;
+        __syncwarp();
     }
 
-    // Write back
-    for (size_t i = threadIdx.x; i < len; i += blockDim.x) {
+    // Write back to global memory
+    for (size_t i = lane; i < len; i += warpSize) {
         d_arr[start + i] = local[i];
     }
 }
@@ -154,19 +161,16 @@ extern "C" void solver(Arrays *arrays, int max_array_len){
 
     cudaMemcpy(d_arr, arrays->arr, N * sizeof(uint32_t), cudaMemcpyHostToDevice);
     cudaMemcpy(d_offsets, arrays->offsets, (num_arrays + 1) * sizeof(uint32_t), cudaMemcpyHostToDevice);
-    
-    int threads_per_block = (max_array_len + 1) / 2;
-    if (threads_per_block > 1024) threads_per_block = 1024;
-    if (threads_per_block < 1) threads_per_block = 1;
 
-    int blocks_per_grid = (int)num_arrays;
+    int warps_per_block = 4;  // 4 warps = 128 threads
+    int threads_per_block = warps_per_block * warpSize;
+    int num_warps = (int)num_arrays;
+    int blocks_per_grid = (num_warps + warps_per_block - 1) / warps_per_block;
 
     printf("Threads per block = %d\n", threads_per_block);
     printf("Blocks per grid   = %d\n", blocks_per_grid);
 
-    size_t shared_size = (size_t)max_array_len * sizeof(uint32_t);
-
-    block_per_array_oddeven_sort<<<blocks_per_grid, threads_per_block, shared_size>>>(d_arr, d_offsets, num_arrays);
+    warp_per_array_oddeven_sort<<<blocks_per_grid, threads_per_block>>>(d_arr, d_offsets, num_arrays);
 
     cudaError_t err = cudaGetLastError();
     if (err != cudaSuccess) {
