@@ -106,7 +106,7 @@ void free_arrays(Arrays *arrays){
     free(arrays);
 }
 
-// ---------------------------- Warp-per-array Odd-Even Sort Kernel (general, len <= 128) ----------------------------
+// ---------------------------- Warp-per-array Odd-Even Sort Kernel ----------------------------
 __global__ void warp_per_array_oddeven_sort(uint32_t *d_arr, uint32_t *d_offsets, size_t num_arrays) {
     unsigned int tid_x   = blockIdx.x * blockDim.x + threadIdx.x;
     unsigned int warp_id = tid_x / WARP_SIZE;
@@ -124,13 +124,13 @@ __global__ void warp_per_array_oddeven_sort(uint32_t *d_arr, uint32_t *d_offsets
     __shared__ uint32_t shmem[128 * 4];
     uint32_t *local = &shmem[(threadIdx.x / WARP_SIZE) * 128];
 
-    // -------------------- Load array into shared memory (strided) --------------------
+    // Load array into shared memory (strided) 
     for (size_t i = lane; i < len; i += WARP_SIZE) {
         local[i] = d_arr[start + i];
     }
-    __syncwarp(mask);
+    // __syncwarp(mask);
 
-    // -------------------- Odd-even sort --------------------
+    // Odd-even sort 
     for (size_t pass = 0; pass < len; ++pass) {
         int swap_flag = 0;
 
@@ -146,13 +146,16 @@ __global__ void warp_per_array_oddeven_sort(uint32_t *d_arr, uint32_t *d_offsets
             }
         }
 
-        __syncwarp(mask);
+        // __syncwarp(mask);
 
         // if no swaps in this pass, array is sorted
-        if (__all_sync(mask, swap_flag)) break;
+        // if (__all_sync(mask, swap_flag)) {
+        //     printf("early exit..,\n");
+        //     break;       
+        // }
     }
 
-    // -------------------- Write back to global memory (strided) --------------------
+    // Write back to global memory (strided) 
     for (size_t i = lane; i < len; i += WARP_SIZE) {
         d_arr[start + i] = local[i];
     }
