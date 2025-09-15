@@ -128,7 +128,7 @@ __global__ void warp_per_array_oddeven_sort(uint32_t *d_arr, uint32_t *d_offsets
     for (size_t i = lane; i < len; i += WARP_SIZE) {
         local[i] = d_arr[start + i];
     }
-    __syncwarp(mask);
+    // __syncwarp(mask);
 
     // Odd-even sort 
     for (size_t pass = 0; pass < len; ++pass) {
@@ -146,10 +146,13 @@ __global__ void warp_per_array_oddeven_sort(uint32_t *d_arr, uint32_t *d_offsets
             }
         }
 
-        __syncwarp(mask);
+        // __syncwarp(mask);
 
         // if no swaps in this pass, array is sorted
-        if (__all_sync(mask, swap_flag)) break;
+        // if (__all_sync(mask, swap_flag)) {
+        //     printf("early exit..,\n");
+        //     break;       
+        // }
     }
 
     // Write back to global memory (strided) 
