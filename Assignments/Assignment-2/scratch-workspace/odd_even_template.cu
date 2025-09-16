@@ -240,7 +240,7 @@ __global__ void warp_per_array_oddeven_sort(uint32_t *sequences, uint32_t *lengt
             }
         }
 
-        __syncwarp(mask);
+        // __syncwarp(mask);
         bool swapped = __any_sync(mask, local_swap);
         
         if(!swapped && (pass % 2 == 1) ) { 
