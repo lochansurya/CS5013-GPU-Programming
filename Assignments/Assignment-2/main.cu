@@ -227,6 +227,7 @@ __global__ void warp_per_array_oddeven_sort(uint32_t *sequences, uint32_t *lengt
 
     // Odd-even sort 
     for (size_t pass = 0; pass < len; ++pass) {
+        bool local_swap = false;
         for (size_t i = lane; i + 1 < len; i += WARP_SIZE) {
             if ((i % 2) == (pass % 2)) {
                 uint32_t a = local[i];
@@ -234,8 +235,17 @@ __global__ void warp_per_array_oddeven_sort(uint32_t *sequences, uint32_t *lengt
                 if (a > b) {
                     local[i]     = b;
                     local[i + 1] = a;
+                    local_swap = true;
                 }
             }
+        }
+
+        __syncwarp(mask);
+        bool swapped = __any_sync(mask, local_swap);
+        
+        if(!swapped && (pass % 2 == 1) ) { 
+            // printf("early exit..\n");
+            break;
         }
     }
 
