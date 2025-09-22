@@ -259,22 +259,20 @@ __global__ void block_per_array_bitonic_sort(uint32_t *sequences, uint32_t *leng
 
 int main(int argc, char **argv) {
     if (argc < 4 || string(argv[2]) != "-o") {
-        string command;
-        for (int i = 0; i < argc; i++) {
-            command += argv[i];
-            command += " ";
-        }
-        cerr << "Usage: ./main <path_to_the_input_file>.csv -o "
-                "<output_file_name>.csv . But command run was: "
-             << command << "\n";
+        cerr << "Usage: ./main <input.csv> -o <output.csv>\n";
         return 1;
     }
+
     string input_filepath = argv[1];
     string output_filename = argv[3];
     int L = 128;
 
     int filesize;
     char *contents = read_file(input_filepath, &filesize);
+    if (!contents) {
+        cerr << "Failed to read file\n";
+        return 1;
+    }
 
     const int NUM_WARPS = 8192;
     const int WARPS_PER_BLOCK = 4;
@@ -282,78 +280,67 @@ int main(int argc, char **argv) {
 
     char *contents_gpu;
     cudaMalloc(&contents_gpu, filesize);
+    cudaMemcpy(contents_gpu, contents, filesize, cudaMemcpyHostToDevice);
 
-    // Stores all sequences
-    uint32_t *sequences;
-
-    // Stores the offsets in the file from which to start writing each sequnce.
-    // These offsets need not be in ascending order
-    uint32_t *offsets;
-
-    // Stores the length of each sequence
-    uint32_t *lengths;
-
-    // a single integer storing total number of integers
-    uint32_t *num_seq;
-
+    uint32_t *sequences, *offsets, *lengths, *num_seq;
     cudaMalloc(&sequences, (30000 * L + 30000 + 30000 + 1) * sizeof(uint32_t));
     offsets = sequences + 30000 * L;
     lengths = offsets + 30000;
     num_seq = lengths + 30000;
-    // making sure num_seq is zero to begin with
-    cudaMemset(num_seq, 0, 1);
-
-    cudaMemcpy(contents_gpu, contents, filesize, cudaMemcpyHostToDevice);
-
-    // auto time_cudaMemcpy = chrono::high_resolution_clock::now();
-
-    double total_sort_time = 0.0;
-
-    for(int iter = 0; iter < 1000; iter++)
-    {
-        
     cudaMemset(num_seq, 0, sizeof(uint32_t));
 
+    // First parse to determine host_num_seq and max_array_len
     gpu_parse<<<(NUM_WARPS + WARPS_PER_BLOCK - 1) / WARPS_PER_BLOCK, block>>>(
-        contents_gpu, sequences, offsets, lengths, num_seq, filesize, NUM_WARPS,
-        L);
+        contents_gpu, sequences, offsets, lengths, num_seq, filesize, NUM_WARPS, L);
+    cudaDeviceSynchronize();
 
     uint32_t host_num_seq;
     cudaMemcpy(&host_num_seq, num_seq, sizeof(uint32_t), cudaMemcpyDeviceToHost);
 
-    // auto-detect maximum sequence length (L = 128 in your code)
-    uint32_t max_array_len = 0;
     std::vector<uint32_t> host_lengths(host_num_seq);
     cudaMemcpy(host_lengths.data(), lengths, host_num_seq * sizeof(uint32_t), cudaMemcpyDeviceToHost);
-	for (size_t i = 0; i < host_num_seq; i++) {
-		if (host_lengths[i] > max_array_len) max_array_len = host_lengths[i];
-	}
 
-	int num_threads_per_block = std::min(1024, (int)max_array_len);
-	size_t shared_size_in_num_bytes = max_array_len * sizeof(uint32_t);
-	int num_blocks_per_grid = host_num_seq;
+    uint32_t max_array_len = 0;
+    for (auto v : host_lengths) if (v > max_array_len) max_array_len = v;
 
-	// ------------------- TIMED KERNEL LAUNCH -------------------
-	auto start = chrono::high_resolution_clock::now();
+    int num_threads_per_block = std::min(1024, (int)max_array_len);
+    size_t shared_size_in_num_bytes = max_array_len * sizeof(uint32_t);
+    int num_blocks_per_grid = host_num_seq;
 
-	block_per_array_bitonic_sort<<<num_blocks_per_grid, num_threads_per_block, shared_size_in_num_bytes>>>(
-		sequences, lengths, num_seq, L);
+    double total_sort_time = 0.0;
 
-	cudaDeviceSynchronize();
+    for (int iter = 0; iter < 1000; iter++) {
+        cudaMemset(num_seq, 0, sizeof(uint32_t));
 
-	auto end = chrono::high_resolution_clock::now();
-	double gpu_sort_time = chrono::duration<double, std::micro>(end - start).count();
-	total_sort_time += gpu_sort_time;
+        gpu_parse<<<(NUM_WARPS + WARPS_PER_BLOCK - 1) / WARPS_PER_BLOCK, block>>>(
+            contents_gpu, sequences, offsets, lengths, num_seq, filesize, NUM_WARPS, L);
 
-    std::cout << "total_sort_time / 1000 = " << total_sort_time / 1000 << std::endl;
+        cudaDeviceSynchronize();
+
+        auto start = chrono::high_resolution_clock::now();
+
+        block_per_array_bitonic_sort<<<num_blocks_per_grid, num_threads_per_block, shared_size_in_num_bytes>>>(
+            sequences, lengths, num_seq, L);
+
+        cudaDeviceSynchronize();
+
+        auto end = chrono::high_resolution_clock::now();
+        total_sort_time += chrono::duration<double, std::micro>(end - start).count();
+    }
+
+    printf("Average gpu_sort execution time: %lf us\n", total_sort_time / 1000.0);
+
+    // Write final output
     gpu_write<<<(NUM_WARPS + WARPS_PER_BLOCK - 1) / WARPS_PER_BLOCK, block,
                 WARPS_PER_BLOCK * 64 * sizeof(uint32_t)>>>(
         contents_gpu, sequences, offsets, lengths, num_seq, NUM_WARPS, L);
-
-
     cudaMemcpy(contents, contents_gpu, filesize, cudaMemcpyDeviceToHost);
-
     write_file(output_filename, contents, filesize);
 
-    printf("Total gpu_sort execution time over 1000 iterations: %lf us\n", total_sort_time);
+    cudaFree(contents_gpu);
+    cudaFree(sequences);
+    free(contents);
+
+    return 0;
 }
+
