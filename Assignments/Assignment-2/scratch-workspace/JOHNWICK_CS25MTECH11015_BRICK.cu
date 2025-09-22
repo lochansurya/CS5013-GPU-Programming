@@ -333,6 +333,7 @@ int main(int argc, char **argv) {
     total_sort_time += gpu_sort_time;
     }
 
+    std::cout << "total_sort_time / 1000 = " << total_sort_time / 1000 << std::endl;
     gpu_write<<<(NUM_WARPS + WARPS_PER_BLOCK - 1) / WARPS_PER_BLOCK, block,
                 WARPS_PER_BLOCK * 64 * sizeof(uint32_t)>>>(
         contents_gpu, sequences, offsets, lengths, num_seq, NUM_WARPS, L);
