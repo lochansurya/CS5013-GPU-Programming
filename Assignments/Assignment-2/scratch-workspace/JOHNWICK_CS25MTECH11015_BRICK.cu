@@ -203,56 +203,57 @@ __global__ void gpu_write(char *contents, uint32_t *sequences,
     }
 }
 
-__global__ void warp_per_array_oddeven_sort(uint32_t *sequences, uint32_t *lengths, uint32_t *num_seq, int L) {
-    unsigned int tid_x   = blockIdx.x * blockDim.x + threadIdx.x;
-    unsigned int warp_id = tid_x / WARP_SIZE;
-    
-    uint32_t total_sequences = *num_seq;
-    if (warp_id >= total_sequences) return;
+__global__ void block_per_array_bitonic_sort(uint32_t *sequences, uint32_t *lengths, uint32_t *num_seq, int L) {
+    extern __shared__ uint32_t s_data[];
 
-    unsigned int lane = threadIdx.x % WARP_SIZE;
-    unsigned int mask = __activemask();
+    size_t array_idx = blockIdx.x;
+    if (array_idx >= *num_seq) return;
 
-    size_t len = lengths[warp_id];
-    if (len <= 1 || len > 128) return;
+    size_t len = lengths[array_idx];
+    if (len <= 1) return;
 
-    // Shared memory buffer: 128 elements per warp, up to 4 warps per block
-    __shared__ uint32_t shmem[128 * 4];
-    uint32_t *local = &shmem[(threadIdx.x / WARP_SIZE) * 128];
+    size_t tid = threadIdx.x;
+    size_t base_offset = L * array_idx;
 
-    // Load array into shared memory (strided) 
-    size_t base_offset = L * warp_id;
-    for (size_t i = lane; i < len; i += WARP_SIZE) {
-        local[i] = sequences[base_offset + i];
+    // Load array into shared memory
+    for (size_t i = tid; i < len; i += blockDim.x) {
+        s_data[i] = sequences[base_offset + i];
     }
 
-    // Odd-even sort 
-    for (size_t pass = 0; pass < len; ++pass) {
-        bool local_swap = false;
-        for (size_t i = lane; i + 1 < len; i += WARP_SIZE) {
-            if ((i % 2) == (pass % 2)) {
-                uint32_t a = local[i];
-                uint32_t b = local[i + 1];
-                if (a > b) {
-                    local[i]     = b;
-                    local[i + 1] = a;
-                    local_swap = true;
+    // Pad with UINT32_MAX for bitonic sort (safe sentinel)
+    for (size_t i = len + tid; i < blockDim.x; i += blockDim.x) {
+        s_data[i] = UINT32_MAX;
+    }
+    __syncthreads();
+
+    // Round up to next power of 2
+    size_t n = 1;
+    while (n < len) n <<= 1;
+
+    // Bitonic sort
+    for (size_t k = 2; k <= n; k <<= 1) {
+        for (size_t j = k >> 1; j > 0; j >>= 1) {
+            size_t i = tid;
+            while (i < n) {
+                size_t ixj = i ^ j;
+                if (ixj > i && ixj < n) {
+                    bool ascending = ((i & k) == 0);
+                    if ((ascending && s_data[i] > s_data[ixj]) ||
+                        (!ascending && s_data[i] < s_data[ixj])) {
+                        uint32_t tmp = s_data[i];
+                        s_data[i] = s_data[ixj];
+                        s_data[ixj] = tmp;
+                    }
                 }
+                i += blockDim.x;
             }
-        }
-
-        __syncwarp(mask);
-        bool swapped = __any_sync(mask, local_swap);
-        
-        if(!swapped && (pass % 2 == 1) ) { 
-            // printf("early exit..\n");
-            break;
+            __syncthreads();
         }
     }
 
-    // Write back to global memory (strided) 
-    for (size_t i = lane; i < len; i += WARP_SIZE) {
-        sequences[base_offset + i] = local[i];
+    // Write back only real elements
+    for (size_t i = tid; i < len; i += blockDim.x) {
+        sequences[base_offset + i] = s_data[i];
     }
 }
 
@@ -320,18 +321,29 @@ int main(int argc, char **argv) {
     uint32_t host_num_seq;
     cudaMemcpy(&host_num_seq, num_seq, sizeof(uint32_t), cudaMemcpyDeviceToHost);
 
-    unsigned int num_warps_per_block = 4;
-    unsigned int num_threads_per_block = num_warps_per_block * WARP_SIZE;
-    unsigned int num_blocks_per_grid = (host_num_seq + num_warps_per_block - 1) / num_warps_per_block;
+    // auto-detect maximum sequence length (L = 128 in your code)
+    uint32_t max_array_len = 0;
+    std::vector<uint32_t> host_lengths(host_num_seq);
+    cudaMemcpy(host_lengths.data(), lengths, host_num_seq * sizeof(uint32_t), cudaMemcpyDeviceToHost);
+	for (size_t i = 0; i < host_num_seq; i++) {
+		if (host_lengths[i] > max_array_len) max_array_len = host_lengths[i];
+	}
 
-    auto start = chrono::high_resolution_clock::now();
-    warp_per_array_oddeven_sort<<<num_blocks_per_grid, num_threads_per_block>>>(sequences, lengths, num_seq, L);
+	int num_threads_per_block = std::min(1024, (int)max_array_len);
+	size_t shared_size_in_num_bytes = max_array_len * sizeof(uint32_t);
+	int num_blocks_per_grid = host_num_seq;
 
-    cudaDeviceSynchronize();
-    auto end = chrono::high_resolution_clock::now();
-    double gpu_sort_time = chrono::duration<double, std::micro>(end - start).count();
-    total_sort_time += gpu_sort_time;
-    }
+	// ------------------- TIMED KERNEL LAUNCH -------------------
+	auto start = chrono::high_resolution_clock::now();
+
+	block_per_array_bitonic_sort<<<num_blocks_per_grid, num_threads_per_block, shared_size_in_num_bytes>>>(
+		sequences, lengths, num_seq, L);
+
+	cudaDeviceSynchronize();
+
+	auto end = chrono::high_resolution_clock::now();
+	double gpu_sort_time = chrono::duration<double, std::micro>(end - start).count();
+	total_sort_time += gpu_sort_time;
 
     std::cout << "total_sort_time / 1000 = " << total_sort_time / 1000 << std::endl;
     gpu_write<<<(NUM_WARPS + WARPS_PER_BLOCK - 1) / WARPS_PER_BLOCK, block,
