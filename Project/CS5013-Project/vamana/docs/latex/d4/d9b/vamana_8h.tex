@@ -1,0 +1,516 @@
+\hypertarget{vamana_8h}{}\doxysection{src/vamana.h File Reference}
+\label{vamana_8h}\index{src/vamana.h@{src/vamana.h}}
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\newline
+Include dependency graph for vamana.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d39/vamana_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d6/dd4/vamana_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{vamana_8h_a5a8d11f72da0b2d72d8c123d1e138183}{VAMANA\+\_\+H}}
+\item 
+\#define \mbox{\hyperlink{vamana_8h_ac66e8347fa3517b82386cba73a590ea4}{BF\+\_\+\+ENTRIES}}~39988U
+\item 
+\#define \mbox{\hyperlink{vamana_8h_a0240ac851181b84ac374872dc5434ee4}{N}}~10000
+\item 
+\#define \mbox{\hyperlink{vamana_8h_a74933a25debe660580eca931d14cbf44}{NUM\+\_\+\+QUERIES}}~10000
+\item 
+\#define \mbox{\hyperlink{vamana_8h_af316c33cc298530f245e8b55330e86b5}{D}}~128
+\item 
+\#define \mbox{\hyperlink{vamana_8h_a5c71a5e59a53413cd6c270266d63b031}{R}}~64
+\item 
+\#define \mbox{\hyperlink{vamana_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}{L}}~150
+\item 
+\#define \mbox{\hyperlink{vamana_8h_a87ba7817757b792861bbc6bdec6bfa2c}{MAX\+\_\+\+PARENTS\+\_\+\+PERQUERY}}~600
+\item 
+\#define \mbox{\hyperlink{vamana_8h_a2029e38b88cd6f354d279a45952f1910}{MAX\+\_\+\+REVERSE\+\_\+\+INDEX\+\_\+\+ENTRIES}}~500
+\item 
+\#define \mbox{\hyperlink{vamana_8h_af7ab2cfc4a82c9d8e43e321fc5aa8218}{MEDOID}}~5000
+\item 
+\#define \mbox{\hyperlink{vamana_8h_a430f6b43e75b4a89326caa3f3de62166}{VISITED\+\_\+\+NODES\+\_\+\+SIZE}}~10000
+\item 
+\#define \mbox{\hyperlink{vamana_8h_a3f6ea8e9ef58125936d50d7e1181aa7a}{gpu\+Errchk}}(ans)
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{vamana_8h_ae4163e43570728b98ae046fe63093a44}{Node\+State}} \+: uint8\+\_\+t \{ \mbox{\hyperlink{vamana_8h_ae4163e43570728b98ae046fe63093a44a0cb1b2c6a7db1f1084886c98909a3f36}{INIT}}
+, \mbox{\hyperlink{vamana_8h_ae4163e43570728b98ae046fe63093a44a95baa00441e5c276f14b0589424142c9}{PRUNED}}
+, \mbox{\hyperlink{vamana_8h_ae4163e43570728b98ae046fe63093a44a14e286e26922e9c31758fd4237e862f0}{NEIGHBOR}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{vamana_8h_a4fa8ae2cfdc7206a47e9122872c752c0}{bf\+\_\+hash\+Fn1}} (unsigned x)
+\item 
+unsigned \mbox{\hyperlink{vamana_8h_a88e46a502c4bc2104b3226c294e8f752}{bf\+\_\+hash\+Fn2}} (unsigned x)
+\item 
+bool \mbox{\hyperlink{vamana_8h_a2a25bf95d583b29c78ef1d600d78e8ce}{bf\+\_\+check}} (bool $\ast$bf, unsigned x)
+\item 
+void \mbox{\hyperlink{vamana_8h_ae33f5b277bdeef8c87b566f3421242b0}{bf\+\_\+set}} (bool $\ast$bf, unsigned x)
+\item 
+void \mbox{\hyperlink{vamana_8h_af73a07fc0b480f8ed5507eb82b52b99a}{generate\+Random\+Graph}} (uint8\+\_\+t $\ast$graph, unsigned batch\+Start, unsigned batch\+Size)
+\item 
+void \mbox{\hyperlink{vamana_8h_a30e31f1b815e7b8d0cda5ae8868e72da}{filter\+Neighbors}} (uint8\+\_\+t $\ast$d\+\_\+graph, bool $\ast$d\+\_\+has\+Parent, unsigned $\ast$d\+\_\+parents, bool $\ast$d\+\_\+bloom\+Filters, unsigned $\ast$d\+\_\+neighbors, unsigned $\ast$d\+\_\+neighbors\+Count, unsigned $\ast$d\+\_\+visited\+Set, unsigned $\ast$d\+\_\+visited\+Set\+Count)
+\item 
+void \mbox{\hyperlink{vamana_8h_ab62d4e9f4e0e21510a4692595b4a37d8}{compute\+Neighbor\+Dists}} (uint8\+\_\+t $\ast$d\+\_\+graph, unsigned $\ast$d\+\_\+neighbors, unsigned $\ast$d\+\_\+neighbors\+Count, float $\ast$d\+\_\+query\+Vecs, float $\ast$d\+\_\+neighbor\+Dists)
+\item 
+void \mbox{\hyperlink{vamana_8h_a8f89e864abd72821bfea6f126f16093c}{sort\+Neighbor\+Dists}} (unsigned $\ast$d\+\_\+neighbors, unsigned $\ast$d\+\_\+neighbors\+Count, float $\ast$d\+\_\+neighbors\+Dist, unsigned $\ast$d\+\_\+neighbors\+Aux, float $\ast$d\+\_\+neighbors\+Dist\+Aux)
+\item 
+unsigned \mbox{\hyperlink{vamana_8h_a7d7b22de4e48770872dfb2cca36c8379}{lower\+Bound}} (float arr\mbox{[}$\,$\mbox{]}, unsigned lo, unsigned hi, float target)
+\item 
+unsigned \mbox{\hyperlink{vamana_8h_a6c6b2ba2a2656aa02fe23c2fe45b927f}{upper\+Bound}} (float arr\mbox{[}$\,$\mbox{]}, unsigned lo, unsigned hi, float target)
+\item 
+void \mbox{\hyperlink{vamana_8h_adc803b99a5d9084206e9e78f093fc010}{merge\+Into\+Worklist}} (unsigned $\ast$d\+\_\+worklist\+Count, unsigned $\ast$d\+\_\+worklist, float $\ast$d\+\_\+worklist\+Dist, unsigned $\ast$d\+\_\+worklist\+Visited, unsigned d\+\_\+neighbors\+Count, unsigned $\ast$d\+\_\+neighbors, float $\ast$d\+\_\+neighbors\+Dist, bool $\ast$d\+\_\+has\+Parent, unsigned $\ast$d\+\_\+parents, bool $\ast$d\+\_\+next\+Iter)
+\item 
+void \mbox{\hyperlink{vamana_8h_a8bf20b50261c7a794b94a2e93bbb7ba6}{get\+Neighbors}} (uint8\+\_\+t $\ast$d\+\_\+graph, unsigned batch\+Start, unsigned $\ast$d\+\_\+neighbors, unsigned $\ast$d\+\_\+neighbors\+Count)
+\item 
+void \mbox{\hyperlink{vamana_8h_a5d5911244a68852b015f24c0aa18e9ac}{compute\+Visited\+Set\+Dists}} (uint8\+\_\+t $\ast$d\+\_\+graph, unsigned $\ast$d\+\_\+visited\+Set, unsigned $\ast$d\+\_\+visited\+Set\+Count, float $\ast$d\+\_\+query\+Vecs, float $\ast$d\+\_\+visited\+Set\+Dists)
+\item 
+void \mbox{\hyperlink{vamana_8h_a4885e3ab27562c575cc881f0914c8281}{sort\+Visited\+Sets}} (unsigned $\ast$d\+\_\+visited\+Set, unsigned $\ast$d\+\_\+visited\+Set\+Count, float $\ast$d\+\_\+visited\+Set\+Dists, unsigned $\ast$d\+\_\+visited\+Set\+Aux, float $\ast$d\+\_\+visited\+Set\+Dists\+Aux)
+\item 
+void \mbox{\hyperlink{vamana_8h_aaa54499da2bbc223bae921387ca63c9c}{merge\+Neighbors\+Into\+Visited\+Set}} (unsigned $\ast$d\+\_\+visited\+Set\+Count, unsigned $\ast$d\+\_\+visited\+Set, float $\ast$d\+\_\+visited\+Set\+Dists, unsigned $\ast$d\+\_\+neighbors\+Count, unsigned $\ast$d\+\_\+neighbors, float $\ast$d\+\_\+neighbors\+Dist)
+\item 
+void \mbox{\hyperlink{vamana_8h_a1f1cf78df2bbc85b83eb386859dad720}{prune\+Out\+Neighbors}} (uint8\+\_\+t $\ast$d\+\_\+graph, unsigned batch\+Start, unsigned $\ast$d\+\_\+visited\+Set, unsigned $\ast$d\+\_\+visited\+Set\+Count, float $\ast$d\+\_\+visited\+Set\+Dists, \mbox{\hyperlink{vamana_8h_ae4163e43570728b98ae046fe63093a44}{Node\+State}} $\ast$d\+\_\+visited\+Set\+Status, float $\ast$d\+\_\+query\+Vecs, uint8\+\_\+t $\ast$d\+\_\+reverse\+Edge\+Index, float alpha, unsigned iter, bool $\ast$d\+\_\+next\+Iter)
+\item 
+void \mbox{\hyperlink{vamana_8h_a32220ffe2280e58d1a4f65d2b8a0bbde}{greedy\+Search}} (uint8\+\_\+t $\ast$d\+\_\+graph, float $\ast$d\+\_\+query\+Vecs, unsigned $\ast$d\+\_\+visited\+Sets, unsigned $\ast$d\+\_\+visited\+Set\+Count, unsigned batch\+Start, unsigned batch\+Size)
+\item 
+void \mbox{\hyperlink{vamana_8h_ab481251e1ae32509c33c0fac70e6fd2e}{compute\+Out\+Neighbors}} (uint8\+\_\+t $\ast$d\+\_\+graph, float $\ast$d\+\_\+query\+Vecs, unsigned $\ast$d\+\_\+visited\+Sets, unsigned $\ast$d\+\_\+visited\+Set\+Count, float alpha, uint8\+\_\+t $\ast$d\+\_\+reverse\+Edge\+Index, unsigned batch\+Start, unsigned batch\+Size)
+\item 
+void \mbox{\hyperlink{vamana_8h_ae50e29b34958cd3ec869755ec3feb5e0}{compute\+Reverse\+Edges}} (uint8\+\_\+t $\ast$d\+\_\+graph, uint8\+\_\+t $\ast$d\+\_\+reverse\+Edge\+Index, float alpha)
+\item 
+void \mbox{\hyperlink{vamana_8h_a0d45b3041508a6aaa6a801bb08b2eea0}{compute\+Dists}} (uint8\+\_\+t $\ast$d\+\_\+graph, unsigned $\ast$d\+\_\+nodes, unsigned $\ast$d\+\_\+node\+Count, float $\ast$d\+\_\+query\+Vecs, float $\ast$d\+\_\+dists, unsigned row\+Size)
+\item 
+void \mbox{\hyperlink{vamana_8h_ad74430e11b73bdd3ac49c49621b1e9a4}{sort\+By\+Distance}} (unsigned $\ast$d\+\_\+items, unsigned $\ast$d\+\_\+item\+Count, float $\ast$d\+\_\+dists, unsigned $\ast$d\+\_\+items\+Aux, float $\ast$d\+\_\+dists\+Aux, unsigned row\+Size)
+\item 
+void \mbox{\hyperlink{vamana_8h_ab3e90881a2476fd461eb2bcfcaa7cf63}{gpu\+Assert}} (cuda\+Error\+\_\+t code, const char $\ast$file, int line, bool abort=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr unsigned \mbox{\hyperlink{vamana_8h_af2f9229b68d66fa464c9ccc2902a4dfc}{BF\+\_\+\+MEMORY}}
+\item 
+constexpr unsigned \mbox{\hyperlink{vamana_8h_a0208a562b82103784d7d65c129d7e5da}{graph\+Entry\+Size}} = 128 $\ast$ sizeof(float) + sizeof(unsigned) + 64 $\ast$ sizeof(unsigned)
+\item 
+constexpr unsigned \mbox{\hyperlink{vamana_8h_abfd4b920e40780e191739ad587598941}{reverse\+Index\+Entry\+Size}} = ( 500 + 1) $\ast$ sizeof(unsigned)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{vamana_8h_ac66e8347fa3517b82386cba73a590ea4}\label{vamana_8h_ac66e8347fa3517b82386cba73a590ea4}} 
+\index{vamana.h@{vamana.h}!BF\_ENTRIES@{BF\_ENTRIES}}
+\index{BF\_ENTRIES@{BF\_ENTRIES}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{BF\_ENTRIES}{BF\_ENTRIES}}
+{\footnotesize\ttfamily \#define BF\+\_\+\+ENTRIES~39988U}
+
+\mbox{\Hypertarget{vamana_8h_af316c33cc298530f245e8b55330e86b5}\label{vamana_8h_af316c33cc298530f245e8b55330e86b5}} 
+\index{vamana.h@{vamana.h}!D@{D}}
+\index{D@{D}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{D}{D}}
+{\footnotesize\ttfamily \#define D~128}
+
+\mbox{\Hypertarget{vamana_8h_a3f6ea8e9ef58125936d50d7e1181aa7a}\label{vamana_8h_a3f6ea8e9ef58125936d50d7e1181aa7a}} 
+\index{vamana.h@{vamana.h}!gpuErrchk@{gpuErrchk}}
+\index{gpuErrchk@{gpuErrchk}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{gpuErrchk}{gpuErrchk}}
+{\footnotesize\ttfamily \#define gpu\+Errchk(\begin{DoxyParamCaption}\item[{}]{ans }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \{                                         \(\backslash\)}
+\DoxyCodeLine{        gpuAssert((ans), \_\_FILE\_\_, \_\_LINE\_\_); \(\backslash\)}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vamana_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}\label{vamana_8h_aa73214aa5f2f94f63d90bb4e3d99fe53}} 
+\index{vamana.h@{vamana.h}!L@{L}}
+\index{L@{L}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{L}{L}}
+{\footnotesize\ttfamily \#define L~150}
+
+\mbox{\Hypertarget{vamana_8h_a87ba7817757b792861bbc6bdec6bfa2c}\label{vamana_8h_a87ba7817757b792861bbc6bdec6bfa2c}} 
+\index{vamana.h@{vamana.h}!MAX\_PARENTS\_PERQUERY@{MAX\_PARENTS\_PERQUERY}}
+\index{MAX\_PARENTS\_PERQUERY@{MAX\_PARENTS\_PERQUERY}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_PARENTS\_PERQUERY}{MAX\_PARENTS\_PERQUERY}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+PARENTS\+\_\+\+PERQUERY~600}
+
+\mbox{\Hypertarget{vamana_8h_a2029e38b88cd6f354d279a45952f1910}\label{vamana_8h_a2029e38b88cd6f354d279a45952f1910}} 
+\index{vamana.h@{vamana.h}!MAX\_REVERSE\_INDEX\_ENTRIES@{MAX\_REVERSE\_INDEX\_ENTRIES}}
+\index{MAX\_REVERSE\_INDEX\_ENTRIES@{MAX\_REVERSE\_INDEX\_ENTRIES}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_REVERSE\_INDEX\_ENTRIES}{MAX\_REVERSE\_INDEX\_ENTRIES}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+REVERSE\+\_\+\+INDEX\+\_\+\+ENTRIES~500}
+
+\mbox{\Hypertarget{vamana_8h_af7ab2cfc4a82c9d8e43e321fc5aa8218}\label{vamana_8h_af7ab2cfc4a82c9d8e43e321fc5aa8218}} 
+\index{vamana.h@{vamana.h}!MEDOID@{MEDOID}}
+\index{MEDOID@{MEDOID}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{MEDOID}{MEDOID}}
+{\footnotesize\ttfamily \#define MEDOID~5000}
+
+\mbox{\Hypertarget{vamana_8h_a0240ac851181b84ac374872dc5434ee4}\label{vamana_8h_a0240ac851181b84ac374872dc5434ee4}} 
+\index{vamana.h@{vamana.h}!N@{N}}
+\index{N@{N}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \#define N~10000}
+
+\mbox{\Hypertarget{vamana_8h_a74933a25debe660580eca931d14cbf44}\label{vamana_8h_a74933a25debe660580eca931d14cbf44}} 
+\index{vamana.h@{vamana.h}!NUM\_QUERIES@{NUM\_QUERIES}}
+\index{NUM\_QUERIES@{NUM\_QUERIES}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{NUM\_QUERIES}{NUM\_QUERIES}}
+{\footnotesize\ttfamily \#define NUM\+\_\+\+QUERIES~10000}
+
+\mbox{\Hypertarget{vamana_8h_a5c71a5e59a53413cd6c270266d63b031}\label{vamana_8h_a5c71a5e59a53413cd6c270266d63b031}} 
+\index{vamana.h@{vamana.h}!R@{R}}
+\index{R@{R}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily \#define R~64}
+
+\mbox{\Hypertarget{vamana_8h_a5a8d11f72da0b2d72d8c123d1e138183}\label{vamana_8h_a5a8d11f72da0b2d72d8c123d1e138183}} 
+\index{vamana.h@{vamana.h}!VAMANA\_H@{VAMANA\_H}}
+\index{VAMANA\_H@{VAMANA\_H}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{VAMANA\_H}{VAMANA\_H}}
+{\footnotesize\ttfamily \#define VAMANA\+\_\+H}
+
+\mbox{\Hypertarget{vamana_8h_a430f6b43e75b4a89326caa3f3de62166}\label{vamana_8h_a430f6b43e75b4a89326caa3f3de62166}} 
+\index{vamana.h@{vamana.h}!VISITED\_NODES\_SIZE@{VISITED\_NODES\_SIZE}}
+\index{VISITED\_NODES\_SIZE@{VISITED\_NODES\_SIZE}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{VISITED\_NODES\_SIZE}{VISITED\_NODES\_SIZE}}
+{\footnotesize\ttfamily \#define VISITED\+\_\+\+NODES\+\_\+\+SIZE~10000}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{vamana_8h_ae4163e43570728b98ae046fe63093a44}\label{vamana_8h_ae4163e43570728b98ae046fe63093a44}} 
+\index{vamana.h@{vamana.h}!NodeState@{NodeState}}
+\index{NodeState@{NodeState}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{NodeState}{NodeState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{vamana_8h_ae4163e43570728b98ae046fe63093a44}{Node\+State}} \+: uint8\+\_\+t}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INIT@{INIT}!vamana.h@{vamana.h}}\index{vamana.h@{vamana.h}!INIT@{INIT}}}\mbox{\Hypertarget{vamana_8h_ae4163e43570728b98ae046fe63093a44a0cb1b2c6a7db1f1084886c98909a3f36}\label{vamana_8h_ae4163e43570728b98ae046fe63093a44a0cb1b2c6a7db1f1084886c98909a3f36}} 
+INIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PRUNED@{PRUNED}!vamana.h@{vamana.h}}\index{vamana.h@{vamana.h}!PRUNED@{PRUNED}}}\mbox{\Hypertarget{vamana_8h_ae4163e43570728b98ae046fe63093a44a95baa00441e5c276f14b0589424142c9}\label{vamana_8h_ae4163e43570728b98ae046fe63093a44a95baa00441e5c276f14b0589424142c9}} 
+PRUNED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NEIGHBOR@{NEIGHBOR}!vamana.h@{vamana.h}}\index{vamana.h@{vamana.h}!NEIGHBOR@{NEIGHBOR}}}\mbox{\Hypertarget{vamana_8h_ae4163e43570728b98ae046fe63093a44a14e286e26922e9c31758fd4237e862f0}\label{vamana_8h_ae4163e43570728b98ae046fe63093a44a14e286e26922e9c31758fd4237e862f0}} 
+NEIGHBOR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{vamana_8h_a2a25bf95d583b29c78ef1d600d78e8ce}\label{vamana_8h_a2a25bf95d583b29c78ef1d600d78e8ce}} 
+\index{vamana.h@{vamana.h}!bf\_check@{bf\_check}}
+\index{bf\_check@{bf\_check}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{bf\_check()}{bf\_check()}}
+{\footnotesize\ttfamily bool bf\+\_\+check (\begin{DoxyParamCaption}\item[{bool $\ast$}]{bf,  }\item[{unsigned}]{x }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{d4/d9b/vamana_8h_a2a25bf95d583b29c78ef1d600d78e8ce_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{d4/d9b/vamana_8h_a2a25bf95d583b29c78ef1d600d78e8ce_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vamana_8h_a4fa8ae2cfdc7206a47e9122872c752c0}\label{vamana_8h_a4fa8ae2cfdc7206a47e9122872c752c0}} 
+\index{vamana.h@{vamana.h}!bf\_hashFn1@{bf\_hashFn1}}
+\index{bf\_hashFn1@{bf\_hashFn1}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{bf\_hashFn1()}{bf\_hashFn1()}}
+{\footnotesize\ttfamily unsigned bf\+\_\+hash\+Fn1 (\begin{DoxyParamCaption}\item[{unsigned}]{x }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d9b/vamana_8h_a4fa8ae2cfdc7206a47e9122872c752c0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vamana_8h_a88e46a502c4bc2104b3226c294e8f752}\label{vamana_8h_a88e46a502c4bc2104b3226c294e8f752}} 
+\index{vamana.h@{vamana.h}!bf\_hashFn2@{bf\_hashFn2}}
+\index{bf\_hashFn2@{bf\_hashFn2}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{bf\_hashFn2()}{bf\_hashFn2()}}
+{\footnotesize\ttfamily unsigned bf\+\_\+hash\+Fn2 (\begin{DoxyParamCaption}\item[{unsigned}]{x }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d9b/vamana_8h_a88e46a502c4bc2104b3226c294e8f752_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vamana_8h_ae33f5b277bdeef8c87b566f3421242b0}\label{vamana_8h_ae33f5b277bdeef8c87b566f3421242b0}} 
+\index{vamana.h@{vamana.h}!bf\_set@{bf\_set}}
+\index{bf\_set@{bf\_set}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{bf\_set()}{bf\_set()}}
+{\footnotesize\ttfamily void bf\+\_\+set (\begin{DoxyParamCaption}\item[{bool $\ast$}]{bf,  }\item[{unsigned}]{x }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{d4/d9b/vamana_8h_ae33f5b277bdeef8c87b566f3421242b0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{d4/d9b/vamana_8h_ae33f5b277bdeef8c87b566f3421242b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vamana_8h_a0d45b3041508a6aaa6a801bb08b2eea0}\label{vamana_8h_a0d45b3041508a6aaa6a801bb08b2eea0}} 
+\index{vamana.h@{vamana.h}!computeDists@{computeDists}}
+\index{computeDists@{computeDists}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{computeDists()}{computeDists()}}
+{\footnotesize\ttfamily void compute\+Dists (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{unsigned $\ast$}]{d\+\_\+nodes,  }\item[{unsigned $\ast$}]{d\+\_\+node\+Count,  }\item[{float $\ast$}]{d\+\_\+query\+Vecs,  }\item[{float $\ast$}]{d\+\_\+dists,  }\item[{unsigned}]{row\+Size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vamana_8h_ab62d4e9f4e0e21510a4692595b4a37d8}\label{vamana_8h_ab62d4e9f4e0e21510a4692595b4a37d8}} 
+\index{vamana.h@{vamana.h}!computeNeighborDists@{computeNeighborDists}}
+\index{computeNeighborDists@{computeNeighborDists}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{computeNeighborDists()}{computeNeighborDists()}}
+{\footnotesize\ttfamily void compute\+Neighbor\+Dists (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors\+Count,  }\item[{float $\ast$}]{d\+\_\+query\+Vecs,  }\item[{float $\ast$}]{d\+\_\+neighbor\+Dists }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vamana_8h_ab481251e1ae32509c33c0fac70e6fd2e}\label{vamana_8h_ab481251e1ae32509c33c0fac70e6fd2e}} 
+\index{vamana.h@{vamana.h}!computeOutNeighbors@{computeOutNeighbors}}
+\index{computeOutNeighbors@{computeOutNeighbors}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{computeOutNeighbors()}{computeOutNeighbors()}}
+{\footnotesize\ttfamily void compute\+Out\+Neighbors (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{float $\ast$}]{d\+\_\+query\+Vecs,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Sets,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set\+Count,  }\item[{float}]{alpha,  }\item[{uint8\+\_\+t $\ast$}]{d\+\_\+reverse\+Edge\+Index,  }\item[{unsigned}]{batch\+Start,  }\item[{unsigned}]{batch\+Size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d9b/vamana_8h_ab481251e1ae32509c33c0fac70e6fd2e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d9b/vamana_8h_ab481251e1ae32509c33c0fac70e6fd2e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vamana_8h_ae50e29b34958cd3ec869755ec3feb5e0}\label{vamana_8h_ae50e29b34958cd3ec869755ec3feb5e0}} 
+\index{vamana.h@{vamana.h}!computeReverseEdges@{computeReverseEdges}}
+\index{computeReverseEdges@{computeReverseEdges}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{computeReverseEdges()}{computeReverseEdges()}}
+{\footnotesize\ttfamily void compute\+Reverse\+Edges (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{uint8\+\_\+t $\ast$}]{d\+\_\+reverse\+Edge\+Index,  }\item[{float}]{alpha }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d9b/vamana_8h_ae50e29b34958cd3ec869755ec3feb5e0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d9b/vamana_8h_ae50e29b34958cd3ec869755ec3feb5e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vamana_8h_a5d5911244a68852b015f24c0aa18e9ac}\label{vamana_8h_a5d5911244a68852b015f24c0aa18e9ac}} 
+\index{vamana.h@{vamana.h}!computeVisitedSetDists@{computeVisitedSetDists}}
+\index{computeVisitedSetDists@{computeVisitedSetDists}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{computeVisitedSetDists()}{computeVisitedSetDists()}}
+{\footnotesize\ttfamily void compute\+Visited\+Set\+Dists (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set\+Count,  }\item[{float $\ast$}]{d\+\_\+query\+Vecs,  }\item[{float $\ast$}]{d\+\_\+visited\+Set\+Dists }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vamana_8h_a30e31f1b815e7b8d0cda5ae8868e72da}\label{vamana_8h_a30e31f1b815e7b8d0cda5ae8868e72da}} 
+\index{vamana.h@{vamana.h}!filterNeighbors@{filterNeighbors}}
+\index{filterNeighbors@{filterNeighbors}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{filterNeighbors()}{filterNeighbors()}}
+{\footnotesize\ttfamily void filter\+Neighbors (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{bool $\ast$}]{d\+\_\+has\+Parent,  }\item[{unsigned $\ast$}]{d\+\_\+parents,  }\item[{bool $\ast$}]{d\+\_\+bloom\+Filters,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors\+Count,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set\+Count }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d9b/vamana_8h_a30e31f1b815e7b8d0cda5ae8868e72da_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vamana_8h_af73a07fc0b480f8ed5507eb82b52b99a}\label{vamana_8h_af73a07fc0b480f8ed5507eb82b52b99a}} 
+\index{vamana.h@{vamana.h}!generateRandomGraph@{generateRandomGraph}}
+\index{generateRandomGraph@{generateRandomGraph}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{generateRandomGraph()}{generateRandomGraph()}}
+{\footnotesize\ttfamily void generate\+Random\+Graph (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{graph,  }\item[{unsigned}]{batch\+Start,  }\item[{unsigned}]{batch\+Size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vamana_8h_a8bf20b50261c7a794b94a2e93bbb7ba6}\label{vamana_8h_a8bf20b50261c7a794b94a2e93bbb7ba6}} 
+\index{vamana.h@{vamana.h}!getNeighbors@{getNeighbors}}
+\index{getNeighbors@{getNeighbors}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{getNeighbors()}{getNeighbors()}}
+{\footnotesize\ttfamily void get\+Neighbors (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{unsigned}]{batch\+Start,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors\+Count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vamana_8h_ab3e90881a2476fd461eb2bcfcaa7cf63}\label{vamana_8h_ab3e90881a2476fd461eb2bcfcaa7cf63}} 
+\index{vamana.h@{vamana.h}!gpuAssert@{gpuAssert}}
+\index{gpuAssert@{gpuAssert}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{gpuAssert()}{gpuAssert()}}
+{\footnotesize\ttfamily void gpu\+Assert (\begin{DoxyParamCaption}\item[{cuda\+Error\+\_\+t}]{code,  }\item[{const char $\ast$}]{file,  }\item[{int}]{line,  }\item[{bool}]{abort = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{vamana_8h_a32220ffe2280e58d1a4f65d2b8a0bbde}\label{vamana_8h_a32220ffe2280e58d1a4f65d2b8a0bbde}} 
+\index{vamana.h@{vamana.h}!greedySearch@{greedySearch}}
+\index{greedySearch@{greedySearch}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{greedySearch()}{greedySearch()}}
+{\footnotesize\ttfamily void greedy\+Search (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{float $\ast$}]{d\+\_\+query\+Vecs,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Sets,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set\+Count,  }\item[{unsigned}]{batch\+Start,  }\item[{unsigned}]{batch\+Size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d9b/vamana_8h_a32220ffe2280e58d1a4f65d2b8a0bbde_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d9b/vamana_8h_a32220ffe2280e58d1a4f65d2b8a0bbde_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vamana_8h_a7d7b22de4e48770872dfb2cca36c8379}\label{vamana_8h_a7d7b22de4e48770872dfb2cca36c8379}} 
+\index{vamana.h@{vamana.h}!lowerBound@{lowerBound}}
+\index{lowerBound@{lowerBound}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{lowerBound()}{lowerBound()}}
+{\footnotesize\ttfamily unsigned lower\+Bound (\begin{DoxyParamCaption}\item[{float}]{arr\mbox{[}$\,$\mbox{]},  }\item[{unsigned}]{lo,  }\item[{unsigned}]{hi,  }\item[{float}]{target }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d9b/vamana_8h_a7d7b22de4e48770872dfb2cca36c8379_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vamana_8h_adc803b99a5d9084206e9e78f093fc010}\label{vamana_8h_adc803b99a5d9084206e9e78f093fc010}} 
+\index{vamana.h@{vamana.h}!mergeIntoWorklist@{mergeIntoWorklist}}
+\index{mergeIntoWorklist@{mergeIntoWorklist}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{mergeIntoWorklist()}{mergeIntoWorklist()}}
+{\footnotesize\ttfamily void merge\+Into\+Worklist (\begin{DoxyParamCaption}\item[{unsigned $\ast$}]{d\+\_\+worklist\+Count,  }\item[{unsigned $\ast$}]{d\+\_\+worklist,  }\item[{float $\ast$}]{d\+\_\+worklist\+Dist,  }\item[{unsigned $\ast$}]{d\+\_\+worklist\+Visited,  }\item[{unsigned}]{d\+\_\+neighbors\+Count,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors,  }\item[{float $\ast$}]{d\+\_\+neighbors\+Dist,  }\item[{bool $\ast$}]{d\+\_\+has\+Parent,  }\item[{unsigned $\ast$}]{d\+\_\+parents,  }\item[{bool $\ast$}]{d\+\_\+next\+Iter }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vamana_8h_aaa54499da2bbc223bae921387ca63c9c}\label{vamana_8h_aaa54499da2bbc223bae921387ca63c9c}} 
+\index{vamana.h@{vamana.h}!mergeNeighborsIntoVisitedSet@{mergeNeighborsIntoVisitedSet}}
+\index{mergeNeighborsIntoVisitedSet@{mergeNeighborsIntoVisitedSet}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{mergeNeighborsIntoVisitedSet()}{mergeNeighborsIntoVisitedSet()}}
+{\footnotesize\ttfamily void merge\+Neighbors\+Into\+Visited\+Set (\begin{DoxyParamCaption}\item[{unsigned $\ast$}]{d\+\_\+visited\+Set\+Count,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set,  }\item[{float $\ast$}]{d\+\_\+visited\+Set\+Dists,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors\+Count,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors,  }\item[{float $\ast$}]{d\+\_\+neighbors\+Dist }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vamana_8h_a1f1cf78df2bbc85b83eb386859dad720}\label{vamana_8h_a1f1cf78df2bbc85b83eb386859dad720}} 
+\index{vamana.h@{vamana.h}!pruneOutNeighbors@{pruneOutNeighbors}}
+\index{pruneOutNeighbors@{pruneOutNeighbors}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{pruneOutNeighbors()}{pruneOutNeighbors()}}
+{\footnotesize\ttfamily void prune\+Out\+Neighbors (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{unsigned}]{batch\+Start,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set\+Count,  }\item[{float $\ast$}]{d\+\_\+visited\+Set\+Dists,  }\item[{\mbox{\hyperlink{vamana_8h_ae4163e43570728b98ae046fe63093a44}{Node\+State}} $\ast$}]{d\+\_\+visited\+Set\+Status,  }\item[{float $\ast$}]{d\+\_\+query\+Vecs,  }\item[{uint8\+\_\+t $\ast$}]{d\+\_\+reverse\+Edge\+Index,  }\item[{float}]{alpha,  }\item[{unsigned}]{iter,  }\item[{bool $\ast$}]{d\+\_\+next\+Iter }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vamana_8h_ad74430e11b73bdd3ac49c49621b1e9a4}\label{vamana_8h_ad74430e11b73bdd3ac49c49621b1e9a4}} 
+\index{vamana.h@{vamana.h}!sortByDistance@{sortByDistance}}
+\index{sortByDistance@{sortByDistance}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{sortByDistance()}{sortByDistance()}}
+{\footnotesize\ttfamily void sort\+By\+Distance (\begin{DoxyParamCaption}\item[{unsigned $\ast$}]{d\+\_\+items,  }\item[{unsigned $\ast$}]{d\+\_\+item\+Count,  }\item[{float $\ast$}]{d\+\_\+dists,  }\item[{unsigned $\ast$}]{d\+\_\+items\+Aux,  }\item[{float $\ast$}]{d\+\_\+dists\+Aux,  }\item[{unsigned}]{row\+Size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{d4/d9b/vamana_8h_ad74430e11b73bdd3ac49c49621b1e9a4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d9b/vamana_8h_ad74430e11b73bdd3ac49c49621b1e9a4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vamana_8h_a8f89e864abd72821bfea6f126f16093c}\label{vamana_8h_a8f89e864abd72821bfea6f126f16093c}} 
+\index{vamana.h@{vamana.h}!sortNeighborDists@{sortNeighborDists}}
+\index{sortNeighborDists@{sortNeighborDists}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{sortNeighborDists()}{sortNeighborDists()}}
+{\footnotesize\ttfamily void sort\+Neighbor\+Dists (\begin{DoxyParamCaption}\item[{unsigned $\ast$}]{d\+\_\+neighbors,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors\+Count,  }\item[{float $\ast$}]{d\+\_\+neighbors\+Dist,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors\+Aux,  }\item[{float $\ast$}]{d\+\_\+neighbors\+Dist\+Aux }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vamana_8h_a4885e3ab27562c575cc881f0914c8281}\label{vamana_8h_a4885e3ab27562c575cc881f0914c8281}} 
+\index{vamana.h@{vamana.h}!sortVisitedSets@{sortVisitedSets}}
+\index{sortVisitedSets@{sortVisitedSets}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{sortVisitedSets()}{sortVisitedSets()}}
+{\footnotesize\ttfamily void sort\+Visited\+Sets (\begin{DoxyParamCaption}\item[{unsigned $\ast$}]{d\+\_\+visited\+Set,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set\+Count,  }\item[{float $\ast$}]{d\+\_\+visited\+Set\+Dists,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set\+Aux,  }\item[{float $\ast$}]{d\+\_\+visited\+Set\+Dists\+Aux }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{vamana_8h_a6c6b2ba2a2656aa02fe23c2fe45b927f}\label{vamana_8h_a6c6b2ba2a2656aa02fe23c2fe45b927f}} 
+\index{vamana.h@{vamana.h}!upperBound@{upperBound}}
+\index{upperBound@{upperBound}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{upperBound()}{upperBound()}}
+{\footnotesize\ttfamily unsigned upper\+Bound (\begin{DoxyParamCaption}\item[{float}]{arr\mbox{[}$\,$\mbox{]},  }\item[{unsigned}]{lo,  }\item[{unsigned}]{hi,  }\item[{float}]{target }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d9b/vamana_8h_a6c6b2ba2a2656aa02fe23c2fe45b927f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{vamana_8h_af2f9229b68d66fa464c9ccc2902a4dfc}\label{vamana_8h_af2f9229b68d66fa464c9ccc2902a4dfc}} 
+\index{vamana.h@{vamana.h}!BF\_MEMORY@{BF\_MEMORY}}
+\index{BF\_MEMORY@{BF\_MEMORY}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{BF\_MEMORY}{BF\_MEMORY}}
+{\footnotesize\ttfamily constexpr unsigned BF\+\_\+\+MEMORY\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{    ( 39988U  \& 0xFFFFFFFC) + \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{unsigned})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{vamana_8h_a0208a562b82103784d7d65c129d7e5da}\label{vamana_8h_a0208a562b82103784d7d65c129d7e5da}} 
+\index{vamana.h@{vamana.h}!graphEntrySize@{graphEntrySize}}
+\index{graphEntrySize@{graphEntrySize}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{graphEntrySize}{graphEntrySize}}
+{\footnotesize\ttfamily constexpr unsigned graph\+Entry\+Size = 128 $\ast$ sizeof(float) + sizeof(unsigned) + 64 $\ast$ sizeof(unsigned)\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\mbox{\Hypertarget{vamana_8h_abfd4b920e40780e191739ad587598941}\label{vamana_8h_abfd4b920e40780e191739ad587598941}} 
+\index{vamana.h@{vamana.h}!reverseIndexEntrySize@{reverseIndexEntrySize}}
+\index{reverseIndexEntrySize@{reverseIndexEntrySize}!vamana.h@{vamana.h}}
+\doxysubsubsection{\texorpdfstring{reverseIndexEntrySize}{reverseIndexEntrySize}}
+{\footnotesize\ttfamily constexpr unsigned reverse\+Index\+Entry\+Size = ( 500 + 1) $\ast$ sizeof(unsigned)\hspace{0.3cm}{\ttfamily [constexpr]}}
+

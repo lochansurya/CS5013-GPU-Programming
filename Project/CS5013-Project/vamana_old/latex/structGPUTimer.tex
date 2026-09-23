@@ -1,0 +1,112 @@
+\hypertarget{structGPUTimer}{}\doxysection{GPUTimer Struct Reference}
+\label{structGPUTimer}\index{GPUTimer@{GPUTimer}}
+
+
+{\ttfamily \#include $<$timer.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structGPUTimer_a64c14923bcb31704c74c4ca444b71b34}{GPUTimer}} (cuda\+Stream\+\_\+t \&stream\+In\+Param, bool b\+Disable=true)
+\item 
+\mbox{\hyperlink{structGPUTimer_a8c2ed04edc530e95c2f4e5aecaac8bef}{$\sim$\+GPUTimer}} ()
+\item 
+void \mbox{\hyperlink{structGPUTimer_ae9f777e37fc9a4770d9a7cb6d00ccb4a}{Start}} ()
+\item 
+void \mbox{\hyperlink{structGPUTimer_a6323951673ff683c3a0eb57899f26d32}{Stop}} ()
+\item 
+float \mbox{\hyperlink{structGPUTimer_aeda5b1ed02ad7a490bef23047dcbc50b}{Elapsed}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cuda\+Event\+\_\+t \mbox{\hyperlink{structGPUTimer_ae2dbe34e9161444acdff8985982df089}{start}}
+\item 
+cuda\+Event\+\_\+t \mbox{\hyperlink{structGPUTimer_a19b67406275194a20beb3c8ba7b7bf70}{stop}}
+\item 
+cuda\+Stream\+\_\+t \mbox{\hyperlink{structGPUTimer_ac051bc2438d727212670d90412610b1b}{stream\+To\+Record}}
+\item 
+bool \mbox{\hyperlink{structGPUTimer_a1541f5539fd688c17e56a6570b297a5e}{m\+\_\+b\+Disable}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structGPUTimer_a64c14923bcb31704c74c4ca444b71b34}\label{structGPUTimer_a64c14923bcb31704c74c4ca444b71b34}} 
+\index{GPUTimer@{GPUTimer}!GPUTimer@{GPUTimer}}
+\index{GPUTimer@{GPUTimer}!GPUTimer@{GPUTimer}}
+\doxysubsubsection{\texorpdfstring{GPUTimer()}{GPUTimer()}}
+{\footnotesize\ttfamily GPUTimer\+::\+GPUTimer (\begin{DoxyParamCaption}\item[{cuda\+Stream\+\_\+t \&}]{stream\+In\+Param,  }\item[{bool}]{b\+Disable = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structGPUTimer_a8c2ed04edc530e95c2f4e5aecaac8bef}\label{structGPUTimer_a8c2ed04edc530e95c2f4e5aecaac8bef}} 
+\index{GPUTimer@{GPUTimer}!````~GPUTimer@{$\sim$GPUTimer}}
+\index{````~GPUTimer@{$\sim$GPUTimer}!GPUTimer@{GPUTimer}}
+\doxysubsubsection{\texorpdfstring{$\sim$GPUTimer()}{~GPUTimer()}}
+{\footnotesize\ttfamily GPUTimer\+::$\sim$\+GPUTimer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structGPUTimer_aeda5b1ed02ad7a490bef23047dcbc50b}\label{structGPUTimer_aeda5b1ed02ad7a490bef23047dcbc50b}} 
+\index{GPUTimer@{GPUTimer}!Elapsed@{Elapsed}}
+\index{Elapsed@{Elapsed}!GPUTimer@{GPUTimer}}
+\doxysubsubsection{\texorpdfstring{Elapsed()}{Elapsed()}}
+{\footnotesize\ttfamily float GPUTimer\+::\+Elapsed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structGPUTimer_ae9f777e37fc9a4770d9a7cb6d00ccb4a}\label{structGPUTimer_ae9f777e37fc9a4770d9a7cb6d00ccb4a}} 
+\index{GPUTimer@{GPUTimer}!Start@{Start}}
+\index{Start@{Start}!GPUTimer@{GPUTimer}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void GPUTimer\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structGPUTimer_ae9f777e37fc9a4770d9a7cb6d00ccb4a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{structGPUTimer_a6323951673ff683c3a0eb57899f26d32}\label{structGPUTimer_a6323951673ff683c3a0eb57899f26d32}} 
+\index{GPUTimer@{GPUTimer}!Stop@{Stop}}
+\index{Stop@{Stop}!GPUTimer@{GPUTimer}}
+\doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
+{\footnotesize\ttfamily void GPUTimer\+::\+Stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structGPUTimer_a6323951673ff683c3a0eb57899f26d32_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structGPUTimer_a1541f5539fd688c17e56a6570b297a5e}\label{structGPUTimer_a1541f5539fd688c17e56a6570b297a5e}} 
+\index{GPUTimer@{GPUTimer}!m\_bDisable@{m\_bDisable}}
+\index{m\_bDisable@{m\_bDisable}!GPUTimer@{GPUTimer}}
+\doxysubsubsection{\texorpdfstring{m\_bDisable}{m\_bDisable}}
+{\footnotesize\ttfamily bool GPUTimer\+::m\+\_\+b\+Disable}
+
+\mbox{\Hypertarget{structGPUTimer_ae2dbe34e9161444acdff8985982df089}\label{structGPUTimer_ae2dbe34e9161444acdff8985982df089}} 
+\index{GPUTimer@{GPUTimer}!start@{start}}
+\index{start@{start}!GPUTimer@{GPUTimer}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily cuda\+Event\+\_\+t GPUTimer\+::start}
+
+\mbox{\Hypertarget{structGPUTimer_a19b67406275194a20beb3c8ba7b7bf70}\label{structGPUTimer_a19b67406275194a20beb3c8ba7b7bf70}} 
+\index{GPUTimer@{GPUTimer}!stop@{stop}}
+\index{stop@{stop}!GPUTimer@{GPUTimer}}
+\doxysubsubsection{\texorpdfstring{stop}{stop}}
+{\footnotesize\ttfamily cuda\+Event\+\_\+t GPUTimer\+::stop}
+
+\mbox{\Hypertarget{structGPUTimer_ac051bc2438d727212670d90412610b1b}\label{structGPUTimer_ac051bc2438d727212670d90412610b1b}} 
+\index{GPUTimer@{GPUTimer}!streamToRecord@{streamToRecord}}
+\index{streamToRecord@{streamToRecord}!GPUTimer@{GPUTimer}}
+\doxysubsubsection{\texorpdfstring{streamToRecord}{streamToRecord}}
+{\footnotesize\ttfamily cuda\+Stream\+\_\+t GPUTimer\+::stream\+To\+Record}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{timer_8h}{timer.\+h}}\end{DoxyCompactItemize}

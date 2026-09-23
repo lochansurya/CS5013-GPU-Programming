@@ -1,0 +1,26 @@
+{
+    "mode": "toy",
+    "dim": 2,
+    "max_capacity": 1000,
+    "workload": {
+        "num_ops": 10,
+        "frac_search": 0.4,
+        "frac_insert": 0.4,
+        "frac_delete": 0.2
+    },
+    "graph": {
+        "size": 20,
+        "k": 6,
+        "max_degree": 32,
+        "beam_width": 32,
+        "visited_list_size": 32
+    },
+    "execution": {
+        "batch_size": 5
+    },
+    "paths": {
+        "initial_graph": "data/toy_initial_graph.bin",
+        "workload": "data/toy_workload.bin",
+        "vis_output_dir": "vis_outputs/toy"
+    }
+}

@@ -1,0 +1,78 @@
+\hypertarget{md_README_autotoc_md1}{}\doxysection{Instructions for Compiling}\label{md_README_autotoc_md1}
+The code can be compiled using the command 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make compile}
+
+\end{DoxyCode}
+
+
+There are several parameters for graph construction, which can be modified by editing the {\ttfamily vamana.\+h} file.
+
+The program takes three arguments as input 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./vamana <randomgraph> <basepoints> <output>}
+
+\end{DoxyCode}
+
+
+The program reads {\ttfamily NUM\+\_\+\+QUERIES} points and their neighbors from the randomgraph, then it reads {\ttfamily N -\/ NUM\+\_\+\+QUERIES} points from the basepoints file, which don\textquotesingle{}t have any neighbors. The graph build algorithm is done on this graph.
+
+The output graph requires some preprocessing to be compatible with BANG search. {\ttfamily scripts/bang\+\_\+preprocess.\+py} is used for this purpose. It is run as 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python bang-\/preprocess.py [-\/h] [-\/-\/N N] [-\/-\/DIM DIM] [-\/-\/DEGREE DEGREE] [-\/-\/MEDOID MEDOID] [-\/-\/DATATYPE DATATYPE] [-\/-\/DATATYPESIZE DATATYPESIZE]}
+\DoxyCodeLine{                          bin prefix}
+
+\end{DoxyCode}
+
+
+where {\ttfamily bin} is the output from Vamana and {\ttfamily prefix} is the BANG prefix for the dataset files. The Python script writes the index and metadata files with the prefix.\hypertarget{md_README_autotoc_md2}{}\doxysection{Exact Commands for SIFT10K}\label{md_README_autotoc_md2}
+First, download the files for the SIFT10k dataset and place them in a directory called {\ttfamily sift10kfles}.
+
+The SIFT10K dataset files are in vecs, BANG needs files in bin format. Convert from vecs to bin using the below exaple 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3 scripts/vecs\_to\_binary.py siftsmall\_base.fvecs data/base.bin 4 10000 128}
+\DoxyCodeLine{python3 scripts/vecs\_to\_binary.py siftsmall\_query.fvecs siftsmall\_query.bin 4 100 128}
+\DoxyCodeLine{python3 scripts/vecs\_to\_binary.py siftsmall\_groundtruth.ivecs siftsmall\_groundtruth.bin 4 100 100}
+
+\end{DoxyCode}
+
+
+Download the SIFT10K randomgraph file and place it in {\ttfamily data/sift10k\+\_\+randomgraph.\+bin}, and the SIFT basepoints file in {\ttfamily data/base.\+bin}.
+
+To compile Vamana, run the command 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{nvcc -\/rdc=true src/util.cu src/bloomFilter.cu src/greedySearch.cu src/outNeighbors.cu src/reverseEdge.cu src/vamana.cu -\/o bin/vamana}
+
+\end{DoxyCode}
+
+
+This creates the executable {\ttfamily ./bin/vamana}.
+
+To run Vamana, use 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./bin/vamana data/sift10k\_randomgraph.bin data/base.bin build/vamana.out`}
+
+\end{DoxyCode}
+
+
+The resulting graph is written to {\ttfamily build/vamana.\+out}.
+
+To convert the graph to Disk\+ANN format, use
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{python3 scripts/bang-\/preprocess.py build/vamana.out sift10kfiles/sift10k\_index}
+
+\end{DoxyCode}
+
+
+This updates the index file {\ttfamily sift10kfiles/sift10k\+\_\+index\+\_\+disk.\+bin} and the metadata file {\ttfamily sift10kfiles/sift10k\+\_\+index\+\_\+metadata.\+bin}
+
+To run BANG Search\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./bin/bang\_search sift10kfiles/sift10k\_index sift10kfiles/siftsmall\_query.bin sift10kfiles/sift10k\_groundtruth.bin 100 10 float l2}
+
+\end{DoxyCode}
+ Note\+: The query and groundtruth files in bin format are also available here\+: \href{https://github.com/karthik86248/BANG-Billion-Scale-ANN/blob/main/sift10kfiles.tar.gz}{\texttt{ https\+://github.\+com/karthik86248/\+BANG-\/\+Billion-\/\+Scale-\/\+ANN/blob/main/sift10kfiles.\+tar.\+gz}} BANG Search usage is documented here\+: \href{https://github.com/karthik86248/BANG-Billion-Scale-ANN/blob/main/BANG_Base/ReadMe.pdf}{\texttt{ https\+://github.\+com/karthik86248/\+BANG-\/\+Billion-\/\+Scale-\/\+ANN/blob/main/\+BANG\+\_\+\+Base/\+Read\+Me.\+pdf}} 

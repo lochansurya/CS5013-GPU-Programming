@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['parsereverseindex_121',['parseReverseIndex',['../d4/d41/reverseEdge_8cu.html#a6bb8058dcea2346cfe13b856323f7dfa',1,'reverseEdge.cu']]],
+  ['pruneoutneighbors_122',['pruneOutNeighbors',['../da/d8b/outNeighbors_8cu.html#a48093b6dec6ee4e8c3ad1fac89cef93d',1,'pruneOutNeighbors(uint8_t *d_graph, unsigned batchStart, unsigned *d_visitedSet, unsigned *d_visitedSetCount, float *d_visitedSetDists, NodeState *d_visitedSetStatus, float *d_queryVecs, uint8_t *d_reverseEdgeIndex, float alpha):&#160;outNeighbors.cu'],['../d4/d9b/vamana_8h.html#a1f1cf78df2bbc85b83eb386859dad720',1,'pruneOutNeighbors(uint8_t *d_graph, unsigned batchStart, unsigned *d_visitedSet, unsigned *d_visitedSetCount, float *d_visitedSetDists, NodeState *d_visitedSetStatus, float *d_queryVecs, uint8_t *d_reverseEdgeIndex, float alpha, unsigned iter, bool *d_nextIter):&#160;vamana.h']]],
+  ['prunereverseedges_123',['pruneReverseEdges',['../d4/d41/reverseEdge_8cu.html#afd9cbcff007968988ea4652fa48cc954',1,'reverseEdge.cu']]]
+];

@@ -1,0 +1,105 @@
+\hypertarget{vamana_8cu}{}\doxysection{src/vamana.cu File Reference}
+\label{vamana_8cu}\index{src/vamana.cu@{src/vamana.cu}}
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}vamana.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for vamana.\+cu\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vamana_8cu__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{vamana_8cu_a8b005279e0523ff70c6c3fbaf620ddd6}{vamana\+Inner}} (uint8\+\_\+t $\ast$d\+\_\+graph, float $\ast$d\+\_\+query\+Vecs, float alpha, unsigned batch\+Start, unsigned batch\+Size)
+\item 
+void \mbox{\hyperlink{vamana_8cu_a5bfe9e1fa00dce90dfc6695c9fe47ae2}{vamana\+Outer}} (uint8\+\_\+t $\ast$graph, float alpha)
+\item 
+void \mbox{\hyperlink{vamana_8cu_ae94a839a183fdf066dba8ab58044b49f}{driver\+Fn}} (char $\ast$graph\+File\+Path, char $\ast$base\+Points\+Path, char $\ast$out\+File\+Path)
+\item 
+int \mbox{\hyperlink{vamana_8cu_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{vamana_8cu_ae94a839a183fdf066dba8ab58044b49f}\label{vamana_8cu_ae94a839a183fdf066dba8ab58044b49f}} 
+\index{vamana.cu@{vamana.cu}!driverFn@{driverFn}}
+\index{driverFn@{driverFn}!vamana.cu@{vamana.cu}}
+\doxysubsubsection{\texorpdfstring{driverFn()}{driverFn()}}
+{\footnotesize\ttfamily void driver\+Fn (\begin{DoxyParamCaption}\item[{char $\ast$}]{graph\+File\+Path,  }\item[{char $\ast$}]{base\+Points\+Path,  }\item[{char $\ast$}]{out\+File\+Path }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vamana_8cu_ae94a839a183fdf066dba8ab58044b49f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{vamana_8cu_ae94a839a183fdf066dba8ab58044b49f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vamana_8cu_a3c04138a5bfe5d72780bb7e82a18e627}\label{vamana_8cu_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{vamana.cu@{vamana.cu}!main@{main}}
+\index{main@{main}!vamana.cu@{vamana.cu}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vamana_8cu_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vamana_8cu_a8b005279e0523ff70c6c3fbaf620ddd6}\label{vamana_8cu_a8b005279e0523ff70c6c3fbaf620ddd6}} 
+\index{vamana.cu@{vamana.cu}!vamanaInner@{vamanaInner}}
+\index{vamanaInner@{vamanaInner}!vamana.cu@{vamana.cu}}
+\doxysubsubsection{\texorpdfstring{vamanaInner()}{vamanaInner()}}
+{\footnotesize\ttfamily void vamana\+Inner (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{float $\ast$}]{d\+\_\+query\+Vecs,  }\item[{float}]{alpha,  }\item[{unsigned}]{batch\+Start,  }\item[{unsigned}]{batch\+Size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vamana_8cu_a8b005279e0523ff70c6c3fbaf620ddd6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vamana_8cu_a8b005279e0523ff70c6c3fbaf620ddd6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{vamana_8cu_a5bfe9e1fa00dce90dfc6695c9fe47ae2}\label{vamana_8cu_a5bfe9e1fa00dce90dfc6695c9fe47ae2}} 
+\index{vamana.cu@{vamana.cu}!vamanaOuter@{vamanaOuter}}
+\index{vamanaOuter@{vamanaOuter}!vamana.cu@{vamana.cu}}
+\doxysubsubsection{\texorpdfstring{vamanaOuter()}{vamanaOuter()}}
+{\footnotesize\ttfamily void vamana\+Outer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{graph,  }\item[{float}]{alpha }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{vamana_8cu_a5bfe9e1fa00dce90dfc6695c9fe47ae2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{vamana_8cu_a5bfe9e1fa00dce90dfc6695c9fe47ae2_icgraph}
+\end{center}
+\end{figure}

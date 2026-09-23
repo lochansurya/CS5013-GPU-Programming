@@ -1,0 +1,19 @@
+test.ipynb
+vamana/build/
+
+# Ignore ctags output
+tags
+# Ignore cscope database and outputs
+cscope*
+# To keep git status clean in the event of regeneration of tags 
+tags.lock
+
+# Ignore macOSX file system artifacts
+.DS_Store
+
+
+vamana/report/
+.vscode/
+
+# Ignore DiskANN repo
+DiskANN/

@@ -1,0 +1,97 @@
+\hypertarget{greedySearch_8cu}{}\doxysection{src/greedy\+Search.cu File Reference}
+\label{greedySearch_8cu}\index{src/greedySearch.cu@{src/greedySearch.cu}}
+{\ttfamily \#include \char`\"{}vamana.\+h\char`\"{}}\newline
+Include dependency graph for greedy\+Search.\+cu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/dbb/greedySearch_8cu__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{greedySearch_8cu_a6ced3e7196715e1f7d9181956f82a30a}{contains}} (unsigned $\ast$set, unsigned count, unsigned el)
+\item 
+void \mbox{\hyperlink{greedySearch_8cu_a009b56e43dabc7aa59f1e9d03b0d3362}{initialize\+Parents}} (bool $\ast$d\+\_\+has\+Parent, unsigned $\ast$d\+\_\+parents)
+\item 
+void \mbox{\hyperlink{greedySearch_8cu_a1e312098bf4357954c4af8a73681ee82}{initialize\+Worklist}} (uint8\+\_\+t $\ast$d\+\_\+graph, float $\ast$d\+\_\+query\+Vecs, unsigned $\ast$d\+\_\+worklist, unsigned $\ast$d\+\_\+worklist\+Count, float $\ast$d\+\_\+worklist\+Dist, bool $\ast$d\+\_\+worklist\+Visited)
+\item 
+void \mbox{\hyperlink{greedySearch_8cu_a30e31f1b815e7b8d0cda5ae8868e72da}{filter\+Neighbors}} (uint8\+\_\+t $\ast$d\+\_\+graph, bool $\ast$d\+\_\+has\+Parent, unsigned $\ast$d\+\_\+parents, bool $\ast$d\+\_\+bloom\+Filters, unsigned $\ast$d\+\_\+neighbors, unsigned $\ast$d\+\_\+neighbors\+Count, unsigned $\ast$d\+\_\+visited\+Set, unsigned $\ast$d\+\_\+visited\+Set\+Count)
+\item 
+void \mbox{\hyperlink{greedySearch_8cu_a0cedfa43575adbc055331e2a5070e800}{merge\+Into\+Worklist}} (unsigned $\ast$d\+\_\+worklist\+Count, unsigned $\ast$d\+\_\+worklist, float $\ast$d\+\_\+worklist\+Dist, bool $\ast$d\+\_\+worklist\+Visited, unsigned $\ast$d\+\_\+neighbors\+Count, unsigned $\ast$d\+\_\+neighbors, float $\ast$d\+\_\+neighbors\+Dist, bool $\ast$d\+\_\+has\+Parent, unsigned $\ast$d\+\_\+parents, bool $\ast$d\+\_\+next\+Iter)
+\item 
+void \mbox{\hyperlink{greedySearch_8cu_ad9b4614e43db8078feb36d32c0f5aa22}{greedy\+Search}} (uint8\+\_\+t $\ast$d\+\_\+graph, float $\ast$d\+\_\+query\+Vecs, unsigned $\ast$d\+\_\+visited\+Set, unsigned $\ast$d\+\_\+visited\+Set\+Count, unsigned batch\+Start, unsigned batch\+Size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{greedySearch_8cu_a6ced3e7196715e1f7d9181956f82a30a}\label{greedySearch_8cu_a6ced3e7196715e1f7d9181956f82a30a}} 
+\index{greedySearch.cu@{greedySearch.cu}!contains@{contains}}
+\index{contains@{contains}!greedySearch.cu@{greedySearch.cu}}
+\doxysubsubsection{\texorpdfstring{contains()}{contains()}}
+{\footnotesize\ttfamily bool contains (\begin{DoxyParamCaption}\item[{unsigned $\ast$}]{set,  }\item[{unsigned}]{count,  }\item[{unsigned}]{el }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{greedySearch_8cu_a30e31f1b815e7b8d0cda5ae8868e72da}\label{greedySearch_8cu_a30e31f1b815e7b8d0cda5ae8868e72da}} 
+\index{greedySearch.cu@{greedySearch.cu}!filterNeighbors@{filterNeighbors}}
+\index{filterNeighbors@{filterNeighbors}!greedySearch.cu@{greedySearch.cu}}
+\doxysubsubsection{\texorpdfstring{filterNeighbors()}{filterNeighbors()}}
+{\footnotesize\ttfamily void filter\+Neighbors (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{bool $\ast$}]{d\+\_\+has\+Parent,  }\item[{unsigned $\ast$}]{d\+\_\+parents,  }\item[{bool $\ast$}]{d\+\_\+bloom\+Filters,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors\+Count,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set\+Count }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc4/greedySearch_8cu_a30e31f1b815e7b8d0cda5ae8868e72da_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{greedySearch_8cu_ad9b4614e43db8078feb36d32c0f5aa22}\label{greedySearch_8cu_ad9b4614e43db8078feb36d32c0f5aa22}} 
+\index{greedySearch.cu@{greedySearch.cu}!greedySearch@{greedySearch}}
+\index{greedySearch@{greedySearch}!greedySearch.cu@{greedySearch.cu}}
+\doxysubsubsection{\texorpdfstring{greedySearch()}{greedySearch()}}
+{\footnotesize\ttfamily void greedy\+Search (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{float $\ast$}]{d\+\_\+query\+Vecs,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set\+Count,  }\item[{unsigned}]{batch\+Start,  }\item[{unsigned}]{batch\+Size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc4/greedySearch_8cu_ad9b4614e43db8078feb36d32c0f5aa22_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc4/greedySearch_8cu_ad9b4614e43db8078feb36d32c0f5aa22_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{greedySearch_8cu_a009b56e43dabc7aa59f1e9d03b0d3362}\label{greedySearch_8cu_a009b56e43dabc7aa59f1e9d03b0d3362}} 
+\index{greedySearch.cu@{greedySearch.cu}!initializeParents@{initializeParents}}
+\index{initializeParents@{initializeParents}!greedySearch.cu@{greedySearch.cu}}
+\doxysubsubsection{\texorpdfstring{initializeParents()}{initializeParents()}}
+{\footnotesize\ttfamily void initialize\+Parents (\begin{DoxyParamCaption}\item[{bool $\ast$}]{d\+\_\+has\+Parent,  }\item[{unsigned $\ast$}]{d\+\_\+parents }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{greedySearch_8cu_a1e312098bf4357954c4af8a73681ee82}\label{greedySearch_8cu_a1e312098bf4357954c4af8a73681ee82}} 
+\index{greedySearch.cu@{greedySearch.cu}!initializeWorklist@{initializeWorklist}}
+\index{initializeWorklist@{initializeWorklist}!greedySearch.cu@{greedySearch.cu}}
+\doxysubsubsection{\texorpdfstring{initializeWorklist()}{initializeWorklist()}}
+{\footnotesize\ttfamily void initialize\+Worklist (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{float $\ast$}]{d\+\_\+query\+Vecs,  }\item[{unsigned $\ast$}]{d\+\_\+worklist,  }\item[{unsigned $\ast$}]{d\+\_\+worklist\+Count,  }\item[{float $\ast$}]{d\+\_\+worklist\+Dist,  }\item[{bool $\ast$}]{d\+\_\+worklist\+Visited }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{greedySearch_8cu_a0cedfa43575adbc055331e2a5070e800}\label{greedySearch_8cu_a0cedfa43575adbc055331e2a5070e800}} 
+\index{greedySearch.cu@{greedySearch.cu}!mergeIntoWorklist@{mergeIntoWorklist}}
+\index{mergeIntoWorklist@{mergeIntoWorklist}!greedySearch.cu@{greedySearch.cu}}
+\doxysubsubsection{\texorpdfstring{mergeIntoWorklist()}{mergeIntoWorklist()}}
+{\footnotesize\ttfamily void merge\+Into\+Worklist (\begin{DoxyParamCaption}\item[{unsigned $\ast$}]{d\+\_\+worklist\+Count,  }\item[{unsigned $\ast$}]{d\+\_\+worklist,  }\item[{float $\ast$}]{d\+\_\+worklist\+Dist,  }\item[{bool $\ast$}]{d\+\_\+worklist\+Visited,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors\+Count,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors,  }\item[{float $\ast$}]{d\+\_\+neighbors\+Dist,  }\item[{bool $\ast$}]{d\+\_\+has\+Parent,  }\item[{unsigned $\ast$}]{d\+\_\+parents,  }\item[{bool $\ast$}]{d\+\_\+next\+Iter }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{d2/dc4/greedySearch_8cu_a0cedfa43575adbc055331e2a5070e800_cgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,10 @@
+PROJECT_NAME           = "Vamana GPU Engine"
+OUTPUT_DIRECTORY       = docs
+INPUT                  = src
+FILE_PATTERNS          = *.h *.cu
+RECURSIVE              = YES
+GENERATE_LATEX         = NO
+GENERATE_HTML          = YES
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES

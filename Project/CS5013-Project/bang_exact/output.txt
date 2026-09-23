@@ -1,0 +1,155 @@
+[medoidID=123, numQueries=400]
+BF Memory = 399888 BF_ENTRIES = 399887
+[1;31m[ Var ][0m size_indexfile=7720000
+mlock ret for Index: 0
+2 	 9970
+17:58:41 [ 1761481721147465550 ] : SEARCH STARTED
+17:58:41 [ 1761481721595050008 ] : SEARCH END
+iterations = 47
+STATSLINE = 
+(1) total time_K1 = 0 ms
+(2) avg. time_B1 = 0.0255081 ms
+(3) total time_B1 = 1.19888 ms
+(4) avg. time_B2 = 0.0245687 ms
+(5) total time_B2 = 1.1793 ms
+(6) total neighbor_filtering_time = 443.561 ms
+(7) total transfer_time (CPU <--> GPU) = 0.384616 ms
+(8) total neigbbour seek time = 0 ms
+(9) Time elapsed in L2 Dist computation (GPU)= 0.019264 ms
+Total time = (1) + (3) + (5) + (6) + (7) + (8) + (9) = 446.343 ms
+Wall Clock Time = 447584 microsec
+Throughput = 893.686 QPS
+Throughput (Exclude Mem Transfers) = 894.455 QPS
+ Stat(../data/sift10k/sift10k_groundtruth.bin) returned: 0
+Opened: ../data/sift10k/sift10k_groundtruth.bin, size: 800008, cache_size: 800008
+Reading truthset file ../data/sift10k/sift10k_groundtruth.bin ...
+Metadata: #pts = 10000, #dims = 10...
+Ls	Recall@10
+total_recall = 2190.00 num_queries = 400 recall_at 10
+40	54.75	 total parents 0	 total computations: 641853
+Try Next run ? [y|n]
+17:58:41 [ 1761481721601428982 ] : SEARCH STARTED
+17:58:41 [ 1761481721607557190 ] : SEARCH END
+iterations = 47
+STATSLINE = 
+(1) total time_K1 = 0.00 ms
+(2) avg. time_B1 = 0.03 ms
+(3) total time_B1 = 1.31 ms
+(4) avg. time_B2 = 0.03 ms
+(5) total time_B2 = 1.30 ms
+(6) total neighbor_filtering_time = 1.43 ms
+(7) total transfer_time (CPU <--> GPU) = 0.48 ms
+(8) total neigbbour seek time = 0.00 ms
+(9) Time elapsed in L2 Dist computation (GPU)= 0.01 ms
+Total time = (1) + (3) + (5) + (6) + (7) + (8) + (9) = 4.53 ms
+Wall Clock Time = 6128.21 microsec
+Throughput = 65271.94 QPS
+Throughput (Exclude Mem Transfers) = 70845.07 QPS
+ Stat(../data/sift10k/sift10k_groundtruth.bin) returned: 0
+Opened: ../data/sift10k/sift10k_groundtruth.bin, size: 800008, cache_size: 800008
+Reading truthset file ../data/sift10k/sift10k_groundtruth.bin ...
+Metadata: #pts = 10000, #dims = 10...
+Ls	Recall@10
+total_recall = 2190.00 num_queries = 400 recall_at 10
+40	54.75	 total parents 0	 total computations: 641853
+Try Next run ? [y|n]
+17:58:41 [ 1761481721610011353 ] : SEARCH STARTED
+17:58:41 [ 1761481721616734904 ] : SEARCH END
+iterations = 47
+STATSLINE = 
+(1) total time_K1 = 0.00 ms
+(2) avg. time_B1 = 0.03 ms
+(3) total time_B1 = 1.36 ms
+(4) avg. time_B2 = 0.03 ms
+(5) total time_B2 = 1.37 ms
+(6) total neighbor_filtering_time = 1.56 ms
+(7) total transfer_time (CPU <--> GPU) = 0.56 ms
+(8) total neigbbour seek time = 0.00 ms
+(9) Time elapsed in L2 Dist computation (GPU)= 0.01 ms
+Total time = (1) + (3) + (5) + (6) + (7) + (8) + (9) = 4.87 ms
+Wall Clock Time = 6723.55 microsec
+Throughput = 59492.37 QPS
+Throughput (Exclude Mem Transfers) = 64902.04 QPS
+ Stat(../data/sift10k/sift10k_groundtruth.bin) returned: 0
+Opened: ../data/sift10k/sift10k_groundtruth.bin, size: 800008, cache_size: 800008
+Reading truthset file ../data/sift10k/sift10k_groundtruth.bin ...
+Metadata: #pts = 10000, #dims = 10...
+Ls	Recall@10
+total_recall = 2190.00 num_queries = 400 recall_at 10
+40	54.75	 total parents 0	 total computations: 641853
+Try Next run ? [y|n]
+17:58:41 [ 1761481721619373398 ] : SEARCH STARTED
+17:58:41 [ 1761481721627614164 ] : SEARCH END
+iterations = 47
+STATSLINE = 
+(1) total time_K1 = 0.00 ms
+(2) avg. time_B1 = 0.03 ms
+(3) total time_B1 = 1.51 ms
+(4) avg. time_B2 = 0.03 ms
+(5) total time_B2 = 1.47 ms
+(6) total neighbor_filtering_time = 1.85 ms
+(7) total transfer_time (CPU <--> GPU) = 0.82 ms
+(8) total neigbbour seek time = 0.00 ms
+(9) Time elapsed in L2 Dist computation (GPU)= 0.02 ms
+Total time = (1) + (3) + (5) + (6) + (7) + (8) + (9) = 5.68 ms
+Wall Clock Time = 8240.77 microsec
+Throughput = 48539.18 QPS
+Throughput (Exclude Mem Transfers) = 53924.70 QPS
+ Stat(../data/sift10k/sift10k_groundtruth.bin) returned: 0
+Opened: ../data/sift10k/sift10k_groundtruth.bin, size: 800008, cache_size: 800008
+Reading truthset file ../data/sift10k/sift10k_groundtruth.bin ...
+Metadata: #pts = 10000, #dims = 10...
+Ls	Recall@10
+total_recall = 2190.00 num_queries = 400 recall_at 10
+40	54.75	 total parents 0	 total computations: 641853
+Try Next run ? [y|n]
+17:58:41 [ 1761481721631215368 ] : SEARCH STARTED
+17:58:41 [ 1761481721640280185 ] : SEARCH END
+iterations = 46
+STATSLINE = 
+(1) total time_K1 = 0.00 ms
+(2) avg. time_B1 = 0.03 ms
+(3) total time_B1 = 1.60 ms
+(4) avg. time_B2 = 0.03 ms
+(5) total time_B2 = 1.56 ms
+(6) total neighbor_filtering_time = 1.98 ms
+(7) total transfer_time (CPU <--> GPU) = 1.00 ms
+(8) total neigbbour seek time = 0.00 ms
+(9) Time elapsed in L2 Dist computation (GPU)= 0.02 ms
+Total time = (1) + (3) + (5) + (6) + (7) + (8) + (9) = 6.16 ms
+Wall Clock Time = 9064.82 microsec
+Throughput = 44126.65 QPS
+Throughput (Exclude Mem Transfers) = 49575.79 QPS
+ Stat(../data/sift10k/sift10k_groundtruth.bin) returned: 0
+Opened: ../data/sift10k/sift10k_groundtruth.bin, size: 800008, cache_size: 800008
+Reading truthset file ../data/sift10k/sift10k_groundtruth.bin ...
+Metadata: #pts = 10000, #dims = 10...
+Ls	Recall@10
+total_recall = 2190.00 num_queries = 400 recall_at 10
+40	54.75	 total parents 0	 total computations: 641807
+Try Next run ? [y|n]
+17:58:41 [ 1761481721643822709 ] : SEARCH STARTED
+17:58:41 [ 1761481721654029032 ] : SEARCH END
+iterations = 46
+STATSLINE = 
+(1) total time_K1 = 0.00 ms
+(2) avg. time_B1 = 0.04 ms
+(3) total time_B1 = 1.72 ms
+(4) avg. time_B2 = 0.04 ms
+(5) total time_B2 = 1.67 ms
+(6) total neighbor_filtering_time = 2.20 ms
+(7) total transfer_time (CPU <--> GPU) = 1.20 ms
+(8) total neigbbour seek time = 0.00 ms
+(9) Time elapsed in L2 Dist computation (GPU)= 0.03 ms
+Total time = (1) + (3) + (5) + (6) + (7) + (8) + (9) = 6.82 ms
+Wall Clock Time = 10206.32 microsec
+Throughput = 39191.39 QPS
+Throughput (Exclude Mem Transfers) = 44409.55 QPS
+ Stat(../data/sift10k/sift10k_groundtruth.bin) returned: 0
+Opened: ../data/sift10k/sift10k_groundtruth.bin, size: 800008, cache_size: 800008
+Reading truthset file ../data/sift10k/sift10k_groundtruth.bin ...
+Metadata: #pts = 10000, #dims = 10...
+Ls	Recall@10
+total_recall = 2190.00 num_queries = 400 recall_at 10
+40	54.75	 total parents 0	 total computations: 641807
+Try Next run ? [y|n]

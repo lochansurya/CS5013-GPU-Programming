@@ -1,0 +1,74 @@
+\hypertarget{outNeighbors_8cu}{}\doxysection{src/out\+Neighbors.cu File Reference}
+\label{outNeighbors_8cu}\index{src/outNeighbors.cu@{src/outNeighbors.cu}}
+{\ttfamily \#include $<$cuda/std/limits$>$}\newline
+{\ttfamily \#include \char`\"{}vamana.\+h\char`\"{}}\newline
+Include dependency graph for out\+Neighbors.\+cu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d4/d72/outNeighbors_8cu__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{outNeighbors_8cu_a8bf20b50261c7a794b94a2e93bbb7ba6}{get\+Neighbors}} (uint8\+\_\+t $\ast$d\+\_\+graph, unsigned batch\+Start, unsigned $\ast$d\+\_\+neighbors, unsigned $\ast$d\+\_\+neighbors\+Count)
+\item 
+void \mbox{\hyperlink{outNeighbors_8cu_ab5607d5cd17ccf0d5b199e52a6ebb1c2}{merge\+Into\+Visited\+Set}} (unsigned $\ast$d\+\_\+visited\+Set\+Count, unsigned $\ast$d\+\_\+visited\+Set, float $\ast$d\+\_\+visited\+Set\+Dists, unsigned $\ast$d\+\_\+neighbors\+Count, unsigned $\ast$d\+\_\+neighbors, float $\ast$d\+\_\+neighbors\+Dist)
+\item 
+void \mbox{\hyperlink{outNeighbors_8cu_a48093b6dec6ee4e8c3ad1fac89cef93d}{prune\+Out\+Neighbors}} (uint8\+\_\+t $\ast$d\+\_\+graph, unsigned batch\+Start, unsigned $\ast$d\+\_\+visited\+Set, unsigned $\ast$d\+\_\+visited\+Set\+Count, float $\ast$d\+\_\+visited\+Set\+Dists, \mbox{\hyperlink{vamana_8h_ae4163e43570728b98ae046fe63093a44}{Node\+State}} $\ast$d\+\_\+visited\+Set\+Status, float $\ast$d\+\_\+query\+Vecs, uint8\+\_\+t $\ast$d\+\_\+reverse\+Edge\+Index, float alpha)
+\item 
+void \mbox{\hyperlink{outNeighbors_8cu_ab481251e1ae32509c33c0fac70e6fd2e}{compute\+Out\+Neighbors}} (uint8\+\_\+t $\ast$d\+\_\+graph, float $\ast$d\+\_\+query\+Vecs, unsigned $\ast$d\+\_\+visited\+Sets, unsigned $\ast$d\+\_\+visited\+Set\+Count, float alpha, uint8\+\_\+t $\ast$d\+\_\+reverse\+Edge\+Index, unsigned batch\+Start, unsigned batch\+Size)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{outNeighbors_8cu_ab481251e1ae32509c33c0fac70e6fd2e}\label{outNeighbors_8cu_ab481251e1ae32509c33c0fac70e6fd2e}} 
+\index{outNeighbors.cu@{outNeighbors.cu}!computeOutNeighbors@{computeOutNeighbors}}
+\index{computeOutNeighbors@{computeOutNeighbors}!outNeighbors.cu@{outNeighbors.cu}}
+\doxysubsubsection{\texorpdfstring{computeOutNeighbors()}{computeOutNeighbors()}}
+{\footnotesize\ttfamily void compute\+Out\+Neighbors (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{float $\ast$}]{d\+\_\+query\+Vecs,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Sets,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set\+Count,  }\item[{float}]{alpha,  }\item[{uint8\+\_\+t $\ast$}]{d\+\_\+reverse\+Edge\+Index,  }\item[{unsigned}]{batch\+Start,  }\item[{unsigned}]{batch\+Size }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d8b/outNeighbors_8cu_ab481251e1ae32509c33c0fac70e6fd2e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{da/d8b/outNeighbors_8cu_ab481251e1ae32509c33c0fac70e6fd2e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{outNeighbors_8cu_a8bf20b50261c7a794b94a2e93bbb7ba6}\label{outNeighbors_8cu_a8bf20b50261c7a794b94a2e93bbb7ba6}} 
+\index{outNeighbors.cu@{outNeighbors.cu}!getNeighbors@{getNeighbors}}
+\index{getNeighbors@{getNeighbors}!outNeighbors.cu@{outNeighbors.cu}}
+\doxysubsubsection{\texorpdfstring{getNeighbors()}{getNeighbors()}}
+{\footnotesize\ttfamily void get\+Neighbors (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{unsigned}]{batch\+Start,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors\+Count }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{outNeighbors_8cu_ab5607d5cd17ccf0d5b199e52a6ebb1c2}\label{outNeighbors_8cu_ab5607d5cd17ccf0d5b199e52a6ebb1c2}} 
+\index{outNeighbors.cu@{outNeighbors.cu}!mergeIntoVisitedSet@{mergeIntoVisitedSet}}
+\index{mergeIntoVisitedSet@{mergeIntoVisitedSet}!outNeighbors.cu@{outNeighbors.cu}}
+\doxysubsubsection{\texorpdfstring{mergeIntoVisitedSet()}{mergeIntoVisitedSet()}}
+{\footnotesize\ttfamily void merge\+Into\+Visited\+Set (\begin{DoxyParamCaption}\item[{unsigned $\ast$}]{d\+\_\+visited\+Set\+Count,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set,  }\item[{float $\ast$}]{d\+\_\+visited\+Set\+Dists,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors\+Count,  }\item[{unsigned $\ast$}]{d\+\_\+neighbors,  }\item[{float $\ast$}]{d\+\_\+neighbors\+Dist }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{da/d8b/outNeighbors_8cu_ab5607d5cd17ccf0d5b199e52a6ebb1c2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{outNeighbors_8cu_a48093b6dec6ee4e8c3ad1fac89cef93d}\label{outNeighbors_8cu_a48093b6dec6ee4e8c3ad1fac89cef93d}} 
+\index{outNeighbors.cu@{outNeighbors.cu}!pruneOutNeighbors@{pruneOutNeighbors}}
+\index{pruneOutNeighbors@{pruneOutNeighbors}!outNeighbors.cu@{outNeighbors.cu}}
+\doxysubsubsection{\texorpdfstring{pruneOutNeighbors()}{pruneOutNeighbors()}}
+{\footnotesize\ttfamily void prune\+Out\+Neighbors (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{d\+\_\+graph,  }\item[{unsigned}]{batch\+Start,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set,  }\item[{unsigned $\ast$}]{d\+\_\+visited\+Set\+Count,  }\item[{float $\ast$}]{d\+\_\+visited\+Set\+Dists,  }\item[{\mbox{\hyperlink{vamana_8h_ae4163e43570728b98ae046fe63093a44}{Node\+State}} $\ast$}]{d\+\_\+visited\+Set\+Status,  }\item[{float $\ast$}]{d\+\_\+query\+Vecs,  }\item[{uint8\+\_\+t $\ast$}]{d\+\_\+reverse\+Edge\+Index,  }\item[{float}]{alpha }\end{DoxyParamCaption})}
+
